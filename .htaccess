@@ -1,0 +1,4 @@
+RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^index?$ index.php [NC,L]
+RewriteRule ^([0-9a-zA-Z-]+)$  details.php?pro_id=$1 [QSA,NC,L]
