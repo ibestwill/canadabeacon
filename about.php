@@ -24,7 +24,7 @@ include("includes/header.php");
 ?>
 
 
-<div id="mydiv"><!-- content Starts -->
+<div><!-- content Starts -->
 
     <div class="col-md-12"><!-- col-md-12 Starts -->
 
@@ -34,8 +34,8 @@ include("includes/header.php");
             <!--vision mission values start-->
 
             <div>
-                <img src="images\Vision-Mission-Values.png"
-                     class="img-responsive" align="center">
+                <img src="images\Vision-Mission-Values.png" style="margin: auto"
+                     class="img-responsive">
             </div>
 
 
@@ -59,8 +59,8 @@ include("includes/header.php");
             <!-- About Section Ends -->
 
             <div>
-                <img src="images\Vision-Mission-Values-logo.png"
-                     class="img-responsive" align="center">
+                <img src="images\Vision-Mission-Values-logo.png" style="margin: auto"
+                     class="img-responsive">
             </div>
 
             <br>
