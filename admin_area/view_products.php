@@ -91,7 +91,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                                     $i = 0;
 
-                                    $get_pro = "select * from products where status='product' order by p_cat_id";
+                                    $get_pro = "select * from products where status='product' order by p_cat_id, cat_id";
 
                                     $run_pro = mysqli_query($con, $get_pro);
 
@@ -225,7 +225,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                                     $i = 0;
 
-                                    $get_pro = "select * from products where status='product' and p_cat_id='1'";
+                                    $get_pro = "select * from products where status='product' and p_cat_id='1' order by cat_id";
 
                                     $run_pro = mysqli_query($con, $get_pro);
 
@@ -360,7 +360,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                                     $i = 0;
 
-                                    $get_pro = "select * from products where status='product' and p_cat_id='2'";
+                                    $get_pro = "select * from products where status='product' and p_cat_id='2' order by cat_id";
 
                                     $run_pro = mysqli_query($con, $get_pro);
 
@@ -495,7 +495,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                                     $i = 0;
 
-                                    $get_pro = "select * from products where status='product' and p_cat_id='3'";
+                                    $get_pro = "select * from products where status='product' and p_cat_id='3' order by cat_id";
 
                                     $run_pro = mysqli_query($con, $get_pro);
 

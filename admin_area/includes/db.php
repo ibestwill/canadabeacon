@@ -1,5 +1,5 @@
 <?php
 
-$con = mysqli_connect("localhost","root","","ecom_store");
+$con = mysqli_connect("localhost","root","aSUS!!54321","ecom_store");
 
 ?>

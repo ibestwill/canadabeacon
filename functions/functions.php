@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect("localhost", "root", "", "ecom_store");
+$db = mysqli_connect("localhost", "root", "aSUS!!54321", "ecom_store");
 
 function formatDate($date)
 {
@@ -201,7 +201,7 @@ function getImmigration($product_category)
         $row_sub_cat = mysqli_fetch_array($run_sub_cat);
         $pro_sub_title = $row_sub_cat['cat_title'];
 
-        if ($pro_sub_title == "经济类") {
+        if ($pro_sub_title == "省提名") {
 
             $product_label = "
 
@@ -217,9 +217,10 @@ function getImmigration($product_category)
 
             echo "
 
-        <div class='col-md-4 col-sm-6 center-responsive' >
-
-            <div class='product' >
+        <div class='col-md-3 center-responsive' >
+        
+        <a class='label' href='$pro_url' style='color:black;'>
+          <div class='product' >
 
 
                 <div class='text'>
@@ -236,6 +237,11 @@ function getImmigration($product_category)
 
 
             </div>
+        
+        </a>
+
+
+          
 
         </div>
 
@@ -243,7 +249,7 @@ function getImmigration($product_category)
         ";
 
 
-        } else if ($pro_sub_title == "省提名") {
+        } else if ($pro_sub_title == "经济类") {
             $product_label = "
 
             <a class='label' href='$pro_url' style='color:black;'>
@@ -265,7 +271,9 @@ function getImmigration($product_category)
 
             echo "
 
-        <div class='col-md-4 col-sm-6 center-responsive' >
+        <div class='col-md-3 center-responsive' >
+
+
 
             <div class='product' >
 
@@ -312,7 +320,7 @@ function getImmigration($product_category)
 
             echo "
 
-        <div class='col-md-4 col-sm-6 center-responsive' >
+        <div class='col-md-3 center-responsive' >
 
             <div class='product' >
 
@@ -347,6 +355,8 @@ function getImmigration($product_category)
 
 
 // getImmigration  Function Ends ///
+
+
 
 
 /// getVisa Function Starts ///
@@ -412,7 +422,7 @@ function getVisa($product_category)
 
             echo "
 
-        <div class='col-md-4 col-sm-6 center-responsive' >
+        <div class='col-md-3 col-sm-6 center-responsive' >
 
             <div class='product' >
 
@@ -425,7 +435,7 @@ function getVisa($product_category)
 
 
                 </div>
-                
+
 
                 $product_label
 
@@ -451,7 +461,9 @@ function getVisa($product_category)
             ";
 
             if ($flag2) {
-                echo "<div class='col-md-12'>
+                echo "
+
+            <div class='row col-md-12'>
                 <hr id='fenge'>
             </div>";
 
@@ -460,7 +472,7 @@ function getVisa($product_category)
 
             echo "
 
-        <div class='col-md-4 col-sm-6 center-responsive' >
+        <div class='col-md-3 col-sm-6 center-responsive' >
 
             <div class='product' >
 
@@ -473,7 +485,7 @@ function getVisa($product_category)
 
 
                 </div>
-                
+
 
                 $product_label
 
@@ -498,7 +510,9 @@ function getVisa($product_category)
             ";
 
             if ($flag3) {
-                echo "<div class='col-md-12'>
+                echo "
+
+            <div class='row col-md-12'>
                 <hr id='fenge'>
             </div>";
 
@@ -507,7 +521,7 @@ function getVisa($product_category)
 
             echo "
 
-        <div class='col-md-4 col-sm-6 center-responsive' >
+        <div class='col-md-3 col-sm-6 center-responsive' >
 
             <div class='product' >
 
@@ -520,7 +534,7 @@ function getVisa($product_category)
 
 
                 </div>
-                
+
 
                 $product_label
 
@@ -539,6 +553,8 @@ function getVisa($product_category)
 
 
 }
+
+
 
 
 /// getVisa Function Ends ///
@@ -602,7 +618,7 @@ function getStudy($product_category)
 
         echo "
 
-        <div class='col-md-4 col-sm-6 center-responsive' >
+        <div class='col-md-3 center-responsive' >
 
             <div class='product' >
 

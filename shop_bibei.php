@@ -190,13 +190,13 @@ include("includes/footer.php");
             url: "fetch.php",
             data: {
                 'offset_wiki': 0,
-                'limit_wiki': 3
+                'limit_wiki': 9
 
             },
 
             success: function (data) {
                 $('#infinite').append(data);
-                flag += 3;
+                flag += 9;
 
             }
         });
@@ -211,7 +211,7 @@ include("includes/footer.php");
                     url: "fetch.php",
                     data: {
                         'offset_wiki': flag,
-                        'limit_wiki': 3
+                        'limit_wiki': 9
 
                     },
 
@@ -228,7 +228,7 @@ include("includes/footer.php");
 
                         $('.ajax-load').hide();
                         $('#infinite').append(data);
-                        flag += 3;
+                        flag += 9;
 
                     }
                 });

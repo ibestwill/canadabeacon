@@ -9,7 +9,7 @@ if (isset($_GET['offset']) && isset($_GET['limit'])) {
 
     $limit = $_GET['limit'];
     $offset = $_GET['offset'];
-
+    $i=0;
 
     $query = "SELECT * FROM products WHERE p_cat_id=5 ORDER BY date DESC LIMIT $limit OFFSET $offset";
     $data = mysqli_query($con, $query);
@@ -32,22 +32,14 @@ if (isset($_GET['offset']) && isset($_GET['limit'])) {
         $pro_img1 = $row['product_img1'];
         $pro_date =friend_date(strtotime($row['date']));
 
-        if ($pro_label == "") {
+        $i++;
 
-            $product_label = "";
-
-        } else {
-
-            $product_label = "
-
-            <a class='label sale' href='$pro_url' >
-
-                <div class='product-label'>$pro_label</div>
-
-                <div class='label-background'> </div>
-
-            </a>
-
+        if($i%3==1){
+            echo "
+                <div class='container-fluid bg-3'>
+                      <div class='row'>
+                
+             
             ";
 
         }
@@ -55,16 +47,13 @@ if (isset($_GET['offset']) && isset($_GET['limit'])) {
 
         echo "
 
-                <div class='col-md-12 col-sm-12' id='post'><!-- col-md-4 col-sm-6 box Starts -->
+                <div id='post'>
 
                         <div class='col-md-4  img-post'>
                             <a href='$pro_url'> 
                                 <img src='admin_area\\product_images\\$pro_img1' class='img-responsive'>
                              </a>
-                        </div>
-
-                        <div class='col-md-8'>
-                            
+                             
                             <a href='$pro_url'> <h4>$pro_title </h4></a>
 
                             <p><span>$pro_feature</span></p>
@@ -78,15 +67,26 @@ if (isset($_GET['offset']) && isset($_GET['limit'])) {
                             <div class='post_date'> $pro_date </div>
                             </p>
                             
-
-
                         </div>
+
+                      
              
                 </div>    
                 
               
 
         ";
+
+        if($i%3==0){
+            echo "
+                
+                      </div>
+                
+                </div>
+            ";
+
+        }
+
 
     }
 
@@ -109,18 +109,6 @@ if (isset($_GET['offset_wiki']) && isset($_GET['limit_wiki'])) {
         exit();
     }
 
-    echo "
-
-        <div class='table-responsive'>
-            <table class='table table-condensed'>
-            <thead>
-                 <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-    
-            </thead>
-            <tbody>";
 
 
 
@@ -139,24 +127,36 @@ if (isset($_GET['offset_wiki']) && isset($_GET['limit_wiki'])) {
         echo "
 
                         
-                             <tr class='warning'> 
-                             
-                                <td><a href='$pro_url'><h4 style='color: #0b0b0b'>$pro_title </h4></a></td>                       
-                           
-                                <td>$pro_date</td>   
-                                 
-                                
+               <p>
+                    <a href='$pro_url' style='color: #0b0b0b'><h4><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i>&nbsp $pro_title </h4></a>
+               </p>
+                            
+               <div class='container-fluid' style='color: grey;border-bottom: solid orange 2px;'>
+                    <div class='col-sm-10'>
+                    
+                        <p>
+                           $pro_feature
+                        </p>   
+                    
+                    </div>
+                    
+                    <div class='col-sm-2'>
+             
+                 
+                        <p style='text-align: right'>
+                            $pro_date
+                        </p>                   
+           
+                    </div>
+                    
+                
+                
+                </div>                      
+                          
+           
                                               
-                            </tr>
-                            
-                            <tr style='border-bottom: solid orange 2px'> 
-                            
-                               <td style='color: grey'>$pro_feature</td>                       
-                               <td></td>
-                             
-                                                     
-                            </tr>
-                            
+                       
+               
                
 
 
@@ -164,11 +164,6 @@ if (isset($_GET['offset_wiki']) && isset($_GET['limit_wiki'])) {
 
     }
 
-    echo "
-        </tbody>
-    </table>
-</div>
-";
 
 
 

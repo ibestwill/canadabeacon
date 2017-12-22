@@ -190,41 +190,28 @@ body {
     }
 }
 
-#content .product {
+.product {
     background: #fff;
     border: solid 1px #e6e6e6;
     box-sizing: border-box;
     margin-bottom: 30px;
 }
 
-#content .product .text p.price {
-    font-size: 18px;
-    text-align: center;
-    font-weight: 300;
-    font-family: Microsoft Yahei;
-}
 
-#content .product .text .buttons {
-    clear: both;
-    text-align: center;
-}
 
-#content .product .text h3 {
+
+.product .text h3 {
     text-align: center;
     font-size: 25px;
     font-family: Microsoft Yahei;
 }
 
-#content .product .text h3 a {
+.product .text h3 a {
     color: rgb(85, 85, 85);
 }
 
-#content .product .text {
+.product .text {
     padding: 10px 10px 0px;
-}
-
-#content .product .text .buttons .btn {
-    margin-bottom: 10px;
 }
 
 
@@ -288,7 +275,7 @@ body {
 
 @media (max-width: 768px) {
     .center-responsive {
-        width: 70%;
+        width: 95%;
         margin: 0 auto;
     }
 }
@@ -547,16 +534,17 @@ body {
 /*Post*/
 
 #post {
-    border-bottom: solid orange 1px;
+
     position: relative;
     padding: 0px;
     background-color: whitesmoke;
-    min-height:160px;
+
+
 }
 
 #post img {
     margin:5px auto;
-
+    border-bottom: solid orange 2px;
 }
 
 #post a {
@@ -572,6 +560,7 @@ body {
 #post hr {
     postion:absolute;
     bottom:15px;
+
 }
 
 .post_label {
@@ -596,10 +585,10 @@ body {
 .img-post{
     display: block;
     margin-top:1em;
-    float: left;
+    float: top;
     overflow: hidden;
     position: relative;
-    text-align: center;
+    text-align: left;
     cursor: default;
 
 }

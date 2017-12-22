@@ -142,7 +142,7 @@ include("functions/functions.php");
 
 
 
-                    <div class="row" id="Products" ><!-- row Starts -->
+                    <div><!-- row Starts -->
 
                         <?php getVisa('p_cat_id=2'); ?>
 

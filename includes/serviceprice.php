@@ -212,6 +212,7 @@
                         $('#' + result).html(tax);
 
                         $('#subtotal').html(subtotal);
+                        $('#pricetotal').html(subtotal);
 
 
 

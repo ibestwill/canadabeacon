@@ -12,7 +12,11 @@ include("functions/functions.php");
 <html>
 
 <head>
-    <title>传送门 CSM.WORLD</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>传送门 CSM.WORLD </title>
 
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
 
@@ -129,7 +133,7 @@ include("functions/functions.php");
     <div class="container"><!-- container Starts -->
 
 
-        <div class="col-md-8"><!-- col-md-12 Starts --->
+        <div class="col-md-9"><!-- col-md-12 Starts --->
 
 
             <canvas id="line-chart" width="auto" height="80" class="hidden-xs"></canvas>
@@ -178,10 +182,12 @@ include("functions/functions.php");
 
             <br>
 
+
             <!--Load Product via Ajax infinite scroll-->
             <div class="row" id="infinite"><!-- row Starts -->
 
             </div><!-- row Ends -->
+
 
 
 
@@ -199,9 +205,7 @@ include("functions/functions.php");
         </div><!-- col-md-12 Ends --->
 
 
-        <div class="col-md-1"></div>
-
-        <div class="col-md-3">
+        <div class="col-md-3 hidden-xs hidden-sm">
             <?php
 
             include("includes/sidebar.php");
@@ -246,13 +250,13 @@ include("includes/footer.php");
             url: "fetch.php",
             data: {
                 'offset': 0,
-                'limit': 3
+                'limit': 9
 
             },
 
             success: function (data) {
                 $('#infinite').append(data);
-                flag += 3;
+                flag += 9;
 
             }
         });
@@ -267,7 +271,7 @@ include("includes/footer.php");
                     url: "fetch.php",
                     data: {
                         'offset': flag,
-                        'limit': 3
+                        'limit': 9
 
                     },
 
@@ -284,7 +288,7 @@ include("includes/footer.php");
 
                         $('.ajax-load').hide();
                         $('#infinite').append(data);
-                        flag += 3;
+                        flag += 9;
 
                     }
                 });
