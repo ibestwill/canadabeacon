@@ -13,7 +13,7 @@
 
             </p>
             <p style="font-size: 12px;">
-                &copy; 2017 传送门科技 All Rights Reserved.
+                © 2019 Canada Beacon Immigration Services All Rights Reserved.
             </p>
 
         </div><!-- row Ends -->

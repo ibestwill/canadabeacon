@@ -6,7 +6,7 @@
 
         <h4 style='border-bottom: solid orange 1px'>
             <!-- panel-title Starts -->
-            关于传送门
+            官方授权
         </h4>
         <!-- panel-title Ends -->
 
@@ -17,8 +17,12 @@
         <div id="home" class="tab-pane fade in active">
 
             <div class="panel-body">
-                <p>传送门是能够合法代理加拿大移民业务的合伙制事务所。我们专注于加拿大访问签证、留学签证、联邦和省提名移民等需求量大的签证和移民文案业务，把每一项业务做到极致，提交速度快，过签率高。
+
+                <p>"加国灯塔"是由加拿大官方认证（ICCRC）并由持牌移民顾问（RCIC）创办的移民事务所，专注于加拿大移民，签证和留学等申请。我们立志把每一项业务做到极致，快速高效，全程持牌顾问服务。
                 </p>
+                <p><!-- p Starts -->
+                    <img src="images/RCIC.png" class="img-responsive" style="margin: 0 auto">
+                </p><!-- p Ends -->
 
 
             </div>

@@ -13,7 +13,7 @@ include("functions/functions.php");
 
 <head>
 
-    <title>Hello World </title>
+    <title>加国灯塔</title>
 
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
 
@@ -22,6 +22,8 @@ include("functions/functions.php");
     <link href="styles/style.css" rel="stylesheet">
 
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/cb-logo.png" />
 
 </head>
 

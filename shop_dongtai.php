@@ -14,9 +14,8 @@ include("functions/functions.php");
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>传送门 CSM.WORLD </title>
+    <title> 加国灯塔 </title>
 
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
 
@@ -25,7 +24,8 @@ include("functions/functions.php");
     <link href="styles/style.css" rel="stylesheet">
 
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <link rel="shortcut icon" href="images/cb-logo.png" />
+
 
 </head>
 
@@ -42,30 +42,21 @@ include("functions/functions.php");
 
         <div class="container"><!-- container Starts -->
 
-            <div class="col-md-6 top-brand">
+            <div class="col-md-10 top-brand">
                 <a href="index" style="text-align:center"><!--- navbar navbar-brand home Starts -->
 
-                    <img src="images/logo-small.png" alt="csm logo" height="35">
+                    <img src="images/cb-dark-long.png" alt="cb logo" height="45">
 
                 </a><!--- navbar navbar-brand home Ends -->
 
             </div>
 
-            <div class="col-md-6 offer hidden-xs hidden-sm"><!-- col-md-6 Starts -->
+            <div class="col-md-2 offer hidden-xs hidden-sm"><!-- col-md-6 Starts -->
 
-                <ul class="menu"><!-- menu Starts -->
+                <ul class="list-inline"><!-- menu Starts -->
 
-                    <li>
-                        <a class="right" href="contact.php"><!-- btn btn-primary navbar-btn right Starts -->
-
-
-                            <i class="fa fa-phone-square fa-2x"></i>
-
-
-                        </a><!-- btn btn-primary navbar-btn right Ends -->
-
-                    </li>
-
+                    <li><a href="INDEX.php"><img src="images/CANADA.png" height="35"></a></li>
+                    <li><a href="shop_dongtai.php"><img src="images/CHINA.png" height="35"></a></li>
                 </ul><!-- menu Ends -->
 
             </div><!-- col-md-6 Ends -->
@@ -112,7 +103,6 @@ include("functions/functions.php");
                     <li>
                         <a href="shop_liuxue.php"> 留学 </a>
                     </li>
-
 
                     <li>
                         <a href="shop_bibei.php"> 百科 </a>

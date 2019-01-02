@@ -9,34 +9,24 @@
 
         <div class="container"><!-- container Starts -->
 
-            <div class="col-md-6 top-brand">
+            <div class="col-md-10 top-brand">
                 <a href="index" style="text-align:center"><!--- navbar navbar-brand home Starts -->
 
-                    <img src="images/logo-small.png" alt="csm logo" height="35">
+                    <img src="images/cb-dark-long.png" alt="cb logo" height="45">
 
                 </a><!--- navbar navbar-brand home Ends -->
 
             </div>
 
-            <div class="col-md-6 offer hidden-xs hidden-sm"><!-- col-md-6 Starts -->
+            <div class="col-md-2 offer hidden-xs hidden-sm"><!-- col-md-6 Starts -->
 
-                <ul class="menu"><!-- menu Starts -->
+                <ul class="list-inline"><!-- menu Starts -->
 
-                    <li>
-                        <a class="right" href="contact.php"><!-- btn btn-primary navbar-btn right Starts -->
-
-
-                            <i class="fa fa-phone-square fa-2x"></i>
-
-
-                        </a><!-- btn btn-primary navbar-btn right Ends -->
-
-                    </li>
-
+                    <li><a href="INDEX.php"><img src="images/CANADA.png" height="35"></a></li>
+                    <li><a href="shop_dongtai.php"><img src="images/CHINA.png" height="35"></a></li>
                 </ul><!-- menu Ends -->
 
             </div><!-- col-md-6 Ends -->
-
 
         </div><!-- container Ends -->
     </div><!-- top Ends -->
@@ -79,7 +69,6 @@
                     <li>
                         <a href="shop_liuxue.php"> 留学 </a>
                     </li>
-
 
                     <li>
                         <a href="shop_bibei.php"> 百科 </a>

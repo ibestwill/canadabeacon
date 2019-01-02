@@ -11,7 +11,7 @@ include("functions/functions.php");
 <html>
 
     <head>
-        <title>传送门 CSM.WORLD</title>
+        <title>加国灯塔</title>
 
         <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet" >
 
@@ -20,7 +20,8 @@ include("functions/functions.php");
         <link href="styles/style.css" rel="stylesheet">
 
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="shortcut icon" href="images/favicon.ico" />
+        <link rel="shortcut icon" href="images/cb-logo.png" />
+
 
     </head>
 
@@ -37,30 +38,21 @@ include("functions/functions.php");
 
             <div class="container"><!-- container Starts -->
 
-                <div class="col-md-6 top-brand">
+                <div class="col-md-10 top-brand">
                     <a href="index" style="text-align:center"><!--- navbar navbar-brand home Starts -->
 
-                        <img src="images/logo-small.png" alt="csm logo" height="35">
+                        <img src="images/cb-dark-long.png" alt="cb logo" height="45">
 
                     </a><!--- navbar navbar-brand home Ends -->
 
                 </div>
 
-                <div class="col-md-6 offer hidden-xs hidden-sm"><!-- col-md-6 Starts -->
+                <div class="col-md-2 offer hidden-xs hidden-sm"><!-- col-md-6 Starts -->
 
-                    <ul class="menu"><!-- menu Starts -->
+                    <ul class="list-inline"><!-- menu Starts -->
 
-                        <li>
-                            <a class="right" href="contact.php"><!-- btn btn-primary navbar-btn right Starts -->
-
-
-                                <i class="fa fa-phone-square fa-2x"></i>
-
-
-                            </a><!-- btn btn-primary navbar-btn right Ends -->
-
-                        </li>
-
+                        <li><a href="INDEX.php"><img src="images/CANADA.png" height="35"></a></li>
+                        <li><a href="shop_dongtai.php"><img src="images/CHINA.png" height="35"></a></li>
                     </ul><!-- menu Ends -->
 
                 </div><!-- col-md-6 Ends -->
@@ -136,7 +128,7 @@ include("functions/functions.php");
                         <br>
                         <br>
 
-                        <p>加拿大有丰富的教育资源，留学加拿大既可以学到专业的知识同时也能提高英语甚至法语水平，一举多得。传送门会针对您的个性化需求，为您筛选出优秀的教育机构，并提供完备的申请方案。</p>
+                        <p>加拿大有丰富的教育资源，留学加拿大既可以学到专业的知识同时也能提高英语甚至法语水平，一举多得。我们会针对您的个性化需求，为您筛选出优秀的教育机构，并提供完备的申请方案。</p>
 
                     </div>
 

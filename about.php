@@ -4,14 +4,15 @@
 
 <head>
 
-    <title>传送门 CSM.WORLD </title>
+    <title>加国灯塔</title>
 
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
     <link href="styles/bootstrap.min.css" rel="stylesheet">
     <link href="store/css/style.css" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <link rel="shortcut icon" href="images/cb-logo.png" />
+
 
 </head>
 
@@ -46,7 +47,7 @@ include("includes/header.php");
 
 
                 <blockquote>
-                    <p class="lead"> 传送门的使命是用完美主义精神，将每一项业务做到极致，把客户对美好生活的向往变成现实。 </p>
+                    <p class="lead"> 加国灯塔的使命是用完美主义精神，将每一项业务做到极致，把客户对美好生活的向往变成现实。 </p>
 
                     <p class="lead"> 我们立志打破移民留学难的局面，让更多的人可以自由迁徙和选择人生！</p>
 
@@ -59,7 +60,7 @@ include("includes/header.php");
             <!-- About Section Ends -->
 
             <div>
-                <img src="images\Vision-Mission-Values-logo.png" style="margin: auto"
+                <img src="images\cb-dark-medium.png" style="margin: auto"
                      class="img-responsive">
             </div>
 

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>传送门 CSM.WORLD </title>
+    <title>Canada Beacon Immigration Services</title>
 
     <!-- Bootstrap -->
     <link href="store/css/bootstrap.min.css" rel="stylesheet">
@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="store/css/plugin/magnific-popup.css">
     <link rel="stylesheet" href="store/css/plugin/nivo-lightbox.css">
     <link rel="stylesheet" href="store/css/themes/default/default.css">
+    <link rel="shortcut icon" href="images/cb-logo.png" />
+
 
 
     <!-- Custom Fonts -->
@@ -46,7 +48,7 @@
             </button>
             <a class="navbar-brand page-scroll" href="#home">
   					<span class="logo">
-  						<img src="store/images/csm_logo_long_white.png" height="45">
+  						<img src="images/cb-dark-long.png" height="45">
   					</span>
             </a>
         </div><!--navbar-header Ends-->
@@ -54,10 +56,9 @@
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
             <!-- nav navbar-nav Starts-->
             <ul class="nav navbar-nav">
-                <li><a href="shop_dongtai.php">动态</a></li>
-                <li><a href="shop_yimin.php">移民</a></li>
-                <li><a href="shop_qianzheng.php">签证</a></li>
-                <li><a href="shop_liuxue.php">留学</a></li>
+                <li><a href="INDEX.php"><img src="images/CANADA.png" height="35"></a></li>
+                <li><a href="shop_dongtai.php"><img src="images/CHINA.png" height="35"></a></li>
+
 
             </ul>
             <!-- nav navbar-nav Ends-->
@@ -75,16 +76,16 @@
         <!-- slides-container Starts-->
         <ul class="slides-container">
 
-            <!-- slide 2 Starts-->
-            <li>
-                <img src="store/images/slides/2.jpg">
-            </li>
-            <!-- slide 2 Ends-->
-
-
             <!-- slide 1 Starts-->
             <li>
                 <img src="store/images/slides/1.jpg">
+            </li>
+            <!-- slide 1 Ends-->
+
+
+            <!-- slide 2 Starts-->
+            <li>
+                <img src="store/images/slides/2.jpg">
 
                 <section id="counter" class="counter-section usp hidden-xs ">
                     <div class="container">
@@ -93,31 +94,30 @@
                             <!-- row starts -->
                             <div class="col-md-12">
                                 <!-- col-md-12 starts -->
-                                <div class="title">加拿大移民局授权认证</div>
-                                <div class="title-desc">海外专业团队，为您的移民留学计划保驾护航</div>
+                                <div class="title">FAMILY SPONSORSHIP</div>
 
                             </div>
                             <!-- col-md-12 Ends -->
 
-                            <div class="col-sm-3 counter-wrap wow fadeInUp" data-wow-offset="10">
-                                <strong><span class="timer">64</span>+</strong>
+<!--                            <div class="col-sm-3 counter-wrap wow fadeInUp" data-wow-offset="10">
+                                <strong><span class="timer">1</span></strong>
                                 <span class="count-description">移民项目</span>
                             </div>
 
                             <div class="col-sm-3 counter-wrap wow fadeInUp" data-wow-offset="10">
-                                <strong><span class="timer">200</span>+</strong>
-                                <span class="count-description">学校申请</span>
+                                <strong><span class="timer">2</span></strong>
+                                <span class="count-description">难民申请</span>
                             </div>
 
                             <div class="col-sm-3 counter-wrap wow fadeInUp" data-wow-offset="10">
-                                <strong><span class="timer">60</span>+</strong>
+                                <strong><span class="timer">3</span></strong>
                                 <span class="count-description">签证项目</span>
                             </div>
 
                             <div class="col-sm-3 counter-wrap wow fadeInUp" data-wow-offset="10">
-                                <strong><span class="timer">99</span>.9%+</strong>
-                                <span class="count-description">成功案例</span>
-                            </div>
+                                <strong><span class="timer">4</span></strong>
+                                <span class="count-description">公民申请</span>
+                            </div>-->
 
                         </div>
                         <!-- row Ends -->
@@ -127,8 +127,86 @@
                 <!-- Portfolio Counter Section Ends  -->
 
             </li>
-            <!-- slide 1 Ends -->
+            <!-- slide 2 Ends -->
 
+            <!-- slide 3 Starts-->
+            <li>
+                <img src="store/images/slides/3.jpg">
+
+                <section id="counter" class="counter-section usp hidden-xs ">
+                    <div class="container">
+                        <!-- container Starts -->
+                        <div class="row text-center">
+                            <!-- row starts -->
+                            <div class="col-md-12">
+                                <!-- col-md-12 starts -->
+                                <div class="title">BUSINESS IMMIGRATION</div>
+
+                            </div>
+
+
+                        </div>
+                        <!-- row Ends -->
+                    </div>
+                    <!-- container Ends -->
+                </section>
+                <!-- Portfolio Counter Section Ends  -->
+
+            </li>
+            <!-- slide 3 Ends -->
+
+
+            <!-- slide 4 Starts-->
+            <li>
+                <img src="store/images/slides/4.jpg">
+
+                <section id="counter" class="counter-section usp hidden-xs ">
+                    <div class="container">
+                        <!-- container Starts -->
+                        <div class="row text-center">
+                            <!-- row starts -->
+                            <div class="col-md-12">
+                                <!-- col-md-12 starts -->
+                                <div class="title">PROVINCIAL NOMINEE</div>
+
+                            </div>
+
+
+                        </div>
+                        <!-- row Ends -->
+                    </div>
+                    <!-- container Ends -->
+                </section>
+                <!-- Portfolio Counter Section Ends  -->
+
+            </li>
+            <!-- slide 4 Ends -->
+
+            <!-- slide 5 Starts-->
+            <li>
+                <img src="store/images/slides/5.jpg">
+
+                <section id="counter" class="counter-section usp hidden-xs ">
+                    <div class="container">
+                        <!-- container Starts -->
+                        <div class="row text-center">
+                            <!-- row starts -->
+                            <div class="col-md-12">
+                                <!-- col-md-12 starts -->
+                                <div class="title">STUDY IN CANADA</div>
+
+                            </div>
+
+
+                        </div>
+                        <!-- row Ends -->
+                    </div>
+                    <!-- container Ends -->
+                </section>
+                <!-- Portfolio Counter Section Ends  -->
+
+            </li>
+            <!-- slide 5 Ends -->
 
         </ul>
         <!-- slides-container Ends-->
@@ -143,8 +221,8 @@
     <div class="container"><!-- container Starts -->
         <div class="row text-center"><!-- Row Starts -->
             <div class="col-md-12"><!-- col-md-12 Starts -->
-                <a href="shop_liuxue.php"><h2>移民传送门</h2></a>
-                <h3 class="caption gray">加拿大各类移民途径及移民服务项目</h3>
+                <a href="shop_liuxue.php"><h2>IMMIGRATION</h2></a>
+                <h3 class="caption gray">Promote the successful integration of our customers into Canada</h3>
             </div><!-- col-md-12 Ends -->
             <div class="container"><!-- container Starts -->
                 <div class="row text-center"><!-- row Starts -->
@@ -152,7 +230,7 @@
                     <div class="col-md-4"><!-- col-md-4 Starts -->
                         <div class="row services-item text-center wow flipInX" data-wow-offset="20">
                             <i class="fa fa-fighter-jet fa-3x"></i>
-                            <h4>快速通道</h4>
+                            <h4>EXPRESS ENTRY</h4>
                             <p></p>
                         </div>
                     </div><!-- col-md-4 Ends -->
@@ -160,7 +238,7 @@
                     <div class="col-md-4"><!-- col-md-4 Starts -->
                         <div class="row services-item text-center wow flipInX" data-wow-offset="20">
                             <i class="fa fa-money fa-3x"></i>
-                            <h4>投资移民</h4>
+                            <h4>BUSINESS INVESTOR</h4>
                             <p></p>
                         </div>
                     </div><!-- col-md-4 Ends -->
@@ -168,7 +246,7 @@
                     <div class="col-md-4"><!-- col-md-4 Starts -->
                         <div class="row services-item text-center wow flipInX" data-wow-offset="20">
                             <i class="fa fa-flask fa-3x"></i>
-                            <h4>技术移民</h4>
+                            <h4>SKILLED WORKER</h4>
                             <p></p>
                         </div>
                     </div><!-- col-md-4 Ends -->
@@ -176,7 +254,7 @@
                     <div class="col-md-4"><!-- col-md-4 Starts -->
                         <div class="row services-item text-center wow flipInX" data-wow-offset="20">
                             <i class="fa fa-users fa-3x"></i>
-                            <h4>家庭团聚</h4>
+                            <h4>FAMILY SPONSORSHIP</h4>
                             <p></p>
                         </div>
                     </div><!-- col-md-4 Ends -->
@@ -184,7 +262,7 @@
                     <div class="col-md-4"><!-- col-md-4 Starts -->
                         <div class="row services-item text-center wow flipInX" data-wow-offset="20">
                             <i class="fa fa-list-ol fa-3x"></i>
-                            <h4>经验类移民</h4>
+                            <h4>EXPERIENCE CLASS</h4>
                             <p></p>
                         </div>
                     </div><!-- col-md-4 Ends -->
@@ -192,7 +270,7 @@
                     <div class="col-md-4"><!-- col-md-4 Starts -->
                         <div class="row services-item text-center wow flipInX" data-wow-offset="20">
                             <i class="fa fa-flag-checkered fa-3x"></i>
-                            <h4>省提名</h4>
+                            <h4>PROVINCIAL NOMINEE</h4>
                             <p></p>
                         </div>
                     </div><!-- col-md-4 Ends -->
@@ -211,8 +289,8 @@
         <div class="row text-center"><!-- row Starts -->
 
             <div class="col-md-12"><!-- col-md-12 Starts -->
-                <a href="shop_qianzheng.php"><h2>签证传送门</h2></a>
-                <h3 class="caption white">加拿大各类签证类别及签证服务项目</h3>
+                <a href="shop_qianzheng.php"><h2>TEMPORARY RESIDENT VISA</h2></a>
+                <h3 class="caption white">Facilitate the entry of visitors, students and temporary workers</h3>
             </div><!-- col-md-12 Ends -->
         </div><!-- row Ends -->
     </div><!-- container Ends -->
@@ -223,7 +301,7 @@
             <div class="col-md-4"><!-- col-md-4 Starts -->
                 <div class="row services-item-dark text-center wow flipInX" data-wow-offset="20">
                     <i class="fa fa-hand-rock-o fa-3x"></i>
-                    <h4>超级签证</h4>
+                    <h4>VISITOR VISA</h4>
                     <p></p>
                 </div>
             </div><!-- col-md-4 Ends -->
@@ -231,7 +309,7 @@
             <div class="col-md-4"><!-- col-md-4 Starts -->
                 <div class="row services-item-dark text-center wow flipInX" data-wow-offset="20">
                     <i class="fa fa-graduation-cap fa-3x"></i>
-                    <h4>学生签证</h4>
+                    <h4>STUDY PERMIT</h4>
                     <p></p>
                 </div>
             </div><!-- col-md-4 Ends -->
@@ -239,7 +317,7 @@
             <div class="col-md-4"><!-- col-md-4 Starts -->
                 <div class="row services-item-dark text-center wow flipInX" data-wow-offset="20">
                     <i class="fa fa-newspaper-o fa-3x"></i>
-                    <h4>工作许可</h4>
+                    <h4>WORK PERMIT</h4>
                     <p></p>
                 </div>
             </div><!-- col-md-4 Ends -->
@@ -247,7 +325,7 @@
             <div class="col-md-4"><!-- col-md-4 Starts -->
                 <div class="row services-item-dark text-center wow flipInX" data-wow-offset="20">
                     <i class="fa fa-magic fa-3x"></i>
-                    <h4>LMIA评估</h4>
+                    <h4>LMIA APPLICATION</h4>
                     <p></p>
                 </div>
             </div><!-- col-md-4 Ends -->
@@ -256,7 +334,7 @@
             <div class="col-md-4"><!-- col-md-4 Starts -->
                 <div class="row services-item-dark text-center wow flipInX" data-wow-offset="20">
                     <i class="fa fa-gavel fa-3x"></i>
-                    <h4>上诉申请</h4>
+                    <h4>APPEAL</h4>
                     <p></p>
                 </div>
             </div><!-- col-md-4 Ends -->
@@ -264,7 +342,7 @@
             <div class="col-md-4"><!-- col-md-4 Starts -->
                 <div class="row services-item-dark text-center wow flipInX" data-wow-offset="20">
                     <i class="fa fa-refresh fa-3x"></i>
-                    <h4>签证恢复</h4>
+                    <h4>STATUS RESTORATION</h4>
                     <p></p>
                 </div>
             </div><!-- col-md-4 Ends -->
@@ -281,8 +359,8 @@
     <div class="container"><!-- container Starts -->
         <div class="row text-center"><!-- Row Starts -->
             <div class="col-md-12"><!-- col-md-12 Starts -->
-                <a href="shop_liuxue.php"><h2>留学传送门</h2></a>
-                <h3 class="caption gray">加拿大各类院校及留学服务项目</h3>
+                <a href="shop_liuxue.php"><h2>EDUCATION</h2></a>
+                <h3 class="caption gray">Offer you many excellent opportunities for a top-notch overseas education</h3>
             </div><!-- col-md-12 Ends -->
             <div class="container"><!-- container Starts -->
                 <div class="row text-center"><!-- row Starts -->
@@ -290,7 +368,7 @@
                     <div class="col-md-4"><!-- col-md-4 Starts -->
                         <div class="row services-item text-center wow flipInX" data-wow-offset="20">
                             <i class="fa fa-pencil-square-o fa-3x"></i>
-                            <h4>博士项目</h4>
+                            <h4>PHD/MASTER</h4>
                             <p></p>
                         </div>
                     </div><!-- col-md-4 Ends -->
@@ -298,7 +376,7 @@
                     <div class="col-md-4"><!-- col-md-4 Starts -->
                         <div class="row services-item text-center wow flipInX" data-wow-offset="20">
                             <i class="fa fa-balance-scale fa-3x"></i>
-                            <h4>研究生项目</h4>
+                            <h4>POSTGRADUATE</h4>
                             <p></p>
                         </div>
                     </div><!-- col-md-4 Ends -->
@@ -306,7 +384,7 @@
                     <div class="col-md-4"><!-- col-md-4 Starts -->
                         <div class="row services-item text-center wow flipInX" data-wow-offset="20">
                             <i class="fa fa-book fa-3x"></i>
-                            <h4>本科项目</h4>
+                            <h4>UNDERGRADUATE</h4>
                             <p></p>
                         </div>
                     </div><!-- col-md-4 Ends -->
@@ -314,7 +392,7 @@
                     <div class="col-md-4"><!-- col-md-4 Starts -->
                         <div class="row services-item text-center wow flipInX" data-wow-offset="20">
                             <i class="fa fa-wrench fa-3x"></i>
-                            <h4>专业技校</h4>
+                            <h4>SECONDARY</h4>
                             <p></p>
                         </div>
                     </div><!-- col-md-4 Ends -->
@@ -322,7 +400,7 @@
                     <div class="col-md-4"><!-- col-md-4 Starts -->
                         <div class="row services-item text-center wow flipInX" data-wow-offset="20">
                             <i class="fa fa-futbol-o fa-3x"></i>
-                            <h4>高中申请</h4>
+                            <h4>INTERMEDIATE</h4>
                             <p></p>
                         </div>
                     </div><!-- col-md-4 Ends -->
@@ -330,7 +408,7 @@
                     <div class="col-md-4"><!-- col-md-4 Starts -->
                         <div class="row services-item text-center wow flipInX" data-wow-offset="20">
                             <i class="fa fa-child fa-3x"></i>
-                            <h4>初中小学</h4>
+                            <h4>ELEMENTARY</h4>
                             <p></p>
                         </div>
                     </div><!-- col-md-4 Ends -->
@@ -341,7 +419,7 @@
     </div><!-- container Ends -->
 </section>
 <!-- 留学 Section Ends -->
-
+-->
 
 <!--  联系我们 Section Starts -->
 <section class="liuxue content-section" id="liuxue">
@@ -350,7 +428,7 @@
 
         <div class="col-md-12">
             <a href="contact.php">
-                <img src="store/images/logo.png" width="100" class="img-responsive">
+                <img src="images/cb-dark-long.png" width="300" class="img-responsive">
             </a>
         </div>
 
@@ -359,7 +437,7 @@
 
         <div class="col-md-12"><!-- col-md-12 Starts -->
 
-            <a href="contact.php"><h2 align="center">联系我们</h2></a>
+            <a href="contact.php"><h2 align="center"></h2></a>
 
         </div><!-- col-md-12 Ends -->
 
@@ -372,17 +450,18 @@
         <div class="row"><!-- row Starts  -->
             <div class="col-md-12 text-center">
                 <p>
-                    <a href="about.php">关于我们</a>
+                    <a href="about.php">ABOUT US</a>
                     |
-                    <a href="contact.php">联系我们</a>
+                    <a href="contact.php">CONTACT US</a>
                     |
-                    <a href="hiring.php">招贤纳士</a>
+                    <a href="hiring.php">JOB OPPORTUNITIES</a>
 
                 </p>
             </div>
 
             <div class="col-md-12 text-center">
-                &copy; 2017 传送门科技 All Rights Reserved.
+               <p>Copyright &copy; 2019 Canada Beacon Immigration Services.</p>
+                <p>All Rights Reserved.</p>
             </div>
         </div><!-- row Ends  -->
 
