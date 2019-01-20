@@ -10,7 +10,17 @@ include("functions/functions.php");
 <!DOCTYPE html>
 <html>
 
+
     <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+
         <title>加国灯塔</title>
 
         <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet" >
@@ -27,108 +37,26 @@ include("functions/functions.php");
 
     <body>
 
-    <!--nav-->
-    <div class="navbar navbar-default navbar-fixed-top" id="navbar"><!-- navbar navbar-default Starts -->
+    <?php
 
-        <!--red line-->
-        <div id="header"></div>
+    include("includes/header.php");
 
-        <!--logo + contact-->
-        <div id="top"><!-- top Starts -->
-
-            <div class="container"><!-- container Starts -->
-
-                <div class="col-md-10 top-brand">
-                    <a href="index" style="text-align:center"><!--- navbar navbar-brand home Starts -->
-
-                        <img src="images/cb-dark-long.png" alt="cb logo" height="45">
-
-                    </a><!--- navbar navbar-brand home Ends -->
-
-                </div>
-
-                <div class="col-md-2 offer hidden-xs hidden-sm"><!-- col-md-6 Starts -->
-
-                    <ul class="list-inline"><!-- menu Starts -->
-
-                        <li><a href="INDEX.php"><img src="images/CANADA.png" height="35"></a></li>
-                        <li><a href="shop_dongtai.php"><img src="images/CHINA.png" height="35"></a></li>
-                    </ul><!-- menu Ends -->
-
-                </div><!-- col-md-6 Ends -->
-
-
-            </div><!-- container Ends -->
-        </div><!-- top Ends -->
-
-
-        <div class="container"><!-- container Starts -->
-
-            <div class="navbar-header"><!-- navbar-header Starts -->
-
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
-
-                    <span class="sr-only">Toggle Navigation </span>
-
-                    <i class="fa fa-align-justify"></i>
-
-                </button>
-
-
-            </div><!-- navbar-header Ends -->
-
-
-            <div class="navbar-collapse collapse" id="navigation"><!-- navbar-collapse collapse Starts -->
-
-                <div class="padding-nav"><!-- padding-nav Starts -->
-
-                    <ul class="nav nav-pills card-header-pills nav-justified"><!-- nav navbar-nav navbar-left Starts -->
-
-                        <li>
-                            <a href="shop_dongtai.php"> 动态 </a>
-                        </li>
-
-                        <li>
-                            <a href="shop_yimin.php"> 移民 </a>
-                        </li>
-
-                        <li>
-                            <a href="shop_qianzheng.php"> 签证 </a>
-                        </li>
-
-                        <li id="nav">
-                            <a href="shop_liuxue.php"> 留学 </a>
-                        </li>
-
-
-                        <li>
-                            <a href="shop_bibei.php"> 百科 </a>
-                        </li>
-
-
-                    </ul><!-- nav navbar-nav navbar-left Ends -->
-
-                </div><!-- padding-nav Ends -->
-
-            </div><!-- navbar-collapse collapse Ends -->
-
-        </div><!-- container Ends -->
-    </div><!-- navbar navbar-default Ends -->
+    ?>
 
 
         <div id="content" ><!-- content Starts -->
             <div class="container" ><!-- container Starts -->
 
 
-                <div class="col-md-12" ><!-- col-md-9 Starts --->
+                <div class="col-md-12" ><!-- col-md-12 Starts --->
 
                     <div class='box effect1'>
 
-                        <h1>留学申请</h1>
+                        <h1>移民申请</h1>
                         <br>
                         <br>
 
-                        <p>加拿大有丰富的教育资源，留学加拿大既可以学到专业的知识同时也能提高英语甚至法语水平，一举多得。我们会针对您的个性化需求，为您筛选出优秀的教育机构，并提供完备的申请方案。</p>
+                        <p>传送门将为每位客户量身选择最适合您的移民申请方案，提供包含移民信息咨询，资料准备，移民申请的一站式服务。团队专业的移民顾问常年居住在加拿大，对于客户的问题我们会给予最地道的解答和专业的指导。</p>
 
                     </div>
 
@@ -136,12 +64,13 @@ include("functions/functions.php");
 
                     <div class="row" id="Products" ><!-- row Starts -->
 
-                        <?php getStudy('p_cat_id=3'); ?>
+                        <?php getImmigration('p_cat_id=1'); ?>
 
                     </div><!-- row Ends -->
 
 
-                </div><!-- col-md-9 Ends --->
+                </div><!-- col-md-12 Ends --->
+
 
 
                 <div id="wait" style="position:absolute;top:40%;left:45%;padding:100px;padding-top:200px;"><!--- wait Starts -->

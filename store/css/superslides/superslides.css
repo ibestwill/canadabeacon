@@ -10,7 +10,7 @@
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
-  background: rgba(54, 53, 54, .30);
+  background: rgba(54, 53, 54, .50);
   min-width:500px;
   width:100%;
 }

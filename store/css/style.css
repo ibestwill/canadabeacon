@@ -94,86 +94,57 @@ a:focus {
     font-family: "Microsoft Yahei", STXihei, Tahoma, Helvetica, Arial, sans-serif;
     text-shadow: 1px 1px black;
     text-align: center;
-    padding-top: 10px;
+    padding: 10px;
 }
 
-.title-desc{
-    font-family: "Microsoft Yahei", STXihei, Tahoma, Helvetica, Arial, sans-serif;
-    font-size:30px;
-    text-shadow: 1px 1px grey;
-    color:whitesmoke;
-    padding-bottom: 20px;
-}
-
-@media only screen and (max-width: 480px) {
-    .title {
-        min-width: 280px;
-        width: 100%;
-    }
-
-    .title-desc {
-        font-size: 12px;
-        width: 100%;
-        min-width: 310px;
-    }
-
-}
-
-@media (max-width: 776px) {
-    .title {
-        font-size: 25px;
-        margin-top: 25%;
-    }
-
-    .title-desc {
-        font-size: 12px;
-    }
-}
 
 @media only screen and (max-width: 992px) {
     .title {
-        margin-top: 70px;
+        font-size:50px;
+
     }
 }
 
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 776px) {
     .title {
-        min-width: 280px;
-        width: 100%;
-    }
+        font-size:40px;
 
-    .title-desc {
-        font-size: 12px;
-        width: 100%;
-        min-width: 310px;
-    }
-}
-
-@media only screen and (max-width: 511px) {
-    .title {
-        min-width: 280px;
-        width: 100%;
-    }
-
-    .title-desc {
-        font-size: 12px;
-        width: 100%;
-        min-width: 310px;
     }
 }
 
 @media only screen and (max-width: 617px) {
     .title {
-        min-width: 280px;
-        width: 100%;
-    }
+        font-size:30px;
 
-    .title-desc {
-        font-size: 12px;
-        width: 100%;
-        min-width: 310px;
     }
 }
+
+
+@media only screen and (max-width: 511px) {
+    .title {
+        font-size:25px;
+
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .title {
+        font-size:25px;
+
+    }
+}
+
+
+@media only screen and (max-width: 440px) {
+    .title {
+        font-size:25px;
+
+    }
+}
+
+
+
+
 
 .buffer-twenty {
     margin: 20px 0;
@@ -294,7 +265,8 @@ blockquote span {
     padding: 10px 0;
     margin-bottom: 0;
     font-size:25px;
-    font-family:"Microsoft Yahei", Tahoma, Helvetica, Arial, sans-serif
+    font-family:"Microsoft Yahei", Tahoma, Helvetica, Arial, sans-serif;
+
 }
 
 .navbar-custom .navbar-brand:focus {
@@ -363,6 +335,7 @@ blockquote span {
 .navbar-custom .fa-bars {
     color: #fff;
 }
+
 
 /* 4: Main Slider */
 

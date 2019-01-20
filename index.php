@@ -1,504 +1,270 @@
+<?php
+
+session_start();
+
+include("includes/db.php");
+
+include("functions/functions.php");
+
+
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Canada Beacon Immigration Services</title>
 
-    <!-- Bootstrap -->
-    <link href="store/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="store/css/style.css">
-    <link rel="stylesheet" href="store/css/font-awesome.min.css">
-    <link rel="stylesheet" href="store/css/superslides/superslides.css">
-    <link rel="stylesheet" href="store/css/fancybox/jquery.fancybox.css">
-    <link rel="stylesheet" href="store/css/plugin/animate.css">
-    <link rel="stylesheet" href="store/css/plugin/owl.carousel.css">
-    <link rel="stylesheet" href="store/css/plugin/owl.theme.css">
-    <link rel="stylesheet" href="store/css/plugin/owl.transitions.css">
-    <link rel="stylesheet" href="store/css/plugin/magnific-popup.css">
-    <link rel="stylesheet" href="store/css/plugin/nivo-lightbox.css">
-    <link rel="stylesheet" href="store/css/themes/default/default.css">
+
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title> 加国灯塔 </title>
+
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
+
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
+
+    <link href="styles/style.css" rel="stylesheet">
+
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/cb-logo.png" />
 
 
-
-    <!-- Custom Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Raleway:100,600' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.min.js"></script>
-    <script src="js/respond.min.js"></script>
-
-    <![endif]-->
 </head>
-<body id="home">
 
-<!--Navigation Starts-->
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-    <div class="container"><!--Container Starts-->
-        <div class="navbar-header"><!--navbar-header Starts-->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                <i class="fa fa-bars fa-lg fa-fw"></i>
-            </button>
-            <a class="navbar-brand page-scroll" href="#home">
-  					<span class="logo">
-  						<img src="images/cb-dark-long.png" height="45">
-  					</span>
-            </a>
-        </div><!--navbar-header Ends-->
-        <!--collapse navbar-collapse navbar-right navbar-main-collapse Starts -->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-            <!-- nav navbar-nav Starts-->
-            <ul class="nav navbar-nav">
-                <li><a href="INDEX.php"><img src="images/CANADA.png" height="35"></a></li>
-                <li><a href="shop_dongtai.php"><img src="images/CHINA.png" height="35"></a></li>
+<body>
+
+<?php
+
+include("includes/header.php");
+
+?>
 
 
-            </ul>
-            <!-- nav navbar-nav Ends-->
-        </div><!--collapse navbar-collapse navbar-right navbar-main-collapse Ends -->
-    </div><!--Container Ends-->
-</nav>
-<!--Navigation ends-->
-
-
-<!--slider Starts-->
-<section id="home"><!--Home slider Starts-->
-    <!--section banner Starts-->
-    <div class="section banner" id="slides" data-slide="1">
-
-        <!-- slides-container Starts-->
-        <ul class="slides-container">
-
-            <!-- slide 1 Starts-->
-            <li>
-                <img src="store/images/slides/1.jpg">
-            </li>
-            <!-- slide 1 Ends-->
-
-
-            <!-- slide 2 Starts-->
-            <li>
-                <img src="store/images/slides/2.jpg">
-
-                <section id="counter" class="counter-section usp hidden-xs ">
-                    <div class="container">
-                        <!-- container Starts -->
-                        <div class="row text-center">
-                            <!-- row starts -->
-                            <div class="col-md-12">
-                                <!-- col-md-12 starts -->
-                                <div class="title">FAMILY SPONSORSHIP</div>
-
-                            </div>
-                            <!-- col-md-12 Ends -->
-
-<!--                            <div class="col-sm-3 counter-wrap wow fadeInUp" data-wow-offset="10">
-                                <strong><span class="timer">1</span></strong>
-                                <span class="count-description">移民项目</span>
-                            </div>
-
-                            <div class="col-sm-3 counter-wrap wow fadeInUp" data-wow-offset="10">
-                                <strong><span class="timer">2</span></strong>
-                                <span class="count-description">难民申请</span>
-                            </div>
-
-                            <div class="col-sm-3 counter-wrap wow fadeInUp" data-wow-offset="10">
-                                <strong><span class="timer">3</span></strong>
-                                <span class="count-description">签证项目</span>
-                            </div>
-
-                            <div class="col-sm-3 counter-wrap wow fadeInUp" data-wow-offset="10">
-                                <strong><span class="timer">4</span></strong>
-                                <span class="count-description">公民申请</span>
-                            </div>-->
-
-                        </div>
-                        <!-- row Ends -->
-                    </div>
-                    <!-- container Ends -->
-                </section>
-                <!-- Portfolio Counter Section Ends  -->
-
-            </li>
-            <!-- slide 2 Ends -->
-
-            <!-- slide 3 Starts-->
-            <li>
-                <img src="store/images/slides/3.jpg">
-
-                <section id="counter" class="counter-section usp hidden-xs ">
-                    <div class="container">
-                        <!-- container Starts -->
-                        <div class="row text-center">
-                            <!-- row starts -->
-                            <div class="col-md-12">
-                                <!-- col-md-12 starts -->
-                                <div class="title">BUSINESS IMMIGRATION</div>
-
-                            </div>
-
-
-                        </div>
-                        <!-- row Ends -->
-                    </div>
-                    <!-- container Ends -->
-                </section>
-                <!-- Portfolio Counter Section Ends  -->
-
-            </li>
-            <!-- slide 3 Ends -->
-
-
-            <!-- slide 4 Starts-->
-            <li>
-                <img src="store/images/slides/4.jpg">
-
-                <section id="counter" class="counter-section usp hidden-xs ">
-                    <div class="container">
-                        <!-- container Starts -->
-                        <div class="row text-center">
-                            <!-- row starts -->
-                            <div class="col-md-12">
-                                <!-- col-md-12 starts -->
-                                <div class="title">PROVINCIAL NOMINEE</div>
-
-                            </div>
-
-
-                        </div>
-                        <!-- row Ends -->
-                    </div>
-                    <!-- container Ends -->
-                </section>
-                <!-- Portfolio Counter Section Ends  -->
-
-            </li>
-            <!-- slide 4 Ends -->
-
-            <!-- slide 5 Starts-->
-            <li>
-                <img src="store/images/slides/5.jpg">
-
-                <section id="counter" class="counter-section usp hidden-xs ">
-                    <div class="container">
-                        <!-- container Starts -->
-                        <div class="row text-center">
-                            <!-- row starts -->
-                            <div class="col-md-12">
-                                <!-- col-md-12 starts -->
-                                <div class="title">STUDY IN CANADA</div>
-
-                            </div>
-
-
-                        </div>
-                        <!-- row Ends -->
-                    </div>
-                    <!-- container Ends -->
-                </section>
-                <!-- Portfolio Counter Section Ends  -->
-
-            </li>
-            <!-- slide 5 Ends -->
-
-        </ul>
-        <!-- slides-container Ends-->
-    </div>
-    <!-- section banner Ends-->
-</section><!--Home slider Ends-->
-<!--slider Ends-->
-
-
-<!-- 移民 Section Starts -->
-<section class="services content-section" id="qianzheng">
+<div id="content"><!-- content Starts -->
     <div class="container"><!-- container Starts -->
-        <div class="row text-center"><!-- Row Starts -->
-            <div class="col-md-12"><!-- col-md-12 Starts -->
-                <a href="shop_liuxue.php"><h2>IMMIGRATION</h2></a>
-                <h3 class="caption gray">Promote the successful integration of our customers into Canada</h3>
-            </div><!-- col-md-12 Ends -->
-            <div class="container"><!-- container Starts -->
-                <div class="row text-center"><!-- row Starts -->
-
-                    <div class="col-md-4"><!-- col-md-4 Starts -->
-                        <div class="row services-item text-center wow flipInX" data-wow-offset="20">
-                            <i class="fa fa-fighter-jet fa-3x"></i>
-                            <h4>EXPRESS ENTRY</h4>
-                            <p></p>
-                        </div>
-                    </div><!-- col-md-4 Ends -->
-
-                    <div class="col-md-4"><!-- col-md-4 Starts -->
-                        <div class="row services-item text-center wow flipInX" data-wow-offset="20">
-                            <i class="fa fa-money fa-3x"></i>
-                            <h4>BUSINESS INVESTOR</h4>
-                            <p></p>
-                        </div>
-                    </div><!-- col-md-4 Ends -->
-
-                    <div class="col-md-4"><!-- col-md-4 Starts -->
-                        <div class="row services-item text-center wow flipInX" data-wow-offset="20">
-                            <i class="fa fa-flask fa-3x"></i>
-                            <h4>SKILLED WORKER</h4>
-                            <p></p>
-                        </div>
-                    </div><!-- col-md-4 Ends -->
-
-                    <div class="col-md-4"><!-- col-md-4 Starts -->
-                        <div class="row services-item text-center wow flipInX" data-wow-offset="20">
-                            <i class="fa fa-users fa-3x"></i>
-                            <h4>FAMILY SPONSORSHIP</h4>
-                            <p></p>
-                        </div>
-                    </div><!-- col-md-4 Ends -->
-
-                    <div class="col-md-4"><!-- col-md-4 Starts -->
-                        <div class="row services-item text-center wow flipInX" data-wow-offset="20">
-                            <i class="fa fa-list-ol fa-3x"></i>
-                            <h4>EXPERIENCE CLASS</h4>
-                            <p></p>
-                        </div>
-                    </div><!-- col-md-4 Ends -->
-
-                    <div class="col-md-4"><!-- col-md-4 Starts -->
-                        <div class="row services-item text-center wow flipInX" data-wow-offset="20">
-                            <i class="fa fa-flag-checkered fa-3x"></i>
-                            <h4>PROVINCIAL NOMINEE</h4>
-                            <p></p>
-                        </div>
-                    </div><!-- col-md-4 Ends -->
-
-                </div><!-- row Ends -->
-            </div><!-- container Ends -->
-        </div><!-- Row Ends -->
-    </div><!-- container Ends -->
-</section>
-<!-- 移民 Section Ends -->
 
 
-<!--  签证 Section Starts -->
-<section class="liuxue content-section" id="liuxue">
-    <div class="container"><!-- container Starts -->
-        <div class="row text-center"><!-- row Starts -->
+        <div class="col-md-9"><!-- col-md-12 Starts --->
 
-            <div class="col-md-12"><!-- col-md-12 Starts -->
-                <a href="shop_qianzheng.php"><h2>TEMPORARY RESIDENT VISA</h2></a>
-                <h3 class="caption white">Facilitate the entry of visitors, students and temporary workers</h3>
-            </div><!-- col-md-12 Ends -->
-        </div><!-- row Ends -->
-    </div><!-- container Ends -->
 
-    <div class="container"><!-- container Starts -->
-        <div class="row text-center"><!-- row Starts -->
+            <canvas id="line-chart" width="auto" height="80" class="hidden-xs"></canvas>
 
-            <div class="col-md-4"><!-- col-md-4 Starts -->
-                <div class="row services-item-dark text-center wow flipInX" data-wow-offset="20">
-                    <i class="fa fa-hand-rock-o fa-3x"></i>
-                    <h4>VISITOR VISA</h4>
-                    <p></p>
+
+            <?php
+
+            $ee_labels = '[';
+            $ee_data = '[';
+            $ee_data_y = '[';
+
+
+            $get_entries = "select * from (select * from express_entry ORDER BY id DESC limit 12) sub ORDER BY id ASC";
+
+            $run_entries = mysqli_query($con, $get_entries);
+
+
+            while ($row_entries = mysqli_fetch_array($run_entries)) {
+
+
+                $ee_id = $row_entries['id'];
+
+                $ee_date = date('ymd',strtotime($row_entries['date']));
+
+
+                $ee_score = $row_entries['score'];
+
+                $ee_number = $row_entries['number'];
+
+
+
+                $ee_labels .= $ee_date . ', ';
+                $ee_data .= $ee_score . ', ';
+                $ee_data_y .= $ee_number . ', ';
+
+
+            }
+
+            $ee_labels .= ']';
+            $ee_data .= ']';
+            $ee_data_y .= ']';
+
+
+            ?>
+
+
+            <br>
+
+
+            <!--Load Product via Ajax infinite scroll-->
+            <div class="row" id="infinite"><!-- row Starts -->
+
+            </div><!-- row Ends -->
+
+
+
+
+
+            <div class="row"><!-- row Starts -->
+
+                <div class="ajax-load text-center" style="display:none">
+                    <p><img src="http://demo.itsolutionstuff.com/plugin/loader.gif">正在加载...</p>
                 </div>
-            </div><!-- col-md-4 Ends -->
 
-            <div class="col-md-4"><!-- col-md-4 Starts -->
-                <div class="row services-item-dark text-center wow flipInX" data-wow-offset="20">
-                    <i class="fa fa-graduation-cap fa-3x"></i>
-                    <h4>STUDY PERMIT</h4>
-                    <p></p>
-                </div>
-            </div><!-- col-md-4 Ends -->
-
-            <div class="col-md-4"><!-- col-md-4 Starts -->
-                <div class="row services-item-dark text-center wow flipInX" data-wow-offset="20">
-                    <i class="fa fa-newspaper-o fa-3x"></i>
-                    <h4>WORK PERMIT</h4>
-                    <p></p>
-                </div>
-            </div><!-- col-md-4 Ends -->
-
-            <div class="col-md-4"><!-- col-md-4 Starts -->
-                <div class="row services-item-dark text-center wow flipInX" data-wow-offset="20">
-                    <i class="fa fa-magic fa-3x"></i>
-                    <h4>LMIA APPLICATION</h4>
-                    <p></p>
-                </div>
-            </div><!-- col-md-4 Ends -->
+            </div><!-- row Ends -->
 
 
-            <div class="col-md-4"><!-- col-md-4 Starts -->
-                <div class="row services-item-dark text-center wow flipInX" data-wow-offset="20">
-                    <i class="fa fa-gavel fa-3x"></i>
-                    <h4>APPEAL</h4>
-                    <p></p>
-                </div>
-            </div><!-- col-md-4 Ends -->
 
-            <div class="col-md-4"><!-- col-md-4 Starts -->
-                <div class="row services-item-dark text-center wow flipInX" data-wow-offset="20">
-                    <i class="fa fa-refresh fa-3x"></i>
-                    <h4>STATUS RESTORATION</h4>
-                    <p></p>
-                </div>
-            </div><!-- col-md-4 Ends -->
-
-        </div><!-- row Ends -->
-    </div><!-- container Ends -->
-
-</section>
-<!--  签证 Section Ends -->
+        </div><!-- col-md-12 Ends --->
 
 
-<!-- 留学 Section Starts -->
-<section class="services content-section" id="qianzheng">
-    <div class="container"><!-- container Starts -->
-        <div class="row text-center"><!-- Row Starts -->
-            <div class="col-md-12"><!-- col-md-12 Starts -->
-                <a href="shop_liuxue.php"><h2>EDUCATION</h2></a>
-                <h3 class="caption gray">Offer you many excellent opportunities for a top-notch overseas education</h3>
-            </div><!-- col-md-12 Ends -->
-            <div class="container"><!-- container Starts -->
-                <div class="row text-center"><!-- row Starts -->
+        <div class="col-md-3">
+            <?php
 
-                    <div class="col-md-4"><!-- col-md-4 Starts -->
-                        <div class="row services-item text-center wow flipInX" data-wow-offset="20">
-                            <i class="fa fa-pencil-square-o fa-3x"></i>
-                            <h4>PHD/MASTER</h4>
-                            <p></p>
-                        </div>
-                    </div><!-- col-md-4 Ends -->
+            include("includes/sidebar.php");
 
-                    <div class="col-md-4"><!-- col-md-4 Starts -->
-                        <div class="row services-item text-center wow flipInX" data-wow-offset="20">
-                            <i class="fa fa-balance-scale fa-3x"></i>
-                            <h4>POSTGRADUATE</h4>
-                            <p></p>
-                        </div>
-                    </div><!-- col-md-4 Ends -->
+            ?>
 
-                    <div class="col-md-4"><!-- col-md-4 Starts -->
-                        <div class="row services-item text-center wow flipInX" data-wow-offset="20">
-                            <i class="fa fa-book fa-3x"></i>
-                            <h4>UNDERGRADUATE</h4>
-                            <p></p>
-                        </div>
-                    </div><!-- col-md-4 Ends -->
-
-                    <div class="col-md-4"><!-- col-md-4 Starts -->
-                        <div class="row services-item text-center wow flipInX" data-wow-offset="20">
-                            <i class="fa fa-wrench fa-3x"></i>
-                            <h4>SECONDARY</h4>
-                            <p></p>
-                        </div>
-                    </div><!-- col-md-4 Ends -->
-
-                    <div class="col-md-4"><!-- col-md-4 Starts -->
-                        <div class="row services-item text-center wow flipInX" data-wow-offset="20">
-                            <i class="fa fa-futbol-o fa-3x"></i>
-                            <h4>INTERMEDIATE</h4>
-                            <p></p>
-                        </div>
-                    </div><!-- col-md-4 Ends -->
-
-                    <div class="col-md-4"><!-- col-md-4 Starts -->
-                        <div class="row services-item text-center wow flipInX" data-wow-offset="20">
-                            <i class="fa fa-child fa-3x"></i>
-                            <h4>ELEMENTARY</h4>
-                            <p></p>
-                        </div>
-                    </div><!-- col-md-4 Ends -->
-
-                </div><!-- row Ends -->
-            </div><!-- container Ends -->
-        </div><!-- Row Ends -->
-    </div><!-- container Ends -->
-</section>
-<!-- 留学 Section Ends -->
--->
-
-<!--  联系我们 Section Starts -->
-<section class="liuxue content-section" id="liuxue">
-
-    <div class="container"><!-- container Starts  -->
-
-        <div class="col-md-12">
-            <a href="contact.php">
-                <img src="images/cb-dark-long.png" width="300" class="img-responsive">
-            </a>
         </div>
 
-        <br>
-        <br>
+        <div id="wait" style="position:absolute;top:40%;left:45%;padding:100px;padding-top:200px;"><!--- wait Starts -->
 
-        <div class="col-md-12"><!-- col-md-12 Starts -->
+        </div><!--- wait Ends -->
 
-            <a href="contact.php"><h2 align="center"></h2></a>
-
-        </div><!-- col-md-12 Ends -->
+    </div><!-- container Ends -->
+</div><!-- content Ends -->
 
 
-    </div><!-- container Ends  -->
+<?php
 
-    <!-- Footer Starts  -->
-    <footer>
+include("includes/footer.php");
 
-        <div class="row"><!-- row Starts  -->
-            <div class="col-md-12 text-center">
-                <p>
-                    <a href="about.php">ABOUT US</a>
-                    |
-                    <a href="contact.php">CONTACT US</a>
-                    |
-                    <a href="hiring.php">JOB OPPORTUNITIES</a>
+?>
 
-                </p>
-            </div>
+<script src="js/jquery.min.js"></script>
 
-            <div class="col-md-12 text-center">
-               <p>Copyright &copy; 2019 Canada Beacon Immigration Services.</p>
-                <p>All Rights Reserved.</p>
-            </div>
-        </div><!-- row Ends  -->
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/Chart.min.js"></script>
 
 
-        <div class="nav pull-right scroll-top"><!-- nav pull-right scroll-top Starts  -->
-            <a href="#home" title="Go To Top"><i class="fa fa-angle-up"></i></a>
-        </div><!-- nav pull-right scroll-top Ends  -->
-
-    </footer>
-    <!-- Footer Ends  -->
 
 
-</section>
-<!--  联系我们 Section Ends -->
+<script>
+
+    $(document).ready(function () {
+
+        var flag = 0;
+
+        $.ajax({
 
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            type: "GET",
+            url: "fetch.php",
+            data: {
+                'offset': 0,
+                'limit': 9
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="store/js/jquery/jquery.js"></script>
+            },
 
-<script src="store/js/bootstrap.min.js"></script>
-<script src="store/js/superslides/jquery.superslides.js"></script>
-<script src="store/js/script.js"></script>
-<script src="store/js/menu.js"></script>
-<script src="store/js/fancybox/jquery.fancybox.pack.js"></script>
-<script src="store/js/plugin/wow.min.js"></script>
-<script src="store/js/plugin/owl.carousel.min.js"></script>
+            success: function (data) {
+                $('#infinite').append(data);
+                flag += 9;
 
-<script src="store/js/plugin/jquery.magnific-popup.min.js"></script>
-<script src="store/js/plugin/nivo-lightbox.min.js"></script>
-<script src="store/js/plugin/jquery.countTo.js"></script>
-<script src="store/js/plugin/jquery.inview.min.js"></script>
-<script src="store/js/plugin/jquery.easing.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
-        async defer></script>
+            }
+        });
 
+        $(window).scroll(function () {
+
+            if ($(window).scrollTop() >= $(document).height() - $(window).height()) {
+
+                $.ajax({
+
+                    type: "GET",
+                    url: "fetch.php",
+                    data: {
+                        'offset': flag,
+                        'limit': 9
+
+                    },
+
+                    beforeSend: function () {
+                        $('.ajax-load').show();
+
+                    },
+
+                    success: function (data) {
+                        if (!$.trim(data)) {
+                            $('.ajax-load').html("—————— 我们是有底线的 ——————");
+                            return;
+                        }
+
+                        $('.ajax-load').hide();
+                        $('#infinite').append(data);
+                        flag += 9;
+
+                    }
+                });
+            }
+
+
+        });
+
+
+    });
+
+</script>
+
+
+<script>
+    new Chart(document.getElementById("line-chart"), {
+        type: 'bar',
+        data: {
+            labels:<?php echo $ee_labels; ?>,
+            datasets: [{
+                data: <?php echo $ee_data_y; ?>,
+                label: 'EE邀请人数',
+                yAxisID:'right-y-axis',
+                fill: false
+            },{
+                type:'line',
+                data: <?php echo $ee_data; ?>,
+                label:'EE邀请分数',
+                yAxisID:'left-y-axis',
+                borderColor: "#c45850"
+            }
+            ]
+        },
+        options: {
+            title: {
+                display: false,
+                text: 'Express Entry',
+                position:'left',
+                fontSize:12
+            },
+            legend: {
+                display: false
+            },
+            tooltips: {
+
+            },
+            scales:{
+                yAxes: [{
+                    id: 'left-y-axis',
+                    type: 'linear',
+                    position: 'left'
+                }, {
+                    id: 'right-y-axis',
+                    type: 'linear',
+                    position: 'right'
+                }]
+            }
+
+        }
+    });
+
+</script>
 
 </body>
+
 </html>

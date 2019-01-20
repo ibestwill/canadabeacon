@@ -22,8 +22,8 @@
 
                 <ul class="list-inline"><!-- menu Starts -->
 
-                    <li><a href="INDEX.php"><img src="images/CANADA.png" height="35"></a></li>
-                    <li><a href="shop_dongtai.php"><img src="images/CHINA.png" height="35"></a></li>
+                    <li><a href="ca.php"><img src="images/CANADA.png" height="35"></a></li>
+                    <li><a href="index.php"><img src="images/CHINA.png" height="35"></a></li>
                 </ul><!-- menu Ends -->
 
             </div><!-- col-md-6 Ends -->
@@ -55,23 +55,23 @@
                 <ul class="nav nav-pills card-header-pills nav-justified"><!-- nav navbar-nav navbar-left Starts -->
 
                     <li>
-                        <a href="shop_dongtai.php"> 动态 </a>
+                        <a href="index.php"> 动态 </a>
                     </li>
 
                     <li>
-                        <a href="shop_yimin.php"> 移民 </a>
+                        <a href="immigration.php"> 移民 </a>
                     </li>
 
                     <li>
-                        <a href="shop_qianzheng.php"> 签证 </a>
+                        <a href="visa.php"> 签证 </a>
                     </li>
 
                     <li>
-                        <a href="shop_liuxue.php"> 留学 </a>
+                        <a href="study.php"> 留学 </a>
                     </li>
 
                     <li>
-                        <a href="shop_bibei.php"> 百科 </a>
+                        <a href="wiki.php"> 百科 </a>
                     </li>
 
 

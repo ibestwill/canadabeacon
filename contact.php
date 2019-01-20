@@ -12,6 +12,12 @@ include("functions/functions.php");
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <title>加国灯塔</title>
 
@@ -40,12 +46,6 @@ include("includes/header.php");
 
     <div class="container"><!-- container Starts -->
 
-        <div class="col-md-12" id="container">
-
-
-
-
-        </div>
 
         <div class="col-md-12"><!-- col-md-12 Starts -->
 
@@ -240,48 +240,84 @@ include("includes/header.php");
 
         </div><!-- col-md-12 Ends -->
 
-        <div class="col-md-6"><!-- col-md-3 col-sm-6 Starts -->
+        <div class="col-md-12 hidden-lg"><!-- col-md-12 Starts -->
+
+
+                <div>
+                    <div class="col-md-4 box">
+
+                        <a href="#"><img src="images\wechat.png" class="img-responsive"></a>
+
+                    </div>
+
+                    <div class="col-md-4 box">
+
+                        <a href="#"><img src="images\phone.png" class="img-responsive"></a>
+
+                    </div>
+
+                    <div class="col-md-4 box">
+
+                        <a href="#"><img src="images\email.png" class="img-responsive"></a>
+
+                    </div>
+
+                </div>
+
+
+        </div><!-- col-md-12 Ends -->
+
+
+        <div class="col-md-12"><!-- col-md-3 col-sm-6 Starts -->
 
             <div class="box"><!-- box Starts -->
 
-                <div class="box-header"><!-- box-header Starts -->
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#china">中国</a></li>
+                    <li><a data-toggle="tab" href="#canada">加拿大</a></li>
 
-                    <h2>加拿大</h2>
+                </ul>
 
-                    <p><!-- p Starts -->
-                        <strong>Fredericton,NB</strong>
-                        <br>电话：+1 (506) 897-4321
-                        <br>地址：311-780 Montgomery Street，Fredericton, NB, Canada, E3B2Y1
-                        <br>
-                        <br>营业时间： 大西洋时区
-                        <br>周一至周五 9:00-18:00
-                        <br>周六和周日 10:30-17:00
-                    </p><!-- p Ends -->
+                <div class="tab-content">
+                    <div id="china" class="tab-pane fade in active">
 
-                </div><!-- box-header Ends -->
-            </div>
+                        <div class="panel-body">
+                            <!-- panel-body scroll-menu Starts -->
+                            <p><!-- p Starts -->
+                                <strong>上海</strong>
+                                <br>电话：+86 18616521681
+                                <br>地址：共和新路1968号
+                                <br>
+                                <br>营业时间：
+                                <br>周一至周五 9:00-18:00
+                                <br>周六和周日 9:30-17:00
+                            </p><!-- p Ends -->
 
-        </div><!-- col-md-3 col-sm-6 Ends -->
+                        </div>
+                    </div>
 
-        <div class="col-md-6"><!-- col-md-3 col-sm-6 Starts -->
 
-            <div class="box"><!-- box Starts -->
+                    <div id="canada" class="tab-pane fade">
+                        <!-- panel-collapse collapse-data starts -->
+                        <div class="panel-body">
+                            <!-- panel-body scroll-menu Starts -->
 
-                <div class="box-header"><!-- box-header Starts -->
+                            <p><!-- p Starts -->
+                                <strong>Fredericton,NB</strong>
+                                <br>PHONE：5068974321
+                                <br>ADDRESS：54 Reading Street，Fredericton, NB, Canada, E3B 6B9
+                                <br>
+                                <br>营业时间： 大西洋时区
+                                <br>周一至周五 9:00-18:00
+                                <br>周六和周日 10:30-17:00
+                            </p><!-- p Ends -->
 
-                    <h2>中国</h2>
 
-                    <p><!-- p Starts -->
-                        <strong>上海</strong>
-                        <br>电话：+86 18616521681
-                        <br>地址：共和新路1968号
-                        <br>
-                        <br>营业时间：
-                        <br>周一至周五 9:00-18:00
-                        <br>周六和周日 9:30-17:00
-                    </p><!-- p Ends -->
+                        </div>
+                        <!-- panel-body scroll-menu Ends -->
 
-                </div><!-- box-header Ends -->
+                        <!-- panel-collapse collapse-data Ends -->
+                    </div>
             </div>
 
         </div><!-- col-md-3 col-sm-6 Ends -->

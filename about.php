@@ -3,6 +3,13 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <title>加国灯塔</title>
 
@@ -47,9 +54,9 @@ include("includes/header.php");
 
 
                 <blockquote>
-                    <p class="lead"> 加国灯塔的使命是用完美主义精神，将每一项业务做到极致，把客户对美好生活的向往变成现实。 </p>
+                    <p class="lead"> 加国灯塔是由加拿大官方认证（ICCRC）并由持牌移民顾问（RCIC）创办的移民事务所。 </p>
 
-                    <p class="lead"> 我们立志打破移民留学难的局面，让更多的人可以自由迁徙和选择人生！</p>
+                    <p class="lead"> 我们的使命是用完美主义精神，将每一项业务做到极致，把客户对美好生活的向往变成现实；我们立志打破移民留学难的局面，让更多的人可以自由迁徙和选择人生！</p>
 
                     <p CLASS="lead"> 诚实守信，以客户和结果为导向，精益求精完成不论大小的每一件事，不辱使命，不负重托。 </p>
 

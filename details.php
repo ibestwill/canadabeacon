@@ -90,6 +90,14 @@ if ($check_product == 0) {
     <html>
 
     <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>加国灯塔</title>
 
         <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
@@ -118,7 +126,7 @@ if ($check_product == 0) {
             <div class="container"><!-- container Starts -->
 
                 <div class="col-md-10 top-brand">
-                    <a href="index" style="text-align:center"><!--- navbar navbar-brand home Starts -->
+                    <a href="index.php" style="text-align:center"><!--- navbar navbar-brand home Starts -->
 
                         <img src="images/cb-dark-long.png" alt="cb logo" height="45">
 
@@ -131,7 +139,7 @@ if ($check_product == 0) {
                     <ul class="list-inline"><!-- menu Starts -->
 
                         <li><a href="INDEX.php"><img src="images/CANADA.png" height="35"></a></li>
-                        <li><a href="shop_dongtai.php"><img src="images/CHINA.png" height="35"></a></li>
+                        <li><a href="index.php"><img src="images/CHINA.png" height="35"></a></li>
                     </ul><!-- menu Ends -->
 
 
@@ -165,24 +173,24 @@ if ($check_product == 0) {
                     <ul class="nav nav-pills card-header-pills nav-justified"><!-- nav navbar-nav navbar-left Starts -->
 
                         <li <?php if ($p_cat_title == "动态") {echo 'id="nav"';} ?>>
-                            <a href="shop_dongtai.php"> 动态 </a>
+                            <a href="index.php"> 动态 </a>
                         </li>
 
                         <li <?php if ($p_cat_title == "移民") {echo 'id="nav"';} ?>>
-                            <a href="shop_yimin.php"> 移民 </a>
+                            <a href="immigration.php"> 移民 </a>
                         </li>
 
                         <li <?php if ($p_cat_title == "签证") {echo 'id="nav"';} ?>>
-                            <a href="shop_qianzheng.php"> 签证 </a>
+                            <a href="visa.php"> 签证 </a>
                         </li>
 
                         <li <?php if ($p_cat_title == "留学") {echo 'id="nav"';} ?>>
-                            <a href="shop_liuxue.php"> 留学 </a>
+                            <a href="study.php"> 留学 </a>
                         </li>
 
 
                         <li <?php if ($p_cat_title == "百科") {echo 'id="nav"';} ?>>
-                            <a href="shop_bibei.php"> 百科 </a>
+                            <a href="wiki.php"> 百科 </a>
                         </li>
 
 
@@ -197,12 +205,12 @@ if ($check_product == 0) {
 
 
     <div id="content"><!-- content Starts -->
-        <div class="container"><!-- container Starts -->
+        <div class="details_container"><!-- container Starts -->
 
 
             <div class="col-md-12"><!-- col-md-12 Starts -->
 
-                <h1 class="text-left"> <?php echo $pro_title; ?> </h1>
+                <h2 class="text-left"> <?php echo $pro_title; ?> </h2>
                 <br>
 
                 <div class="box" id="details"><!-- box Starts -->
@@ -242,6 +250,9 @@ if ($check_product == 0) {
                 }
                 ?>
             </div><!-- col-md-12 Ends -->
+
+
+
         </div><!-- container Ends -->
     </div><!-- content Ends -->
 

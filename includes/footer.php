@@ -13,7 +13,7 @@
 
             </p>
             <p style="font-size: 12px;">
-                © 2019 Canada Beacon Immigration Services All Rights Reserved.
+                © 2019 Canada Beacon Immigration Services.
             </p>
 
         </div><!-- row Ends -->

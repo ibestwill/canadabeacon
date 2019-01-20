@@ -683,7 +683,7 @@ function getPaginator($product_category)
 
     $total_pages = ceil($total_records / $per_page);
 
-    echo "<li><a href='shop_dongtai.php?page=1";
+    echo "<li><a href='index.php?page=1";
 
     if (!empty($aPath)) {
         echo "&" . $aPath;
@@ -694,11 +694,11 @@ function getPaginator($product_category)
 
     for ($i = 1; $i <= $total_pages; $i++) {
 
-        echo "<li><a href='shop_dongtai.php?page=" . $i . (!empty($aPath) ? '&' . $aPath : '') . "' >" . $i . "</a></li>";
+        echo "<li><a href='index.php?page=" . $i . (!empty($aPath) ? '&' . $aPath : '') . "' >" . $i . "</a></li>";
 
     };
 
-    echo "<li><a href='shop_dongtai.php?page=$total_pages";
+    echo "<li><a href='index.php?page=$total_pages";
 
     if (!empty($aPath)) {
         echo "&" . $aPath;

@@ -30,7 +30,7 @@
             ?>
 
 
-            <h3 class="text-center">服务项目: <?php echo $pro_title ?></h3>
+            <h2 class="text-center">服务项目: <?php echo $pro_title ?></h2>
 
             <div class="form-group">
                 <table class="table">
