@@ -13,7 +13,7 @@
 
     <title>加国灯塔</title>
 
-    <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
     <link href="styles/bootstrap.min.css" rel="stylesheet">
     <link href="store/css/style.css" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
@@ -54,7 +54,7 @@ include("includes/header.php");
 
 
                 <blockquote>
-                    <p class="lead"> 加国灯塔是由加拿大官方认证（ICCRC）并由持牌移民顾问（RCIC）创办的移民事务所。 </p>
+                    <p class="lead"> 加国灯塔是由加拿大官方认证（ICCRC）并由持牌移民顾问（编号: R532305）创办的移民事务所。 </p>
 
                     <p class="lead"> 我们的使命是用完美主义精神，将每一项业务做到极致，把客户对美好生活的向往变成现实；我们立志打破移民留学难的局面，让更多的人可以自由迁徙和选择人生！</p>
 
@@ -71,6 +71,10 @@ include("includes/header.php");
                      class="img-responsive">
             </div>
 
+            <br>
+            <br>
+            <br>
+            <br>
             <br>
             <br>
 

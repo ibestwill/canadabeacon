@@ -38,7 +38,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                     <h3 class="panel-title"><!-- panel-title Starts -->
 
-                        <i class="fa fa-money fa-fw"></i> Insert Express Entry
+                        <i class="fa fa-money fa-fw"></i> <a href="index.php?view_ee"> 快速通道 </a>
 
                     </h3><!-- panel-title Ends -->
 

@@ -16,8 +16,7 @@ if (!isset($_SESSION['admin_email'])) {
         <title> Insert Bundle </title>
 
 
-        <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-        <script>tinymce.init({selector: '#product_desc,#product_features'});</script>
+        <script src="ckeditor/ckeditor.js"></script>
 
     </head>
 
@@ -314,6 +313,10 @@ $manufacturer_title
 
 
 </textarea>
+                                        <script>
+                                            CKEDITOR.inline('product_desc');
+                                        </script>
+
 
                                     </div><!-- description tab-pane fade in active Ends -->
 

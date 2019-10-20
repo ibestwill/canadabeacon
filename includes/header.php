@@ -16,14 +16,64 @@
 
                 </a><!--- navbar navbar-brand home Ends -->
 
+                <div class="dropdown hidden-lg hidden-md" style="float:right;">
+                    <button class="dropbtn"><i class="fa fa-align-justify"></i></button>
+                    <div class="dropdown-content">
+
+                        <li>
+                            <a href="index"> 动态 </a>
+                        </li>
+
+                        <li>
+                            <a href="immigration"> 移民 </a>
+                        </li>
+
+                        <li>
+                            <a href="visa"> 签证 </a>
+                        </li>
+
+                        <li>
+                            <a href="study"> 留学 </a>
+                        </li>
+
+
+                        <li>
+                            <form action="language_switcher.php" method="post">
+                                <input type="hidden" name="lang" value="en">
+                                <input type="image" src="images/CANADA.png" height="35" style="margin-left: 20px">
+                            </form>
+
+                        </li>
+                        <li>
+                            <form action="language_switcher.php" method="post">
+                                <input type="hidden" name="lang" value="cn">
+                                <input type="image" src="images/CHINA.png" height="35" style="margin-left: 20px">
+                            </form>
+
+                        </li>
+
+
+                    </div>
+                </div>
+
             </div>
 
             <div class="col-md-2 offer hidden-xs hidden-sm"><!-- col-md-6 Starts -->
 
                 <ul class="list-inline"><!-- menu Starts -->
+                    <li>
+                        <form action="language_switcher.php" method="post">
+                            <input type="hidden" name="lang" value="en">
+                            <input type="image" src="images/CANADA.png" height="35">
+                        </form>
+                    </li>
+                    <li>
+                        <form action="language_switcher.php" method="post">
+                            <input type="hidden" name="lang" value="cn">
+                            <input type="image" src="images/CHINA.png" height="35">
+                        </form>
 
-                    <li><a href="ca.php"><img src="images/CANADA.png" height="35"></a></li>
-                    <li><a href="index.php"><img src="images/CHINA.png" height="35"></a></li>
+                    </li>
                 </ul><!-- menu Ends -->
 
             </div><!-- col-md-6 Ends -->
@@ -32,7 +82,7 @@
     </div><!-- top Ends -->
 
 
-    <div class="container"><!-- container Starts -->
+    <div class="container hidden-xs"><!-- container Starts -->
 
         <div class="navbar-header"><!-- navbar-header Starts -->
 
@@ -55,23 +105,19 @@
                 <ul class="nav nav-pills card-header-pills nav-justified"><!-- nav navbar-nav navbar-left Starts -->
 
                     <li>
-                        <a href="index.php"> 动态 </a>
+                        <a href="index"> 动态 </a>
                     </li>
 
                     <li>
-                        <a href="immigration.php"> 移民 </a>
+                        <a href="immigration"> 移民 </a>
                     </li>
 
                     <li>
-                        <a href="visa.php"> 签证 </a>
+                        <a href="visa"> 签证 </a>
                     </li>
 
                     <li>
-                        <a href="study.php"> 留学 </a>
-                    </li>
-
-                    <li>
-                        <a href="wiki.php"> 百科 </a>
+                        <a href="study"> 留学 </a>
                     </li>
 
 

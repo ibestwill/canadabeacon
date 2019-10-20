@@ -21,7 +21,7 @@ include("functions/functions.php");
 
     <title>加国灯塔</title>
 
-    <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
 
     <link href="styles/bootstrap.min.css" rel="stylesheet">
 
@@ -29,7 +29,7 @@ include("functions/functions.php");
 
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="shortcut icon" href="images/cb-logo.png" />
+    <link rel="shortcut icon" href="images/cb-logo.png"/>
 
 </head>
 
@@ -40,6 +40,7 @@ include("functions/functions.php");
 include("includes/header.php");
 
 ?>
+
 
 
 <div id="content"><!-- content Starts -->
@@ -84,19 +85,19 @@ include("includes/header.php");
                 <div id="container" class="hidden-xs hidden-md hidden-sm">
                     <div class="col-md-4 box">
 
-                        <a href="#"><img src="images\wechat.png" class="img-responsive"></a>
+                        <a href=""><img src="images\wechat.png" class="img-responsive"></a>
 
                     </div>
 
                     <div class="col-md-4 box">
 
-                        <a href="#"><img src="images\phone.png" class="img-responsive"></a>
+                        <a href=""><img src="images\phone.png" class="img-responsive"></a>
 
                     </div>
 
                     <div class="col-md-4 box">
 
-                        <a href="#"><img src="images\email.png" class="img-responsive"></a>
+                        <a href=""><img src="images\email.png" class="img-responsive"></a>
 
                     </div>
 
@@ -164,7 +165,7 @@ include("includes/header.php");
 
                         <label> 内容 </label>
 
-                        <textarea class="form-control" name="message" required> </textarea>
+                        <textarea class="form-control" name="message" rows="6" required> </textarea>
 
                     </div><!-- form-group Ends -->
 
@@ -181,25 +182,111 @@ include("includes/header.php");
 
                 </form><!-- form Ends -->
 
-                <?php
+            </div><!-- box Ends -->
 
-                if (isset($_POST['submit'])) {
+        </div><!-- col-md-12 Ends -->
 
-                    // Admin receives email through this code
+        <div class="col-md-12 hidden-lg"><!-- col-md-12 Starts -->
 
-                    $sender_name = $_POST['name'];
 
-                    $sender_email = $_POST['email'];
+            <div>
+                <div class="col-md-4 box">
 
-                    $sender_subject = $_POST['subject'];
+                    <a href="#"><img src="images\wechat.png" class="img-responsive"></a>
 
-                    $sender_message = $_POST['message'];
+                </div>
 
-                    $sender_phone = $_POST['phone'];
+                <div class="col-md-4 box">
 
-                    $new_message = "
+                    <a href="#"><img src="images\phone.png" class="img-responsive"></a>
 
-<h1> This Message Has Been Sent By $sender_name </h1>
+                </div>
+
+                <div class="col-md-4 box">
+
+                    <a href="#"><img src="images\email.png" class="img-responsive"></a>
+
+                </div>
+
+            </div>
+
+
+        </div><!-- col-md-12 Ends -->
+
+
+    </div>
+
+</div><!-- content Ends -->
+
+
+<?php
+
+include("includes/footer.php");
+
+?>
+
+
+<div class="modal fade" id="thankYou" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalCenterTitle">发送成功！</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                感谢关注加国灯塔。我们将在24小时内邮件或电话回复您。
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">感谢</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="js/jquery.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+
+<script>
+    $(function () {
+        $("#container div a").hover(function () {
+            $("img", this).stop().animate({top: "-180px"}, {queue: false, duration: 200});
+        }, function () {
+            $("img", this).stop().animate({top: "0px"}, {queue: false, duration: 200});
+        });
+    });
+
+</script>
+
+</body>
+</html>
+
+<?php
+
+if (isset($_POST['submit'])) {
+
+    // Admin receives email through this code
+
+    $sender_name = $_POST['name'];
+
+    $sender_email = $_POST['email'];
+
+    $sender_subject = $_POST['subject'];
+
+    $sender_message = $_POST['message'];
+
+    $sender_phone = $_POST['phone'];
+
+    $new_message = "
+
+<h3> This Message Has Been Sent By $sender_name </h3>
 
 <p> <b> Sender Email :  </b> <br> $sender_email </p>
 
@@ -211,144 +298,17 @@ include("includes/header.php");
 
 ";
 
-                    $headers = "From: $sender_email \r\n";
+    $headers = "From: $sender_email \r\n";
 
-                    $headers .= "Content-type: text/html\r\n";
+    $headers .= "Content-type: text/html\r\n";
 
-                    mail($contact_email, $sender_subject, $new_message, $headers);
-
-                    // Send email to sender through this code
-
-                    $email = $_POST['email'];
-
-                    $subject = "Welcome to my website";
-
-                    $msg = "I shall get you soon, thanks for sending us email";
-
-                    $from = "ibestwill@gmail.com";
-
-                    mail($email, $subject, $msg, $from);
-
-                    echo "<h2 align='center'>Your message has been sent successfully</h2>";
-
-                }
+    if (mail($contact_email, $sender_subject, $new_message, $headers)) {
+        echo "<script>$('#thankYou').modal('show');</script>";
+    }
 
 
-                ?>
+}
 
-            </div><!-- box Ends -->
-
-        </div><!-- col-md-12 Ends -->
-
-        <div class="col-md-12 hidden-lg"><!-- col-md-12 Starts -->
-
-
-                <div>
-                    <div class="col-md-4 box">
-
-                        <a href="#"><img src="images\wechat.png" class="img-responsive"></a>
-
-                    </div>
-
-                    <div class="col-md-4 box">
-
-                        <a href="#"><img src="images\phone.png" class="img-responsive"></a>
-
-                    </div>
-
-                    <div class="col-md-4 box">
-
-                        <a href="#"><img src="images\email.png" class="img-responsive"></a>
-
-                    </div>
-
-                </div>
-
-
-        </div><!-- col-md-12 Ends -->
-
-
-        <div class="col-md-12"><!-- col-md-3 col-sm-6 Starts -->
-
-            <div class="box"><!-- box Starts -->
-
-                <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#china">中国</a></li>
-                    <li><a data-toggle="tab" href="#canada">加拿大</a></li>
-
-                </ul>
-
-                <div class="tab-content">
-                    <div id="china" class="tab-pane fade in active">
-
-                        <div class="panel-body">
-                            <!-- panel-body scroll-menu Starts -->
-                            <p><!-- p Starts -->
-                                <strong>上海</strong>
-                                <br>电话：+86 18616521681
-                                <br>地址：共和新路1968号
-                                <br>
-                                <br>营业时间：
-                                <br>周一至周五 9:00-18:00
-                                <br>周六和周日 9:30-17:00
-                            </p><!-- p Ends -->
-
-                        </div>
-                    </div>
-
-
-                    <div id="canada" class="tab-pane fade">
-                        <!-- panel-collapse collapse-data starts -->
-                        <div class="panel-body">
-                            <!-- panel-body scroll-menu Starts -->
-
-                            <p><!-- p Starts -->
-                                <strong>Fredericton,NB</strong>
-                                <br>PHONE：5068974321
-                                <br>ADDRESS：54 Reading Street，Fredericton, NB, Canada, E3B 6B9
-                                <br>
-                                <br>营业时间： 大西洋时区
-                                <br>周一至周五 9:00-18:00
-                                <br>周六和周日 10:30-17:00
-                            </p><!-- p Ends -->
-
-
-                        </div>
-                        <!-- panel-body scroll-menu Ends -->
-
-                        <!-- panel-collapse collapse-data Ends -->
-                    </div>
-            </div>
-
-        </div><!-- col-md-3 col-sm-6 Ends -->
-
-
-    </div><!-- container Ends -->
-</div><!-- content Ends -->
-
-
-<?php
-
-include("includes/footer.php");
 
 ?>
-
-<script src="js/jquery.min.js"></script>
-
-<script src="js/bootstrap.min.js"></script>
-
-<script>
-    $(function () {
-        $("#container div a").hover(function () {
-            $("img", this).stop().animate({top: "-180px"}, {queue: false, duration: 200});
-        }, function () {
-            $("img", this).stop().animate({top: "0px"}, {queue: false, duration: 200});
-        });
-    });
-
-
-</script>
-
-</body>
-</html>
 

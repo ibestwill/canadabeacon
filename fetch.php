@@ -11,7 +11,7 @@ if (isset($_GET['offset']) && isset($_GET['limit'])) {
     $offset = $_GET['offset'];
     $i=0;
 
-    $query = "SELECT * FROM products WHERE p_cat_id=5 ORDER BY date DESC LIMIT $limit OFFSET $offset";
+    $query = "SELECT * FROM products WHERE p_cat_id=5 ORDER BY post_id DESC LIMIT $limit OFFSET $offset";
     $data = mysqli_query($con, $query);
 
     if (!$data) {
@@ -27,10 +27,10 @@ if (isset($_GET['offset']) && isset($_GET['limit'])) {
 
         $pro_url = $row['product_url'];
 
-        $pro_feature = shortenText($row['product_features']);
+        $pro_feature = shortenText($row['product_desc']);
 
         $pro_img1 = $row['product_img1'];
-        $pro_date =friend_date(strtotime($row['date']));
+        $pro_date = $row['post_id'];
 
         $i++;
 
@@ -55,17 +55,15 @@ if (isset($_GET['offset']) && isset($_GET['limit'])) {
                              </a>
                              
                             <a href='$pro_url'> <h4>$pro_title </h4></a>
+                            
+                            
 
-                            <p><span>$pro_feature</span></p>
-                            <br>
-                
-                            <hr>
-
-                            <p>
-                      
-                            <div class='post_label'> $pro_label  </div>
-                            <div class='post_date'> $pro_date </div>
-                            </p>
+                            <p><span><span style='color: #9c3328'> $pro_date  : </span>$pro_feature</span></p>
+                         
+               
+                   
+                  
+                           
                             
                         </div>
 
@@ -87,10 +85,7 @@ if (isset($_GET['offset']) && isset($_GET['limit'])) {
 
         }
 
-
     }
-
-
 
 }
 
@@ -99,9 +94,10 @@ if (isset($_GET['offset_wiki']) && isset($_GET['limit_wiki'])) {
 
     $limit = $_GET['limit_wiki'];
     $offset = $_GET['offset_wiki'];
+    $i = 0;
 
 
-    $query = "SELECT * FROM products WHERE p_cat_id=4 ORDER BY date DESC LIMIT $limit OFFSET $offset";
+    $query = "SELECT * FROM products WHERE p_cat_id=4 ORDER BY post_id DESC LIMIT $limit OFFSET $offset";
     $data = mysqli_query($con, $query);
 
     if (!$data) {
@@ -120,9 +116,11 @@ if (isset($_GET['offset_wiki']) && isset($_GET['limit_wiki'])) {
 
         $pro_url = $row['product_url'];
 
-        $pro_feature = shortenText($row['product_features']);
+        $pro_feature = shortenText($row['product_desc']);
 
-        $pro_date =friend_date(strtotime($row['date']));
+        $pro_date = $row['post_id'];
+
+        $i++;
 
         echo "
 
@@ -130,8 +128,28 @@ if (isset($_GET['offset_wiki']) && isset($_GET['limit_wiki'])) {
                <p>
                     <a href='$pro_url' style='color: #0b0b0b'><h4><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i>&nbsp $pro_title </h4></a>
                </p>
+               
+               ";
+
+        if ($i % 2 == 1) {
+            echo "
                             
                <div class='container-fluid' style='color: grey;border-bottom: solid orange 2px;'>
+               
+               ";
+        }
+
+
+        if ($i % 2 == 0) {
+            echo "
+                            
+               <div class='container-fluid' style='color: grey;border-bottom: solid red 2px;'>
+               
+               ";
+        }
+
+
+        echo "
                     <div class='col-sm-10'>
                     
                         <p>
@@ -162,9 +180,8 @@ if (isset($_GET['offset_wiki']) && isset($_GET['limit_wiki'])) {
 
         ";
 
+
     }
-
-
 
 
 }

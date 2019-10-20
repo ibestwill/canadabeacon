@@ -38,7 +38,8 @@ if (!isset($_SESSION['admin_email'])) {
 
                     <h3 class="panel-title">
 
-                        <i class="fa fa-money fa-fw"></i> View Express Entry
+                        <i class="fa fa-money fa-fw"></i> <a href="index.php?insert_ee"> 添加快速通道 </a>
+
 
                     </h3>
 
@@ -74,7 +75,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                             $i = 0;
 
-                            $get_ee = "select * from express_entry";
+                            $get_ee = "select * from express_entry ORDER BY times DESC";
 
                             $run_ee = mysqli_query($con, $get_ee);
 

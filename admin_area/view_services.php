@@ -1,136 +1,130 @@
 <?php
 
 
-if(!isset($_SESSION['admin_email'])){
+if (!isset($_SESSION['admin_email'])) {
 
-echo "<script>window.open('login.php','_self')</script>";
+    echo "<script>window.open('login.php','_self')</script>";
 
-}
+} else {
 
-else {
 
+    ?>
 
-?>
 
+    <div class="row"><!-- 1 row Starts -->
 
+        <div class="col-lg-12"><!-- col-lg-12 Starts -->
 
+            <ol class="breadcrumb"><!-- breadcrumb Starts -->
 
-<div class="row" ><!-- 1 row Starts -->
+                <li class="active">
 
-<div class="col-lg-12" ><!-- col-lg-12 Starts --> 
+                    <i class="fa fa-dashboard"></i> Dashboard / View Services
 
-<ol class="breadcrumb"><!-- breadcrumb Starts -->
+                </li>
 
-<li class="active">
+            </ol><!-- breadcrumb Ends -->
 
-<i class="fa fa-dashboard" ></i> Dashboard / View Services
+        </div><!-- col-lg-12 Ends -->
 
-</li>
+    </div><!-- 1 row Ends -->
 
-</ol><!-- breadcrumb Ends -->
+    <div class="row"><!-- 2 row Starts -->
 
-</div><!-- col-lg-12 Ends --> 
+        <div class="col-lg-12"><!-- col-lg-12 Starts -->
 
-</div><!-- 1 row Ends -->
+            <div class="panel panel-default"><!-- panel panel-default Starts -->
 
-<div class="row"><!-- 2 row Starts -->
+                <div class="panel-heading"><!-- panel-heading Starts -->
 
-<div class="col-lg-12"><!-- col-lg-12 Starts -->
+                    <h3 class="panel-title">
 
-<div class="panel panel-default"><!-- panel panel-default Starts -->
+                        <i class="fa fa-money fa-fw"></i> View Services
 
-<div class="panel-heading"><!-- panel-heading Starts -->
+                    </h3>
 
-<h3 class="panel-title">
+                </div><!-- panel-heading Ends -->
 
-<i class="fa fa-money fa-fw"></i> View Services 
+                <div class="panel-body"><!-- panel-body Starts -->
 
-</h3>
+                    <?php
 
-</div><!-- panel-heading Ends -->
+                    $get_services = "select * from services";
 
-<div class="panel-body"><!-- panel-body Starts -->
+                    $run_services = mysqli_query($con, $get_services);
 
-<?php
+                    while ($row_services = mysqli_fetch_array($run_services)) {
 
-$get_services = "select * from services";
+                        $service_id = $row_services['service_id'];
 
-$run_services = mysqli_query($con,$get_services);
+                        $service_title = $row_services['service_title'];
 
-while($row_services = mysqli_fetch_array($run_services)){
+                        $service_image = $row_services['service_image'];
 
-$service_id = $row_services['service_id'];
+                        $service_desc = substr($row_services['service_desc'], 0, 400);
 
-$service_title = $row_services['service_title'];
+                        $service_button = $row_services['service_button'];
 
-$service_image = $row_services['service_image'];
+                        $service_url = $row_services['service_url'];
 
-$service_desc = substr($row_services['service_desc'],0,400);
 
-$service_button = $row_services['service_button'];
+                        ?>
 
-$service_url = $row_services['service_url'];
+                        <div class="col-lg-4 col-md-4"><!-- col-lg-4 col-md-4 Starts -->
 
+                            <div class="panel panel-primary"><!-- panel panel-primary Starts -->
 
-?>
+                                <div class="panel-heading"><!-- panel-heading Starts -->
 
-<div class="col-lg-4 col-md-4"><!-- col-lg-4 col-md-4 Starts -->
+                                    <h3 class="panel-title" align="center">
 
-<div class="panel panel-primary"><!-- panel panel-primary Starts -->
+                                        <?php echo $service_title; ?>
 
-<div class="panel-heading"><!-- panel-heading Starts -->
+                                    </h3>
 
-<h3 class="panel-title" align="center">
+                                </div><!-- panel-heading Ends -->
 
-<?php echo $service_title; ?>
+                                <div class="panel-body"><!-- panel-body Starts -->
 
-</h3>
+                                    <img src="services_images/<?php echo $service_image; ?>" class="img-responsive">
 
-</div><!-- panel-heading Ends -->
+                                    <br>
 
-<div class="panel-body"><!-- panel-body Starts -->
+                                    <p><?php echo $service_desc; ?></p>
 
-<img src="services_images/<?php echo $service_image; ?>" class="img-responsive">
+                                </div><!-- panel-body Ends -->
 
-<br>
+                                <div class="panel-footer"><!-- panel-footer Starts -->
 
-<p><?php echo $service_desc; ?></p>
+                                    <a href="index.php?delete_service=<?php echo $service_id; ?>" class="pull-left">
 
-</div><!-- panel-body Ends -->
+                                        <i class="fa fa-trash-o"></i> Delete
 
-<div class="panel-footer"><!-- panel-footer Starts -->
+                                    </a>
 
-<a href="index.php?delete_service=<?php echo $service_id; ?>" class="pull-left">
+                                    <a href="index.php?edit_service=<?php echo $service_id; ?>" class="pull-right">
 
-<i class="fa fa-trash-o"></i> Delete
+                                        <i class="fa fa-pencil"></i> Edit
 
-</a>
+                                    </a>
 
-<a href="index.php?edit_service=<?php echo $service_id; ?>" class="pull-right">
+                                    <div class="clearfix"></div>
 
-<i class="fa fa-pencil"></i> Edit
+                                </div><!-- panel-footer Ends -->
 
-</a>
+                            </div><!-- panel panel-primary Ends -->
 
-<div class="clearfix"> </div>
+                        </div><!-- col-lg-4 col-md-4 Ends -->
 
-</div><!-- panel-footer Ends -->
+                    <?php } ?>
 
-</div><!-- panel panel-primary Ends -->
+                </div><!-- panel-body Ends -->
 
-</div><!-- col-lg-4 col-md-4 Ends -->
+            </div><!-- panel panel-default Ends -->
 
-<?php } ?>
+        </div><!-- col-lg-12 Ends -->
 
-</div><!-- panel-body Ends -->
-
-</div><!-- panel panel-default Ends -->
-
-</div><!-- col-lg-12 Ends -->
-
-</div><!-- 2 row Ends -->
-
-
+    </div><!-- 2 row Ends -->
 
 
 <?php } ?>

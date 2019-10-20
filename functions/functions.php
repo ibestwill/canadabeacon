@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect("localhost", "root", "aSUS!!54321", "ecom_store");
+$db = mysqli_connect("localhost", "ibestwill", "aSUS!!54321", "ecom_store");
 
 function formatDate($date)
 {
@@ -8,12 +8,18 @@ function formatDate($date)
 }
 
 
-function shortenText($text, $chars = 200)
+function shortenText($text, $chars = 300)
 {
     $text = $text . " ";
     $text = substr($text, 0, $chars);
-    $text = substr($text, 0, strrpos($text, '。'));
+    if (strrpos($text, '。')) {
+        $text = substr($text, 0, strrpos($text, '。'));
+    } else {
+        $text = substr($text, 0, strrpos($text, '，'));
+    }
+
     $text = $text . "...";
+    $text = strip_tags($text);  //remove text format
     return $text;
 }
 
@@ -154,6 +160,106 @@ function total_price()
 // total_price function Ends //
 
 
+// getNews Function Starts //
+
+function getNews()
+{
+
+    global $db;
+    $i = 0;
+
+    $query = "SELECT * FROM products WHERE p_cat_id=5 ORDER BY date DESC";
+    $data = mysqli_query($db, $query);
+
+    if (!$data) {
+        printf("Error: %s\n", mysqli_error($db));
+        exit();
+    }
+
+    while ($row = mysqli_fetch_array($data)) {
+
+        $pro_title = $row['product_title'];
+
+
+        $pro_url = $row['product_url'];
+
+        $pro_feature = shortenText($row['product_desc']);
+
+        $pro_date = friend_date(strtotime($row['date']));
+
+        $i++;
+
+
+        echo "
+
+                        
+               <p>
+                    <a href='$pro_url' style='color: #0b0b0b'><h4><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i>&nbsp $pro_title </h4></a>
+               </p>
+               
+               ";
+
+        if ($i % 3 == 1) {
+            echo "
+                            
+               <div class='container-fluid' style='color: grey;border-bottom: solid orange 1px;'>
+               
+               ";
+        }
+
+        if ($i % 3 == 2) {
+            echo "
+                            
+               <div class='container-fluid' style='color: grey;border-bottom: solid cornflowerblue 1px;'>
+               
+               ";
+        }
+
+        if ($i % 3 == 0) {
+            echo "
+                            
+               <div class='container-fluid' style='color: grey;border-bottom: solid red 1px;'>
+               
+               ";
+        }
+
+
+        echo "
+                    <div class='col-sm-10'>
+                    
+                        <p>
+                           $pro_feature
+                        </p>   
+                    
+                    </div>
+                    
+                    <div class='col-sm-2'>
+             
+                 
+                        <p style='text-align: right'>
+                            $pro_date
+                        </p>                   
+           
+                    </div>
+                    
+                
+                
+                </div>                      
+                          
+           
+                                              
+                       
+               
+               
+
+
+        ";
+
+
+    }
+
+}
+
 // getImmigration Function Starts ///
 
 function getImmigration($product_category)
@@ -161,7 +267,7 @@ function getImmigration($product_category)
 
     global $db;
 
-    $flag = 1;
+    $flag1 = 1;
     $flag2 = 1;
     $flag3 = 1;
 
@@ -171,11 +277,13 @@ function getImmigration($product_category)
     $aWhere[] = $product_category;
 
 
-
-    $get_products = "select * from products WHERE ".$product_category." ORDER BY cat_id ASC";
+    $get_products = "select * from products WHERE " . $product_category . " ORDER BY cat_id ASC";
 
     $run_products = mysqli_query($db, $get_products);
 
+    echo "
+            <ul>
+        ";
 
     while ($row_products = mysqli_fetch_array($run_products)) {
 
@@ -203,145 +311,105 @@ function getImmigration($product_category)
 
         if ($pro_sub_title == "省提名") {
 
-            $product_label = "
+            $product_label = " 
+            
+            <li style=\"list-style-type:none;\">
+            
+            $pro_sub_title
 
-            <a class='label' href='$pro_url' style='color:black;'>
-
-                <div class='product-label'>$pro_sub_title</div>
-
-
-            </a>
-
+            </li>
+                        
+          
             ";
+
+            if ($flag1) {
+                echo "
+
+            $product_label
+
+            <li id='fenge'>
+                
+            </li>";
+
+                $flag1 = 0;
+            }
 
 
             echo "
+            <li>
+            
+            <a href='$pro_url'> $pro_title </a>
 
-        <div class='col-md-3 center-responsive' >
-        
-        <a class='label' href='$pro_url' style='color:black;'>
-          <div class='product' >
-
-
-                <div class='text'>
-
-                    <h3><a href='$pro_url'> $pro_title </a></h3>
-
-                    <br>
-
-
-                </div>
-                
-
-                $product_label
-
-
-            </div>
-        
-        </a>
-
-
-          
-
-        </div>
+            </li>
 
 
         ";
 
 
         } else if ($pro_sub_title == "经济类") {
+
             $product_label = "
+            <br>
+            <li style=\"list-style-type:none;\">
+            
+            $pro_sub_title
 
-            <a class='label' href='$pro_url' style='color:black;'>
-
-                <div class='product-label'>$pro_sub_title</div>
-
-
-            </a>
+            </li>
 
             ";
 
             if ($flag2) {
-                echo "<div class='col-md-12'>
-                <hr id='fenge'>
-            </div>";
+                echo "
+
+            $product_label
+
+            <li id='fenge'>
+                
+            </li>";
 
                 $flag2 = 0;
             }
 
             echo "
 
-        <div class='col-md-3 center-responsive' >
+            <li>
+            
+            <a href='$pro_url'> $pro_title </a>
 
-
-
-            <div class='product' >
-
-
-                <div class='text'>
-
-                    <h3><a href='$pro_url'> $pro_title </a></h3>
-
-                    <br>
-
-
-                </div>
-                
-
-                $product_label
-
-
-            </div>
-
-        </div>
-
+            </li>
 
         ";
         } else if ($pro_sub_title == "团聚类") {
 
             $product_label = "
 
-            <a class='label' href='$pro_url' style='color:black;'>
+            <br>
 
-                <div class='product-label'>$pro_sub_title</div>
+            <li style=\"list-style-type:none;\">
+            
+            $pro_sub_title
 
-
-            </a>
+            </li>
 
             ";
 
             if ($flag3) {
-                echo "<div class='col-md-12'>
-                <hr id='fenge'>
-            </div>";
+                echo "
+            $product_label
+
+            <li id='fenge'>
+                
+            </li>";
 
                 $flag3 = 0;
             }
 
             echo "
+            <li>
+            
+            <a href='$pro_url'> $pro_title </a>
 
-        <div class='col-md-3 center-responsive' >
-
-            <div class='product' >
-
-
-                <div class='text'>
-
-                    <h3><a href='$pro_url'> $pro_title </a></h3>
-
-                    <br>
-
-
-                </div>
-                
-
-                $product_label
-
-
-            </div>
-
-        </div>
-
+            </li>
 
         ";
 
@@ -350,13 +418,16 @@ function getImmigration($product_category)
 
     }
 
-
+    echo "
+            </ul>
+            <p>&NonBreakingSpace;</p>
+            <p>&NonBreakingSpace;</p>
+ 
+        ";
 }
 
 
 // getImmigration  Function Ends ///
-
-
 
 
 /// getVisa Function Starts ///
@@ -367,7 +438,7 @@ function getVisa($product_category)
 
     global $db;
 
-
+    $flag1 = 1;
     $flag2 = 1;
     $flag3 = 1;
 
@@ -377,10 +448,14 @@ function getVisa($product_category)
     $aWhere[] = $product_category;
 
 
-    $get_products = "select * from products WHERE ".$product_category." ORDER BY cat_id ASC";
+    $get_products = "select * from products WHERE " . $product_category . " ORDER BY cat_id ASC";
 
     $run_products = mysqli_query($db, $get_products);
 
+
+    echo "
+            <ul>
+        ";
 
     while ($row_products = mysqli_fetch_array($run_products)) {
 
@@ -406,43 +481,40 @@ function getVisa($product_category)
         $row_sub_cat = mysqli_fetch_array($run_sub_cat);
         $pro_sub_title = $row_sub_cat['cat_title'];
 
+
         if ($pro_sub_title == "工签类") {
 
-            $product_label = "
+            $product_label = " 
+            
+            <li style=\"list-style-type:none;\">
+            
+            $pro_sub_title
 
-            <a class='label' href='$pro_url' style='color:black;'>
-
-                <div class='product-label'>$pro_sub_title</div>
-
-
-            </a>
-
+            </li>
+                        
+          
             ";
 
+            if ($flag1) {
+                echo "
+
+            $product_label
+
+            <li id='fenge'>
+                
+            </li>";
+
+                $flag1 = 0;
+            }
 
             echo "
 
-        <div class='col-md-3 col-sm-6 center-responsive' >
+            
+            <li>
+            
+            <a href='$pro_url'> $pro_title </a>
 
-            <div class='product' >
-
-
-                <div class='text'>
-
-                    <h3><a href='$pro_url'> $pro_title </a></h3>
-
-                    <br>
-
-
-                </div>
-
-
-                $product_label
-
-
-            </div>
-
-        </div>
+            </li>
 
 
         ";
@@ -450,49 +522,36 @@ function getVisa($product_category)
 
         } else if ($pro_sub_title == "访问签") {
             $product_label = "
+            <br>
+            <li style=\"list-style-type:none;\">
+            
+            $pro_sub_title
 
-            <a class='label' href='$pro_url' style='color:black;'>
-
-                <div class='product-label'>$pro_sub_title</div>
-
-
-            </a>
+            </li>
 
             ";
 
             if ($flag2) {
                 echo "
 
-            <div class='row col-md-12'>
-                <hr id='fenge'>
-            </div>";
+            $product_label
+
+            <li id='fenge'>
+                
+            </li>";
 
                 $flag2 = 0;
             }
 
             echo "
 
-        <div class='col-md-3 col-sm-6 center-responsive' >
+                            
+            <li>
+            
+            <a href='$pro_url'> $pro_title </a>
 
-            <div class='product' >
+            </li>
 
-
-                <div class='text'>
-
-                    <h3><a href='$pro_url'> $pro_title </a></h3>
-
-                    <br>
-
-
-                </div>
-
-
-                $product_label
-
-
-            </div>
-
-        </div>
 
 
         ";
@@ -500,48 +559,34 @@ function getVisa($product_category)
 
             $product_label = "
 
-            <a class='label' href='$pro_url' style='color:black;'>
+            <br>
 
-                <div class='product-label'>$pro_sub_title</div>
+            <li style=\"list-style-type:none;\">
+            
+            $pro_sub_title
 
-
-            </a>
+            </li>
 
             ";
 
             if ($flag3) {
                 echo "
+            $product_label
 
-            <div class='row col-md-12'>
-                <hr id='fenge'>
-            </div>";
+            <li id='fenge'>
+                
+            </li>";
 
                 $flag3 = 0;
             }
 
             echo "
 
-        <div class='col-md-3 col-sm-6 center-responsive' >
+            <li>
+            
+            <a href='$pro_url'> $pro_title </a>
 
-            <div class='product' >
-
-
-                <div class='text'>
-
-                    <h3><a href='$pro_url'> $pro_title </a></h3>
-
-                    <br>
-
-
-                </div>
-
-
-                $product_label
-
-
-            </div>
-
-        </div>
+            </li>
 
 
         ";
@@ -551,13 +596,17 @@ function getVisa($product_category)
 
     }
 
-
+    echo "
+            </ul>
+            <p>&NonBreakingSpace;</p>
+            <p>&NonBreakingSpace;</p>
+ 
+        ";
 }
 
 
-
-
 /// getVisa Function Ends ///
+
 
 
 // getStudy Function Starts ///
@@ -573,10 +622,13 @@ function getStudy($product_category)
     $aWhere[] = " ORDER BY cat_id ASC";
 
 
-
-    $get_products = "select * from products WHERE ".$product_category." ORDER BY cat_id ASC";
+    $get_products = "select * from products WHERE " . $product_category . " ORDER BY cat_id ASC";
 
     $run_products = mysqli_query($db, $get_products);
+
+    echo "
+            <ul>
+        ";
 
 
     while ($row_products = mysqli_fetch_array($run_products)) {
@@ -604,54 +656,90 @@ function getStudy($product_category)
         $pro_sub_title = $row_sub_cat['cat_title'];
 
 
-        $product_label = "
-
-            <a class='label' href='$pro_url' style='color:black;'>
-
-                <div class='product-label'>$pro_sub_title</div>
-
-
-            </a>
-
-            ";
-
-
         echo "
+            <li>
+            
+            <a href='$pro_url'> $pro_title </a>
 
-        <div class='col-md-3 center-responsive' >
-
-            <div class='product' >
-
-
-                <div class='text'>
-
-                    <h3><a href='$pro_url'> $pro_title </a></h3>
-
-                    <br>
-
-
-                </div>
-                
-
-                $product_label
-
-
-            </div>
-
-        </div>
-
+            </li>
 
         ";
 
-
     }
-
+    echo "
+            </ul>
+            <p>&NonBreakingSpace;</p>
+            <p>&NonBreakingSpace;</p>
+ 
+        ";
 
 }
 
 
 // getStudy Function Ends ///
 
+
+// getWiki Function Starts //
+
+function getWiki()
+{
+
+    global $db;
+
+
+    $query = "SELECT * FROM products WHERE p_cat_id=4 ORDER BY date DESC";
+    $data = mysqli_query($db, $query);
+
+    if (!$data) {
+        printf("Error: %s\n", mysqli_error($db));
+        exit();
+    }
+
+    while ($row = mysqli_fetch_array($data)) {
+
+        $pro_title = $row['product_title'];
+
+
+        $pro_url = $row['product_url'];
+
+        $pro_feature = shortenText($row['product_desc']);
+
+        $pro_date = friend_date(strtotime($row['date']));
+
+        echo "
+
+                        
+               <p>
+                    <a href='$pro_url' style='color: #0b0b0b'><h4><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i>&nbsp $pro_title </h4></a>
+               </p>
+                            
+               <div class='container-fluid' style='color: grey;border-bottom: solid orange 2px;'>
+                    <div class='col-sm-10'>
+                    
+                        <p>
+                           $pro_feature
+                        </p>   
+                    
+                    </div>
+                    
+                    <div class='col-sm-2'>
+             
+                 
+                        <p style='text-align: right'>
+                            $pro_date
+                        </p>                   
+           
+                    </div>
+                                                
+                </div>                      
+ 
+        ";
+
+    }
+
+}
+
+// getWiki Function Ends //
 
 /// getPaginator Function Starts ///
 

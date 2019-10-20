@@ -21,7 +21,7 @@ $check_product = mysqli_num_rows($run_product);
 
 if ($check_product == 0) {
 
-    echo "<script> window.open('index.php','_self') </script>";
+    echo "<script> window.open('index','_self') </script>";
 
 } else {
 
@@ -100,7 +100,7 @@ if ($check_product == 0) {
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>加国灯塔</title>
 
-        <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
 
         <link href="styles/bootstrap.min.css" rel="stylesheet">
 
@@ -126,11 +126,44 @@ if ($check_product == 0) {
             <div class="container"><!-- container Starts -->
 
                 <div class="col-md-10 top-brand">
-                    <a href="index.php" style="text-align:center"><!--- navbar navbar-brand home Starts -->
+                    <a href="index"><!--- navbar navbar-brand home Starts -->
 
-                        <img src="images/cb-dark-long.png" alt="cb logo" height="45">
+                        <img src="images/cb-dark-long.png" alt="cb logo">
 
                     </a><!--- navbar navbar-brand home Ends -->
+
+                    <div class="dropdown hidden-lg hidden-md hidden-sm" style="float:right;">
+                        <button class="dropbtn"><i class="fa fa-align-justify"></i></button>
+                        <div class="dropdown-content">
+
+                            <li>
+                                <a href="index"> 动态 </a>
+                            </li>
+
+                            <li>
+                                <a href="immigration"> 移民 </a>
+                            </li>
+
+                            <li>
+                                <a href="visa"> 签证 </a>
+                            </li>
+
+                            <li>
+                                <a href="study"> 留学 </a>
+                            </li>
+
+
+                            <li>
+                                <a href="wiki"> 百科 </a>
+                            </li>
+
+                            <li><a href="en"><img src="images/CANADA.png" height="35"></a></li>
+                            <li><a href="index"><img src="images/CHINA.png" height="35"></a></li>
+
+
+                        </div>
+                    </div>
+
 
                 </div>
 
@@ -138,10 +171,9 @@ if ($check_product == 0) {
 
                     <ul class="list-inline"><!-- menu Starts -->
 
-                        <li><a href="INDEX.php"><img src="images/CANADA.png" height="35"></a></li>
-                        <li><a href="index.php"><img src="images/CHINA.png" height="35"></a></li>
+                        <li><a href="en"><img src="images/CANADA.png" height="35"></a></li>
+                        <li><a href="index"><img src="images/CHINA.png" height="35"></a></li>
                     </ul><!-- menu Ends -->
-
 
                 </div><!-- col-md-6 Ends -->
 
@@ -150,7 +182,7 @@ if ($check_product == 0) {
         </div><!-- top Ends -->
 
 
-        <div class="container"><!-- container Starts -->
+        <div class="container hidden-xs"><!-- container Starts -->
 
             <div class="navbar-header"><!-- navbar-header Starts -->
 
@@ -173,24 +205,24 @@ if ($check_product == 0) {
                     <ul class="nav nav-pills card-header-pills nav-justified"><!-- nav navbar-nav navbar-left Starts -->
 
                         <li <?php if ($p_cat_title == "动态") {echo 'id="nav"';} ?>>
-                            <a href="index.php"> 动态 </a>
+                            <a href="index"> 动态 </a>
                         </li>
 
                         <li <?php if ($p_cat_title == "移民") {echo 'id="nav"';} ?>>
-                            <a href="immigration.php"> 移民 </a>
+                            <a href="immigration"> 移民 </a>
                         </li>
 
                         <li <?php if ($p_cat_title == "签证") {echo 'id="nav"';} ?>>
-                            <a href="visa.php"> 签证 </a>
+                            <a href="visa"> 签证 </a>
                         </li>
 
                         <li <?php if ($p_cat_title == "留学") {echo 'id="nav"';} ?>>
-                            <a href="study.php"> 留学 </a>
+                            <a href="study"> 留学 </a>
                         </li>
 
 
                         <li <?php if ($p_cat_title == "百科") {echo 'id="nav"';} ?>>
-                            <a href="wiki.php"> 百科 </a>
+                            <a href="wiki"> 百科 </a>
                         </li>
 
 
@@ -238,6 +270,8 @@ if ($check_product == 0) {
 
                         </div><!-- video tab-pane fade in  Ends -->
 
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
 
                     </div><!-- tab-content Ends -->
 

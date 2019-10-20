@@ -1,11 +1,7 @@
 <?php
 
-session_start();
-
 include("includes/db.php");
-
 include("functions/functions.php");
-
 
 ?>
 <!DOCTYPE html>
@@ -21,7 +17,7 @@ include("functions/functions.php");
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title> 加国灯塔 </title>
 
-    <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
 
     <link href="styles/bootstrap.min.css" rel="stylesheet">
 
@@ -35,11 +31,138 @@ include("functions/functions.php");
 
 <body>
 
-<?php
 
-include("includes/header.php");
+<div class="navbar navbar-default navbar-fixed-top"><!-- navbar navbar-default Starts -->
 
-?>
+    <!--red line-->
+    <div id="header"></div>
+
+    <!--logo + contact-->
+    <div id="top"><!-- top Starts -->
+
+        <div class="container"><!-- container Starts -->
+
+            <div class="col-md-10 top-brand">
+                <a href="index" style="text-align:center"><!--- navbar navbar-brand home Starts -->
+
+                    <img src="images/cb-dark-long.png" alt="cb logo" height="45">
+
+                </a><!--- navbar navbar-brand home Ends -->
+
+                <div class="dropdown hidden-lg hidden-md" style="float:right;">
+                    <button class="dropbtn"><i class="fa fa-align-justify"></i></button>
+                    <div class="dropdown-content">
+
+                        <li>
+                            <a href="index"> 动态 </a>
+                        </li>
+
+                        <li>
+                            <a href="immigration"> 移民 </a>
+                        </li>
+
+                        <li>
+                            <a href="visa"> 签证 </a>
+                        </li>
+
+                        <li>
+                            <a href="study"> 留学 </a>
+                        </li>
+
+
+                        <li>
+                            <form action="language_switcher.php" method="post">
+                                <input type="hidden" name="lang" value="en">
+                                <input type="image" src="images/CANADA.png" height="35" style="margin-left: 20px">
+                            </form>
+
+                        </li>
+                        <li>
+                            <form action="language_switcher.php" method="post">
+                                <input type="hidden" name="lang" value="cn">
+                                <input type="image" src="images/CHINA.png" height="35" style="margin-left: 20px">
+                            </form>
+
+                        </li>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-2 offer hidden-xs hidden-sm"><!-- col-md-6 Starts -->
+
+                <ul class="list-inline"><!-- menu Starts -->
+
+                    <li>
+                        <form action="language_switcher.php" method="post">
+                            <input type="hidden" name="lang" value="en">
+                            <input type="image" src="images/CANADA.png" height="35">
+                        </form>
+                    </li>
+                    <li>
+                        <form action="language_switcher.php" method="post">
+                            <input type="hidden" name="lang" value="cn">
+                            <input type="image" src="images/CHINA.png" height="35">
+                        </form>
+
+                    </li>
+
+                </ul><!-- menu Ends -->
+
+            </div><!-- col-md-6 Ends -->
+
+        </div><!-- container Ends -->
+    </div><!-- top Ends -->
+
+
+    <div class="container hidden-xs"><!-- container Starts -->
+
+        <div class="navbar-header"><!-- navbar-header Starts -->
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+
+                <span class="sr-only">Toggle Navigation </span>
+
+                <i class="fa fa-align-justify"></i>
+
+            </button>
+
+
+        </div><!-- navbar-header Ends -->
+
+
+        <div class="navbar-collapse collapse" id="navigation"><!-- navbar-collapse collapse Starts -->
+
+            <div class="padding-nav"><!-- padding-nav Starts -->
+
+                <ul class="nav nav-pills card-header-pills nav-justified"><!-- nav navbar-nav navbar-left Starts -->
+
+                    <li id="nav">
+                        <a href="index"> 动态 </a>
+                    </li>
+
+                    <li>
+                        <a href="immigration"> 移民 </a>
+                    </li>
+
+                    <li>
+                        <a href="visa"> 签证 </a>
+                    </li>
+
+                    <li>
+                        <a href="study"> 留学 </a>
+                    </li>
+
+
+                </ul><!-- nav navbar-nav navbar-left Ends -->
+
+            </div><!-- padding-nav Ends -->
+
+        </div><!-- navbar-collapse collapse Ends -->
+
+    </div><!-- container Ends -->
+</div><!-- navbar navbar-default Ends -->
 
 
 <div id="content"><!-- content Starts -->
@@ -92,30 +215,22 @@ include("includes/header.php");
 
             ?>
 
-
-            <br>
-
-
             <!--Load Product via Ajax infinite scroll-->
             <div class="row" id="infinite"><!-- row Starts -->
 
             </div><!-- row Ends -->
 
 
-
-
-
             <div class="row"><!-- row Starts -->
 
-                <div class="ajax-load text-center" style="display:none">
-                    <p><img src="http://demo.itsolutionstuff.com/plugin/loader.gif">正在加载...</p>
+                <div class="ajax-load text-center">
+                    <button type="button" class="btn btn-danger">加载更多</button>
                 </div>
 
             </div><!-- row Ends -->
 
 
-
-        </div><!-- col-md-12 Ends --->
+        </div><!-- col-md-9 Ends --->
 
 
         <div class="col-md-3">
@@ -141,14 +256,49 @@ include("includes/footer.php");
 
 ?>
 
+<div id="myModal" class="modal fade">
+
+    <div class="vertical-alignment-helper">
+
+        <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">&nbsp;&nbsp;&nbsp;中文&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;English</h4>
+                </div>
+                <div class="modal-body">
+
+
+                    <form action="language_switcher.php" method="post">
+
+                        <input type="hidden" name="lang" value="cn">
+                        <input type="image" src="images/CHINA.png" height="70">
+
+                    </form>
+
+
+                    <form action="language_switcher.php" method="post">
+
+                        <input type="hidden" name="lang" value="en">
+                        <input type="image" src="images/CANADA.png" height="70">
+
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
 <script src="js/jquery.min.js"></script>
 
 <script src="js/bootstrap.min.js"></script>
 
 <script src="js/Chart.min.js"></script>
-
-
-
 
 <script>
 
@@ -163,20 +313,20 @@ include("includes/footer.php");
             url: "fetch.php",
             data: {
                 'offset': 0,
-                'limit': 9
+                'limit': 15
 
             },
 
             success: function (data) {
                 $('#infinite').append(data);
-                flag += 9;
+                flag += 15;
 
             }
         });
 
-        $(window).scroll(function () {
+        $('.ajax-load').click(function () {
 
-            if ($(window).scrollTop() >= $(document).height() - $(window).height()) {
+
 
                 $.ajax({
 
@@ -184,7 +334,7 @@ include("includes/footer.php");
                     url: "fetch.php",
                     data: {
                         'offset': flag,
-                        'limit': 9
+                        'limit': 15
 
                     },
 
@@ -195,17 +345,17 @@ include("includes/footer.php");
 
                     success: function (data) {
                         if (!$.trim(data)) {
+
                             $('.ajax-load').html("—————— 我们是有底线的 ——————");
                             return;
                         }
 
-                        $('.ajax-load').hide();
+
                         $('#infinite').append(data);
-                        flag += 9;
+                        flag += 15;
 
                     }
                 });
-            }
 
 
         });
@@ -237,10 +387,10 @@ include("includes/footer.php");
         },
         options: {
             title: {
-                display: false,
-                text: 'Express Entry',
-                position:'left',
-                fontSize:12
+                display: true,
+                text: '联邦EE快速通道邀请分数',
+                position: 'bottom',
+                fontSize: 14
             },
             legend: {
                 display: false
@@ -264,6 +414,43 @@ include("includes/footer.php");
     });
 
 </script>
+
+
+<script>
+
+    function getCookie(name) {
+        var dc = document.cookie;
+        var prefix = name + "=";
+        var begin = dc.indexOf("; " + prefix);
+        if (begin == -1) {
+            begin = dc.indexOf(prefix);
+            if (begin != 0) return null;
+        } else {
+            begin += 2;
+            var end = document.cookie.indexOf(";", begin);
+            if (end == -1) {
+                end = dc.length;
+            }
+        }
+        // because unescape has been deprecated, replaced with decodeURI
+        //return unescape(dc.substring(begin + prefix.length, end));
+        return decodeURI(dc.substring(begin + prefix.length, end));
+    }
+
+</script>
+
+<script>
+    var myCookie = getCookie("language");
+
+    if (myCookie == null) {
+        // do cookie doesn't exist stuff;
+        $("#myModal").modal('show');
+    } else if (myCookie == "en") {
+        // window.open("en");
+        window.location.replace("en");
+    }
+</script>
+
 
 </body>
 

@@ -4,11 +4,11 @@
 
         <div class="row"><!-- row Starts -->
             <p style="font-size: 12px;">
-                <a href="about.php" style="color: #F0FFF0">关于我们</a>
+                <a href="about" style="color: #F0FFF0">关于我们</a>
                 |
-                <a href="contact.php" style="color: #FFD700">联系我们</a>
+                <a href="contact" style="color: #FFD700">联系我们</a>
                 |
-                <a href="hiring.php" style="color: #F0FFF0">招贤纳士</a>
+                <a href="hiring" style="color: #F0FFF0">招贤纳士</a>
 
 
             </p>

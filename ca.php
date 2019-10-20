@@ -45,7 +45,7 @@
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container"><!--Container Starts-->
         <div class="navbar-header"><!--navbar-header Starts-->
-            <a class="navbar-brand page-scroll" href="ca.php">
+            <a class="navbar-brand page-scroll" href="en">
   					<span class="logo">
   						<img src="images/cb-dark-long.png" height="45">
   					</span>
@@ -420,7 +420,7 @@
     <div class="container"><!-- container Starts  -->
 
         <div class="col-md-12">
-            <a href="index.php">
+            <a href="en">
                 <img src="images/cb-dark-long.png" width="300" class="img-responsive">
             </a>
         </div>
@@ -428,11 +428,7 @@
         <br>
         <br>
 
-        <div class="col-md-12"><!-- col-md-12 Starts -->
 
-            <a href="contact.php"><h2 align="center"></h2></a>
-
-        </div><!-- col-md-12 Ends -->
 
 
     </div><!-- container Ends  -->
@@ -443,9 +439,7 @@
         <div class="row"><!-- row Starts  -->
             <div class="col-md-12 text-center">
                 <p>
-                    <a href="about.php">ABOUT US</a>
-                    |
-                    <a href="contact.php">CONTACT US</a>
+
 
 
                 </p>
@@ -464,12 +458,24 @@
 
 
                 <div class="col-md-1">
-                    <a href="index.php"><img src="images/CHINA.png" height="50"></a>
+
+                    <form action="language_switcher.php" method="post">
+
+                        <input type="hidden" name="lang" value="cn">
+                        <input type="image" src="images/CHINA.png" height="70">
+
+                    </form>
+
 
                 </div>
 
                 <div class="col-md-1">
-                    <a href="ca.php"><img src="images/CANADA.png" height="50"></a>
+                    <form action="language_switcher.php" method="post">
+
+                        <input type="hidden" name="lang" value="en">
+                        <input type="image" src="images/CANADA.png" height="70">
+
+                    </form>
                 </div>
 
                 <div class="col-md-5"></div>
@@ -480,7 +486,7 @@
 
 
         <div class="nav pull-right scroll-top"><!-- nav pull-right scroll-top Starts  -->
-            <a href="contact.php" title="CONTACT US"><i class="fa fa-phone fa-2x"></i></a>
+            <a href="contactus" title="CONTACT US"><i class="fa fa-phone fa-2x"></i></a>
         </div><!-- nav pull-right scroll-top Ends  -->
 
 

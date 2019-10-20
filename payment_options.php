@@ -37,10 +37,10 @@
             <input type="hidden" name="currency_code" value="USD">
 
             <input type="hidden" name="return"
-                   value="http://localhost/ecom_store/paypal_order.php?c_id=<?php echo $customer_id; ?>">
+                   value="https://localhost/ecom_store/paypal_order.php?c_id=<?php echo $customer_id; ?>">
 
 
-            <input type="hidden" name="cancel_return" value="http://localhost/ecom_store/index.php">
+            <input type="hidden" name="cancel_return" value="https://localhost/ecom_store/index.php">
 
 
             <?php

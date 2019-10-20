@@ -17,7 +17,7 @@ if (!isset($_SESSION['admin_email'])) {
 
 
         <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-        <script>tinymce.init({selector: '#product_desc,#product_features'});</script>
+        <script src="ckeditor/ckeditor.js"></script>
 
     </head>
 
@@ -52,7 +52,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                     <h3 class="panel-title">
 
-                        <i class="fa fa-money fa-fw"></i> Insert Post
+                        <i class="fa fa-money fa-fw"></i> <a href="index.php?view_posts"> 取消添加 </a>
 
                     </h3>
 
@@ -62,6 +62,27 @@ if (!isset($_SESSION['admin_email'])) {
 
                     <form class="form-horizontal" method="post" enctype="multipart/form-data">
                         <!-- form-horizontal Starts -->
+
+                        <div class="form-group"><!-- form-group Starts -->
+
+                            <label class="col-md-3 control-label"> Post ID </label>
+
+                            <div class="col-md-6">
+
+                                <input type="number" name="post_id" class="form-control" required>
+
+                                <br>
+
+                                <p style="font-size:15px; font-weight:bold;">
+
+                                    Post ID Example : 20191025
+
+                                </p>
+
+                            </div>
+
+                        </div><!-- form-group Ends -->
+
 
                         <div class="form-group"><!-- form-group Starts -->
 
@@ -178,8 +199,12 @@ if (!isset($_SESSION['admin_email'])) {
 
                                         <br>
 
-                                        <textarea name="product_desc" class="form-control" rows="15" id="product_desc">
-</textarea>
+                                        <textarea name="product_desc" class="form-control" rows="15"
+                                                  id="product_desc"></textarea>
+                                        <script>
+                                            CKEDITOR.inline('product_desc');
+                                        </script>
+
 
                                     </div><!-- description tab-pane fade in active Ends -->
 
@@ -265,6 +290,7 @@ if (!isset($_SESSION['admin_email'])) {
         $product_title = $_POST['product_title'];
         $product_features = $_POST['product_features'];
         $product_cat = 5;
+        $post_id = $_POST['post_id'];
         $cat_id = $_POST['cat'];
         $product_desc = $_POST['product_desc'];
         $product_label = $_POST['product_label'];
@@ -277,7 +303,7 @@ if (!isset($_SESSION['admin_email'])) {
         move_uploaded_file($temp_name1, "product_images/$product_img1");
 
 
-        $insert_post = "insert into products (p_cat_id,cat_id,date,product_title,product_url,product_img1,product_desc,product_label,status,product_features) values ('$product_cat',$cat_id,NOW(),'$product_title','$product_url','$product_img1','$product_desc','$product_label','$status','$product_features')";
+        $insert_post = "insert into products (p_cat_id,cat_id,post_id,date,product_title,product_url,product_img1,product_desc,product_label,status,product_features) values ('$product_cat','$cat_id','$post_id',NOW(),'$product_title','$product_url','$product_img1','$product_desc','$product_label','$status','$product_features')";
 
         $run_post = mysqli_query($con, $insert_post);
 

@@ -9,8 +9,7 @@ if (!isset($_SESSION['admin_email'])) {
 
     ?>
 
-    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-    <script>tinymce.init({selector: 'textarea'});</script>
+    <script src="ckeditor/ckeditor.js"></script>
 
     <div class="row"><!-- 1 row Starts -->
 
@@ -83,11 +82,11 @@ if (!isset($_SESSION['admin_email'])) {
 
                             <div class="col-md-6">
 
-<textarea name="service_desc" class="form-control" rows="10" cols="19">
+                                <textarea name="service_desc" class="form-control" rows="10" cols="19"></textarea>
+                                <script>
+                                    CKEDITOR.inline('service_desc');
+                                </script>
 
-
-
-</textarea>
 
                             </div>
 

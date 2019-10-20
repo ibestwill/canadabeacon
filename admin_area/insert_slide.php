@@ -1,161 +1,157 @@
 <?php
 
 
+if (!isset($_SESSION['admin_email'])) {
 
-if(!isset($_SESSION['admin_email'])){
+    echo "<script>window.open('login.php','_self')</script>";
 
-echo "<script>window.open('login.php','_self')</script>";
+} else {
 
-}
+    ?>
 
-else {
+    <div class="row"><!-- 1 row Starts -->
 
-?>
+        <div class="col-lg-12"><!-- col-lg-12 Starts -->
 
-<div class="row" ><!-- 1 row Starts -->
+            <ol class="breadcrumb"><!-- breadcrumb Starts -->
 
-<div class="col-lg-12" ><!-- col-lg-12 Starts --> 
+                <li class="active">
 
-<ol class="breadcrumb"><!-- breadcrumb Starts -->
+                    <i class="fa fa-dashboard"></i> Dashboard / Insert Slide
 
-<li class="active">
+                </li>
 
-<i class="fa fa-dashboard" ></i> Dashboard / Insert Slide
+            </ol><!-- breadcrumb Ends -->
 
-</li>
 
-</ol><!-- breadcrumb Ends -->
+        </div><!-- col-lg-12 Ends -->
 
+    </div><!-- 1 row Ends -->
 
+    <div class="row"><!-- 2 row Starts -->
 
-</div><!-- col-lg-12 Ends --> 
+        <div class="col-lg-12"><!-- col-lg-12 Starts -->
 
-</div><!-- 1 row Ends -->
+            <div class="panel panel-default"><!-- panel panel-default Starts -->
 
-<div class="row" ><!-- 2 row Starts -->
+                <div class="panel-heading"><!-- panel-heading Starts -->
 
-<div class="col-lg-12" ><!-- col-lg-12 Starts -->
+                    <h3 class="panel-title">
 
-<div class="panel panel-default" ><!-- panel panel-default Starts -->
+                        <i class="fa fa-money fa-fw"></i> Insert Slide
 
-<div class="panel-heading" ><!-- panel-heading Starts -->
+                    </h3>
 
-<h3 class="panel-title" >
+                </div><!-- panel-heading Ends -->
 
-<i class="fa fa-money fa-fw"></i> Insert Slide
+                <div class="panel-body"><!-- panel-body Starts -->
 
-</h3>
+                    <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                        <!-- form-horizontal Starts -->
 
-</div><!-- panel-heading Ends -->
+                        <div class="form-group"><!-- 1 form-group Starts -->
 
-<div class="panel-body" ><!-- panel-body Starts -->
+                            <label class="col-md-3 control-label">Slide Name:</label>
 
-<form class="form-horizontal" action="" method="post" enctype="multipart/form-data" ><!-- form-horizontal Starts -->
+                            <div class="col-md-6">
 
-<div class="form-group" ><!-- 1 form-group Starts -->
+                                <input type="text" name="slide_name" class="form-control">
 
-<label class="col-md-3 control-label">Slide Name:</label>
+                            </div>
 
-<div class="col-md-6">
+                        </div><!-- 1 form-group Ends -->
 
-<input type="text" name="slide_name" class="form-control" >
+                        <div class="form-group"><!-- 2 form-group Starts -->
 
-</div>
+                            <label class="col-md-3 control-label">Slide Image:</label>
 
-</div><!-- 1 form-group Ends -->
+                            <div class="col-md-6">
 
-<div class="form-group" ><!-- 2 form-group Starts -->
+                                <input type="file" name="slide_image" class="form-control">
 
-<label class="col-md-3 control-label">Slide Image:</label>
+                            </div>
 
-<div class="col-md-6">
+                        </div><!-- 2 form-group Ends -->
 
-<input type="file" name="slide_image" class="form-control" >
 
-</div>
+                        <div class="form-group"><!-- 3 form-group Starts -->
 
-</div><!-- 2 form-group Ends -->
+                            <label class="col-md-3 control-label">Slide Url:</label>
 
+                            <div class="col-md-6">
 
-<div class="form-group" ><!-- 3 form-group Starts -->
+                                <input type="text" name="slide_url" class="form-control">
 
-<label class="col-md-3 control-label">Slide Url:</label>
+                            </div>
 
-<div class="col-md-6">
+                        </div><!-- 3 form-group Ends -->
 
-<input type="text" name="slide_url" class="form-control" >
+                        <div class="form-group"><!-- 4 form-group Starts -->
 
-</div>
+                            <label class="col-md-3 control-label"></label>
 
-</div><!-- 3 form-group Ends -->
+                            <div class="col-md-6">
 
-<div class="form-group" ><!-- 4 form-group Starts -->
+                                <input type="submit" name="submit" value="Submit Now"
+                                       class=" btn btn-primary form-control">
 
-<label class="col-md-3 control-label"></label>
+                            </div>
 
-<div class="col-md-6">
+                        </div><!--4 form-group Ends -->
 
-<input type="submit" name="submit" value="Submit Now" class=" btn btn-primary form-control" >
 
-</div>
+                    </form><!-- form-horizontal Ends -->
 
-</div><!--4 form-group Ends -->
+                </div><!-- panel-body Ends -->
 
 
-</form><!-- form-horizontal Ends -->
+            </div><!-- panel panel-default Ends -->
 
-</div><!-- panel-body Ends -->
+        </div><!-- col-lg-12 Ends -->
 
 
-</div><!-- panel panel-default Ends -->
+    </div><!-- 2 row Ends -->
 
-</div><!-- col-lg-12 Ends -->
+    <?php
 
+    if (isset($_POST['submit'])) {
 
-</div><!-- 2 row Ends -->
+        $slide_name = $_POST['slide_name'];
 
-<?php
+        $slide_image = $_FILES['slide_image']['name'];
 
-if(isset($_POST['submit'])){
+        $temp_name = $_FILES['slide_image']['tmp_name'];
 
-$slide_name = $_POST['slide_name'];
+        $slide_url = $_POST['slide_url'];
 
-$slide_image = $_FILES['slide_image']['name'];
+        $view_slides = "select * from slider";
 
-$temp_name = $_FILES['slide_image']['tmp_name'];
+        $view_run_slides = mysqli_query($con, $view_slides);
 
-$slide_url = $_POST['slide_url'];
+        $count = mysqli_num_rows($view_run_slides);
 
-$view_slides = "select * from slider";
+        if ($count < 4) {
 
-$view_run_slides = mysqli_query($con,$view_slides);
+            move_uploaded_file($temp_name, "slides_images/$slide_image");
 
-$count = mysqli_num_rows($view_run_slides);
+            $insert_slide = "insert into slider (slide_name,slide_image,slide_url) values ('$slide_name','$slide_image','$slide_url')";
 
-if($count<4){
+            $run_slide = mysqli_query($con, $insert_slide);
 
-move_uploaded_file($temp_name,"slides_images/$slide_image");
+            echo "<script>alert('New Slide Has Been Inserted')</script>";
 
-$insert_slide = "insert into slider (slide_name,slide_image,slide_url) values ('$slide_name','$slide_image','$slide_url')";
+            echo "<script>window.open('index.php?view_slides','_self')</script>";
 
-$run_slide = mysqli_query($con,$insert_slide);
+        } else {
 
-echo "<script>alert('New Slide Has Been Inserted')</script>";
+            echo "<script>alert('You have already inserted 4 slides')</script>";
 
-echo "<script>window.open('index.php?view_slides','_self')</script>";
+        }
 
-}
-else {
+    }
 
-echo "<script>alert('You have already inserted 4 slides')</script>";
 
-}
-
-}
-
-
-?>
-
+    ?>
 
 
 <?php } ?>

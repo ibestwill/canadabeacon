@@ -24,6 +24,8 @@ if (!isset($_SESSION['admin_email'])) {
 
         $p_title = $row_edit['product_title'];
 
+        $po_id = $row_edit['post_id'];
+
         $p_cat = $row_edit['p_cat_id'];
 
         $cat = $row_edit['cat_id'];
@@ -99,8 +101,8 @@ if (!isset($_SESSION['admin_email'])) {
         <title> Edit Post </title>
 
 
-        <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-        <script>tinymce.init({selector: '#product_desc,#product_features'});</script>
+        <script src="ckeditor/ckeditor.js"></script>
+
 
     </head>
 
@@ -143,8 +145,31 @@ if (!isset($_SESSION['admin_email'])) {
 
                 <div class="panel-body"><!-- panel-body Starts -->
 
+
                     <form class="form-horizontal" method="post" enctype="multipart/form-data">
                         <!-- form-horizontal Starts -->
+
+                        <div class="form-group"><!-- form-group Starts -->
+
+                            <label class="col-md-3 control-label"> Post ID </label>
+
+                            <div class="col-md-6">
+
+                                <input type="number" name="post_id" class="form-control" required
+                                       value="<?php echo $po_id; ?>">
+
+                                <br>
+
+                                <p style="font-size:15px; font-weight:bold;">
+
+                                    Post ID Example : 20191025
+
+                                </p>
+
+                            </div>
+
+                        </div><!-- form-group Ends -->
+
 
                         <div class="form-group"><!-- form-group Starts -->
 
@@ -154,6 +179,28 @@ if (!isset($_SESSION['admin_email'])) {
 
                                 <input type="text" name="product_title" class="form-control" required
                                        value="<?php echo $p_title; ?>">
+
+                            </div>
+
+                        </div><!-- form-group Ends -->
+
+
+                        <div class="form-group"><!-- form-group Starts -->
+
+                            <label class="col-md-3 control-label"> Post Url </label>
+
+                            <div class="col-md-6">
+
+                                <input type="text" name="product_url" class="form-control" required
+                                       value="<?php echo $p_url; ?>">
+
+                                <br>
+
+                                <p style="font-size:15px; font-weight:bold;">
+
+                                    URL Example : study-permit-extension
+
+                                </p>
 
                             </div>
 
@@ -262,6 +309,9 @@ if (!isset($_SESSION['admin_email'])) {
                                         <br>
 
                                         <textarea name="product_desc" class="form-control" rows="15" id="product_desc"><?php echo $p_desc; ?></textarea>
+                                        <script>
+                                            CKEDITOR.inline('product_desc');
+                                        </script>
 
                                     </div><!-- description tab-pane fade in active Ends -->
 
@@ -320,6 +370,9 @@ if (!isset($_SESSION['admin_email'])) {
         $product_cat = 5;
         $cat = $_POST['cat'];
         $manufacturer_id = $_POST['manufacturer'];
+
+        $post_id = $_POST['post_id'];
+
         $product_price = $_POST['product_price'];
         $product_desc = $_POST['product_desc'];
         $product_keywords = $_POST['product_keywords'];
@@ -368,7 +421,7 @@ if (!isset($_SESSION['admin_email'])) {
         move_uploaded_file($temp_name2, "product_images/$product_img2");
         move_uploaded_file($temp_name3, "product_images/$product_img3");
 
-        $update_product = "update products set p_cat_id='$product_cat',cat_id='$cat',manufacturer_id='$manufacturer_id',date=NOW(),product_title='$product_title',product_url='$product_url',product_img1='$product_img1',product_img2='$product_img2',product_img3='$product_img3',product_price='$product_price',product_psp_price='$psp_price',product_desc='$product_desc',product_features='$product_features',product_video='$product_video',product_keywords='$product_keywords',product_label='$product_label',status='$status' where product_id='$p_id'";
+        $update_product = "update products set p_cat_id='$product_cat',cat_id='$cat',manufacturer_id='$manufacturer_id',post_id='$post_id',product_title='$product_title',product_url='$product_url',product_img1='$product_img1',product_img2='$product_img2',product_img3='$product_img3',product_price='$product_price',product_psp_price='$psp_price',product_desc='$product_desc',product_features='$product_features',product_video='$product_video',product_keywords='$product_keywords',product_label='$product_label',status='$status' where product_id='$p_id'";
 
         $run_product = mysqli_query($con, $update_product);
 

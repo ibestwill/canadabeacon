@@ -1,142 +1,138 @@
 <?php
 
 
+if (!isset($_SESSION['admin_email'])) {
 
-if(!isset($_SESSION['admin_email'])){
+    echo "<script>window.open('login.php','_self')</script>";
 
-echo "<script>window.open('login.php','_self')</script>";
+} else {
 
-}
+    ?>
 
-else {
+    <div class="row"><!-- 1 row Starts -->
 
-?>
+        <div class="col-lg-12"><!-- col-lg-12 Starts -->
 
-<div class="row" ><!-- 1 row Starts -->
+            <ol class="breadcrumb"><!-- breadcrumb Starts -->
 
-<div class="col-lg-12" ><!-- col-lg-12 Starts -->
+                <li class="active">
 
-<ol class="breadcrumb" ><!-- breadcrumb Starts -->
+                    <i class="fa fa-dashboard"></i> Dashboard / View Categories
 
-<li class="active" >
+                </li>
 
-<i class="fa fa-dashboard" ></i> Dashboard / View Categories
+            </ol><!-- breadcrumb Ends -->
 
-</li>
 
-</ol><!-- breadcrumb Ends -->
+        </div><!-- col-lg-12 Ends -->
 
+    </div><!-- 1 row Ends -->
 
-</div><!-- col-lg-12 Ends -->
+    <div class="row"><!-- 2 row Starts -->
 
-</div><!-- 1 row Ends -->
+        <div class="col-lg-12"><!-- col-lg-12 Starts -->
 
-<div class="row" ><!-- 2 row Starts -->
+            <div class="panel panel-default"><!-- panel panel-default Starts -->
 
-<div class="col-lg-12" ><!-- col-lg-12 Starts -->
+                <div class="panel-heading"><!-- panel-heading Starts -->
 
-<div class="panel panel-default" ><!-- panel panel-default Starts -->
+                    <h3 class="panel-title">
 
-<div class="panel-heading" ><!-- panel-heading Starts -->
+                        <i class="fa fa-money fa-fw"></i> View Categories
 
-<h3 class="panel-title" >
+                    </h3>
 
-<i class="fa fa-money fa-fw"></i> View Categories
+                </div><!-- panel-heading Ends -->
 
-</h3>
+                <div class="panel-body"><!-- panel-body Starts -->
 
-</div><!-- panel-heading Ends -->
+                    <div class="table-responsive"><!-- table-responsive Starts -->
 
-<div class="panel-body" ><!-- panel-body Starts -->
+                        <table class="table table-bordered table-hover table-striped">
+                            <!-- table-bordered table-hover table-striped Starts -->
 
-<div class="table-responsive" ><!-- table-responsive Starts -->
+                            <thead><!-- thead Starts -->
 
-<table class="table table-bordered table-hover table-striped" ><!-- table-bordered table-hover table-striped Starts -->
+                            <tr>
 
-<thead><!-- thead Starts -->
+                                <th>Category ID:</th>
+                                <th>Category Title:</th>
+                                <th>Delete Category:</th>
+                                <th>Edit Category:</th>
 
-<tr>
 
-<th>Category ID:</th>
-<th>Category Title:</th>
-<th>Delete Category:</th>
-<th>Edit Category:</th>
+                            </tr>
 
+                            </thead><!-- thead Ends -->
 
+                            <tbody><!-- tbody Starts -->
 
-</tr>
+                            <?php
 
-</thead><!-- thead Ends -->
+                            $i = 0;
 
-<tbody><!-- tbody Starts -->
+                            $get_cats = "select * from categories";
 
-<?php 
+                            $run_cats = mysqli_query($con, $get_cats);
 
-$i=0;
+                            while ($row_cats = mysqli_fetch_array($run_cats)) {
 
-$get_cats = "select * from categories";
+                                $cat_id = $row_cats['cat_id'];
 
-$run_cats = mysqli_query($con,$get_cats);
+                                $cat_title = $row_cats['cat_title'];
 
-while($row_cats = mysqli_fetch_array($run_cats)){
 
-$cat_id = $row_cats['cat_id'];
+                                $i++;
 
-$cat_title = $row_cats['cat_title'];
 
+                                ?>
 
-$i++;
+                                <tr>
 
+                                    <td><?php echo $i; ?></td>
 
+                                    <td><?php echo $cat_title; ?></td>
 
-?>
 
-<tr>
+                                    <td>
 
-<td><?php echo $i; ?></td>
+                                        <a href="index.php?delete_cat=<?php echo $cat_id; ?>">
 
-<td><?php echo $cat_title; ?></td>
+                                            <i class="fa fa-trash-o"></i> Delete
 
+                                        </a>
 
-<td>
+                                    </td>
 
-<a href="index.php?delete_cat=<?php echo $cat_id; ?>" >
+                                    <td>
 
-<i class="fa fa-trash-o" ></i> Delete
+                                        <a href="index.php?edit_cat=<?php echo $cat_id; ?>">
 
-</a>
+                                            <i class="fa fa-pencil"></i> Edit
 
-</td>
+                                        </a>
 
-<td>
+                                    </td>
 
-<a href="index.php?edit_cat=<?php echo $cat_id; ?>" >
+                                </tr>
 
-<i class="fa fa-pencil" ></i> Edit
 
-</a>
+                            <?php } ?>
 
-</td>
+                            </tbody><!-- tbody Ends -->
 
-</tr>
+                        </table><!-- table-bordered table-hover table-striped Ends -->
 
 
-<?php } ?>
+                    </div><!-- table-responsive Ends -->
 
-</tbody><!-- tbody Ends -->
+                </div><!-- panel-body Ends -->
 
-</table><!-- table-bordered table-hover table-striped Ends -->
+            </div><!-- panel panel-default Ends -->
 
+        </div><!-- col-lg-12 Ends -->
 
-</div><!-- table-responsive Ends -->
-
-</div><!-- panel-body Ends -->
-
-</div><!-- panel panel-default Ends -->
-
-</div><!-- col-lg-12 Ends -->
-
-</div><!-- 2 row Ends -->
+    </div><!-- 2 row Ends -->
 
 
 <?php } ?>

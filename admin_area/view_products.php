@@ -111,13 +111,15 @@ if (!isset($_SESSION['admin_email'])) {
 
                                         $pro_date = $row_pro['date'];
 
+                                        $post_id = $row_pro['post_id'];
+
                                         $i++;
 
                                         ?>
 
                                         <tr>
 
-                                            <td><?php echo $i; ?></td>
+                                            <td><?php echo $post_id; ?></td>
 
                                             <td><?php echo $pro_title; ?></td>
                                             <td>
@@ -245,13 +247,15 @@ if (!isset($_SESSION['admin_email'])) {
 
                                         $pro_date = $row_pro['date'];
 
+                                        $post_id = $row_pro['post_id'];
+
                                         $i++;
 
                                         ?>
 
                                         <tr>
 
-                                            <td><?php echo $i; ?></td>
+                                            <td><?php echo $post_id; ?></td>
 
                                             <td><?php echo $pro_title; ?></td>
                                             <td>
@@ -380,13 +384,15 @@ if (!isset($_SESSION['admin_email'])) {
 
                                         $pro_date = $row_pro['date'];
 
+                                        $post_id = $row_pro['post_id'];
+
                                         $i++;
 
                                         ?>
 
                                         <tr>
 
-                                            <td><?php echo $i; ?></td>
+                                            <td><?php echo $post_id; ?></td>
 
                                             <td><?php echo $pro_title; ?></td>
                                             <td>
@@ -515,13 +521,15 @@ if (!isset($_SESSION['admin_email'])) {
 
                                         $pro_date = $row_pro['date'];
 
+                                        $post_id = $row_pro['post_id'];
+
                                         $i++;
 
                                         ?>
 
                                         <tr>
 
-                                            <td><?php echo $i; ?></td>
+                                            <td><?php echo $post_id = $row_pro['post_id'];; ?></td>
 
                                             <td><?php echo $pro_title; ?></td>
                                             <td>

@@ -16,8 +16,7 @@ if (!isset($_SESSION['admin_email'])) {
         <title> Insert Products </title>
 
 
-        <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-        <script>tinymce.init({selector: '#product_desc,#product_features'});</script>
+        <script src="ckeditor/ckeditor.js"></script>
 
     </head>
 
@@ -62,6 +61,27 @@ if (!isset($_SESSION['admin_email'])) {
 
                     <form class="form-horizontal" method="post" enctype="multipart/form-data">
                         <!-- form-horizontal Starts -->
+
+                        <div class="form-group"><!-- form-group Starts -->
+
+                            <label class="col-md-3 control-label"> Post ID </label>
+
+                            <div class="col-md-6">
+
+                                <input type="number" name="post_id" class="form-control" required>
+
+                                <br>
+
+                                <p style="font-size:15px; font-weight:bold;">
+
+                                    Post ID Example : 20191025
+
+                                </p>
+
+                            </div>
+
+                        </div><!-- form-group Ends -->
+
 
                         <div class="form-group"><!-- form-group Starts -->
 
@@ -232,8 +252,12 @@ $manufacturer_title
 
                                         <br>
 
-                                        <textarea name="product_desc" class="form-control" rows="15" id="product_desc">
-</textarea>
+                                        <textarea name="product_desc" class="form-control" rows="15"
+                                                  id="product_desc"></textarea>
+                                        <script>
+                                            CKEDITOR.inline('product_desc');
+                                        </script>
+
 
                                     </div><!-- description tab-pane fade in active Ends -->
 
@@ -288,12 +312,13 @@ $manufacturer_title
 
         $product_url = $_POST['product_url'];
 
+        $post_id = $_POST['post_id'];
+
 
         $status = "product";
 
 
-
-        $insert_product = "insert into products (p_cat_id,cat_id,manufacturer_id,date,product_title,product_url,product_price,product_desc,status) values ('$product_cat','$cat','$manufacturer_id',NOW(),'$product_title','$product_url','$product_price','$product_desc','$status')";
+        $insert_product = "insert into products (p_cat_id,cat_id,manufacturer_id,post_id,date,product_title,product_url,product_price,product_desc,status) values ('$product_cat','$cat','$manufacturer_id','$post_id',NOW(),'$product_title','$product_url','$product_price','$product_desc','$status')";
 
         $run_product = mysqli_query($con, $insert_product);
 

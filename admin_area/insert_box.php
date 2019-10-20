@@ -1,127 +1,121 @@
 <?php
 
 
+if (!isset($_SESSION['admin_email'])) {
 
-if(!isset($_SESSION['admin_email'])){
+    echo "<script>window.open('login.php','_self')</script>";
 
-echo "<script>window.open('login.php','_self')</script>";
+} else {
 
-}
 
-else {
+    ?>
 
+    <div class="row"><!-- 1 row Starts -->
 
+        <div class="col-lg-12"><!-- col-lg-12 Starts -->
 
+            <ol class="breadcrumb"><!-- breadcrumb Starts -->
 
-?>
+                <li class="active">
 
-<div class="row" ><!-- 1 row Starts -->
+                    <i class="fa fa-dashboard"></i> Dashboard / Insert Box
 
-<div class="col-lg-12"><!-- col-lg-12 Starts -->
+                </li>
 
-<ol class="breadcrumb" ><!-- breadcrumb Starts -->
+            </ol><!-- breadcrumb Ends -->
 
-<li class="active">
+        </div><!-- col-lg-12 Ends -->
 
-<i class="fa fa-dashboard"></i> Dashboard / Insert Box
+    </div><!-- 1 row Ends -->
 
-</li>
+    <div class="row"><!-- 2 row Starts -->
 
-</ol><!-- breadcrumb Ends -->
+        <div class="col-lg-12"><!-- col-lg-12 Starts -->
 
-</div><!-- col-lg-12 Ends -->
+            <div class="panel panel-default"><!-- panel panel-default Starts -->
 
-</div><!-- 1 row Ends -->
+                <div class="panel-heading"><!-- panel-heading starts-->
+                    <h3 class="panel-title">
+                        <i class="fa fa-money fa-fw"></i> Insert Box
 
-<div class="row" ><!-- 2 row Starts -->
+                    </h3>
 
-<div class="col-lg-12" ><!-- col-lg-12 Starts -->
+                </div><!-- panel-heading Ends-->
 
-<div class="panel panel-default"><!-- panel panel-default Starts -->
+                <div class="panel-body"><!-- panel-body Starts -->
 
-<div class="panel-heading"><!-- panel-heading starts-->
-<h3 class="panel-title">
-<i class="fa fa-money fa-fw"></i> Insert Box
+                    <form class="form-horizontal" method="post" action=""><!-- form-horizontal Starts -->
 
-</h3>
+                        <div class="form-group"><!-- 1 form-group Starts -->
 
-</div><!-- panel-heading Ends-->
+                            <label class="col-md-3 control-label">Box Title : </label>
 
-<div class="panel-body"><!-- panel-body Starts -->
+                            <div class="col-md-6">
 
-<form class="form-horizontal" method="post" action=""><!-- form-horizontal Starts -->
+                                <input type="text" name="box_title" class="form-control">
 
-<div class="form-group"><!-- 1 form-group Starts -->
+                            </div>
 
-<label class="col-md-3 control-label">Box Title : </label>
+                        </div><!-- 1 form-group Ends -->
 
-<div class="col-md-6">
 
-<input type="text" name="box_title" class="form-control">
+                        <div class="form-group"><!-- 2 form-group Starts -->
 
-</div>
+                            <label class="col-md-3 control-label">Box Description : </label>
 
-</div><!-- 1 form-group Ends -->
+                            <div class="col-md-6">
 
+                                <textarea name="box_desc" class="form-control" rows="6" cols="19"> </textarea>
 
-<div class="form-group"><!-- 2 form-group Starts -->
+                            </div>
 
-<label class="col-md-3 control-label">Box Description : </label>
+                        </div><!-- 2 form-group Ends -->
 
-<div class="col-md-6">
 
-<textarea name="box_desc" class="form-control" rows="6" cols="19"> </textarea>
+                        <div class="form-group"><!-- 3 form-group Starts -->
 
-</div>
+                            <label class="col-md-3 control-label"></label>
 
-</div><!-- 2 form-group Ends -->
+                            <div class="col-md-6">
 
+                                <input type="submit" name="submit" value="Insert Box"
+                                       class="btn btn-primary form-control">
 
-<div class="form-group"><!-- 3 form-group Starts -->
+                            </div>
 
-<label class="col-md-3 control-label"></label>
+                        </div><!-- 3 form-group Ends -->
 
-<div class="col-md-6">
+                    </form><!-- form-horizontal Ends -->
 
-<input type="submit" name="submit" value="Insert Box" class="btn btn-primary form-control">
+                </div><!-- panel-body Ends -->
 
-</div>
+            </div><!-- panel panel-default Ends -->
 
-</div><!-- 3 form-group Ends -->
+        </div><!-- col-lg-12 Ends -->
 
-</form><!-- form-horizontal Ends -->
+    </div><!-- 2 row Ends -->
 
-</div><!-- panel-body Ends -->
 
-</div><!-- panel panel-default Ends -->
+    <?php
 
-</div><!-- col-lg-12 Ends -->
+    if (isset($_POST['submit'])) {
 
-</div><!-- 2 row Ends -->
+        $box_title = $_POST['box_title'];
 
+        $box_desc = $_POST['box_desc'];
 
-<?php
+        $insert_box = "insert into boxes_section (box_title,box_desc) values ('$box_title','$box_desc')";
 
-if(isset($_POST['submit'])){
+        $run_box = mysqli_query($con, $insert_box);
 
-$box_title = $_POST['box_title'];
+        echo "<script>alert('New Box Has Been Inserted')</script>";
 
-$box_desc = $_POST['box_desc'];
+        echo "<script>window.open('index.php?view_boxes','_self')</script>";
 
-$insert_box = "insert into boxes_section (box_title,box_desc) values ('$box_title','$box_desc')";
+    }
 
-$run_box = mysqli_query($con,$insert_box);
 
-echo "<script>alert('New Box Has Been Inserted')</script>";
-
-echo "<script>window.open('index.php?view_boxes','_self')</script>";
-
-}
-
-
-?>
-
-
+    ?>
 
 
 <?php } ?>

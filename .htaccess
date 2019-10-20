@@ -1,5 +1,7 @@
 RewriteEngine On
 #RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{HTTPS} !=off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteRule ^index?$ index.php [NC,L]
 RewriteRule ^immigration?$ immigration.php [NC,L]
 RewriteRule ^study?$ study.php [NC,L]
@@ -8,5 +10,6 @@ RewriteRule ^wiki?$ wiki.php [NC,L]
 RewriteRule ^en?$ ca.php [NC,L]
 RewriteRule ^about?$ about.php [NC,L]
 RewriteRule ^contact?$ contact.php [NC,L]
+RewriteRule ^contactus?$ contactus.php [NC,L]
 RewriteRule ^hiring?$ hiring.php [NC,L]
 RewriteRule ^([0-9a-zA-Z-]+)$  details.php?pro_id=$1 [QSA,NC,L]

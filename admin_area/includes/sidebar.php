@@ -126,27 +126,13 @@ if (!isset($_SESSION['admin_email'])) {
 
                 <li><!-- Posts li Starts -->
 
-                    <a href="#" data-toggle="collapse" data-target="#posts">
+                    <a href="index.php?view_posts">
 
                         <i class="fa fa-fw fa-gg"></i> 动态
-
-                        <i class="fa fa-fw fa-caret-down"></i>
 
 
                     </a>
 
-                    <ul id="posts" class="collapse">
-
-                        <li>
-                            <a href="index.php?insert_post"> Insert Posts </a>
-                        </li>
-
-                        <li>
-                            <a href="index.php?view_posts"> View Posts </a>
-                        </li>
-
-
-                    </ul>
 
                 </li><!-- Posts li Ends -->
 
@@ -287,26 +273,12 @@ if (!isset($_SESSION['admin_email'])) {
 
                 <li><!-- li Starts -->
 
-                    <a href="#" data-toggle="collapse" data-target="#express_entry">
+                    <a href="index.php?view_ee">
 
                         <i class="fa fa-fw fa-gg"></i> 快速通道
 
-                        <i class="fa fa-fw fa-caret-down"></i>
-
                     </a>
 
-                    <ul id="express_entry" class="collapse">
-
-                        <li>
-                            <a href="index.php?insert_ee"> Insert EE </a>
-                        </li>
-
-                        <li>
-                            <a href="index.php?view_ee"> View EE </a>
-                        </li>
-
-
-                    </ul>
 
                 </li><!-- li Ends -->
 

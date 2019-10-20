@@ -38,7 +38,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                     <h3 class="panel-title"><!-- panel-title Starts -->
 
-                        <i class="fa fa-money fa-fw"></i> View Posts
+                        <i class="fa fa-money fa-fw"></i> <a href="index.php?insert_post"> 添加动态 </a>
 
                     </h3><!-- panel-title Ends -->
 
@@ -55,7 +55,7 @@ if (!isset($_SESSION['admin_email'])) {
                             <thead>
 
                             <tr>
-                                <th>ID</th>
+                                <th>Post ID</th>
                                 <th>Title</th>
                                 <th>Features</th>
                                 <th>Date</th>
@@ -73,7 +73,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                             $i = 0;
 
-                            $get_pro = "select * from products where status='post'";
+                            $get_pro = "select * from products where status='post' ORDER BY post_id DESC";
 
                             $run_pro = mysqli_query($con, $get_pro);
 
@@ -87,13 +87,15 @@ if (!isset($_SESSION['admin_email'])) {
 
                                 $pro_date = $row_pro['date'];
 
+                                $post_id = $row_pro['post_id'];
+
                                 $i++;
 
                                 ?>
 
                                 <tr>
 
-                                    <td><?php echo $i; ?></td>
+                                    <td><?php echo $post_id; ?></td>
 
                                     <td><?php echo $pro_title; ?></td>
 

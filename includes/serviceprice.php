@@ -19,6 +19,21 @@
 
             $pro_label = $row_price['product_label'];
 
+            $pro_url = $row_products['product_url'];
+
+
+            $get_contact_us = "select * from contact_us";
+
+            $run_conatct_us = mysqli_query($con, $get_contact_us);
+
+            $row_conatct_us = mysqli_fetch_array($run_conatct_us);
+
+            $contact_heading = $row_conatct_us['contact_heading'];
+
+            $contact_desc = $row_conatct_us['contact_desc'];
+
+            $contact_email = $row_conatct_us['contact_email'];
+
 
 
             $province = '';
@@ -30,138 +45,150 @@
             ?>
 
 
-            <h2 class="text-center">服务项目: <?php echo $pro_title ?></h2>
-
-            <div class="form-group">
-                <table class="table">
-                    <tbody>
-
-                    <tr>
-                        <td>申请人所在地</td>
-                        <td>
-                            <div><!-- col-md-9 Starts -->
-
-                                <select id="country" name="country" class="form-control action">
-                                    <?php echo $province; ?>
-
-                                </select>
-
-                            </div><!-- col-md-7 Ends -->
-
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>价格 Price</td>
-                        <td>
-                            <label class="form-control"><?php echo $pro_price ?></label>
-
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>税费 Tax</td>
-                        <td>
-                            <label name="state" id="state" class="form-control action">0</label>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>小计 Subtotal</td>
-                        <td>
-                            <label id="subtotal" class="form-control action"><?php echo $pro_price ?></label>
-                        </td>
-                    </tr>
-
-
-                    </tbody>
-                </table>
-            </div>
-
-<div>
-    <label id="pro_subtotal"></label>
-
-</div>
-
             <!-- form-horizontal Ends -->
 
 
             <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#tab1">信用卡支付</a></li>
-                <li><a data-toggle="tab" href="#tab2">E-mail转账</a></li>
-                <li><a data-toggle="tab" href="#tab3">支付宝或微信支付</a></li>
-                <li><a data-toggle="tab" href="#tab4">当面支付</a></li>
+                <li class="active"><a data-toggle="tab" href="#tab1">联系我们</a></li>
+                <li><a data-toggle="tab" href="#tab2">付款方式</a></li>
+
 
             </ul>
 
 
-
             <div class="tab-content">
 
-                <!--Credit Card-->
+                <!--Contact Us-->
                 <div id="tab1" class="tab-pane fade in active">
 
                     <div class="panel-body">
 
+                        <h2 class="text-center">服务项目: <?php echo $pro_title ?></h2>
 
 
-                        <form action="process.php" method="POST">
-                            <script
-                                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                                    data-key="pk_test_JSL8VqwhvT7A4B9Fz1mFlBZC"
-                                    data-amount="<?php echo $pro_price?>00"
-                                    data-name="CSM.WORLD"
-                                    data-description="服务项目：<?php echo $pro_title ?>"
-                                    data-image="images/logo_red.png"
-                                    data-locale="auto"
-                                    data-currency="cad">
-                            </script>
-                        </form>
+                        <form action="<?php echo $pro_url ?>" method="post"><!-- form Starts -->
+
+                            <div class="form-group"><!-- form-group Starts -->
+
+                                <label>姓名</label>
+
+                                <input type="text" class="form-control" name="name" required>
+
+                            </div><!-- form-group Ends -->
+
+                            <div class="form-group"><!-- form-group Starts -->
+
+                                <label>邮箱</label>
+
+                                <input type="text" class="form-control" name="email" required>
+
+                            </div><!-- form-group Ends -->
+
+                            <div class="form-group"><!-- form-group Starts -->
+
+                                <label>电话</label>
+
+                                <input type="text" class="form-control" name="phone" required>
+
+                            </div><!-- form-group Ends -->
 
 
+                            <div class="form-group"><!-- form-group Starts -->
+
+                                <label> 内容 </label>
+
+                                <textarea class="form-control" name="message" rows="6" required> </textarea>
+
+                            </div><!-- form-group Ends -->
+
+
+                            <div class="text-center"><!-- text-center Starts -->
+
+                                <button type="submit" name="submit" class="btn btn-danger">
+
+                                    联系我们
+
+                                </button>
+
+                            </div><!-- text-center Ends -->
+
+                        </form><!-- form Ends -->
 
 
                     </div>
                 </div>
 
-                <!--Email Transfer-->
+                <!--Payment Method-->
                 <div id="tab2" class="tab-pane fade">
 
                     <div class="panel-body">
 
-                        <p>如果您有加拿大境内银行账户，您可以方便地进行E-mail转账</p>
-                        <p>我们的收款邮箱是：ibestwill@gmail.com </p>
-                        <p>收款人名称是：Wei Zhao</p>
-                        <p>您支付相应的款项后，请致电1 (506) 897-4321或发邮件到 ibestwill@gmail.com 告知我们安全问答（Security Answer）。</p>
 
-                    </div>
+                        <h4>服务: <label><?php echo $pro_title ?></label></h4>
 
-                </div>
+                        <!-- <h4>价格: ￥ <label><?php /*echo $pro_price */ ?></label></h4>-->
 
-                <!--Alipay & Wechat-->
-                <div id="tab3" class="tab-pane fade">
+                        <hr>
 
-                    <div class="panel-body">
+                        <div><!-- Starts -->
 
-                        <p><!-- p Starts -->
-                            如果您在中国，可使用支付宝或微信支付您的订单。
-                        </p><!-- p Ends -->
-                        <p>
-                            请联系我们给您生成二维码用于支付。
-                        </p>
+                            <label>支付宝或微信支付</label>
 
-                    </div>
+                            <div>
+                                <p>如果您在中国，可使用支付宝或微信支付您的订单。</p>
+                                <p>请联系我们给您生成二维码用于支付。</p>
 
-                </div>
+                            </div>
 
-                <!--Face to Face-->
-                <div id="tab4" class="tab-pane fade">
+                            <hr>
 
-                    <div class="panel-body">
+                        </div><!-- Ends -->
 
-                        <p><!-- p Starts -->
-                            欢迎前来我们在加拿大或中国的办公室支付。我们接受现金、支票和信用卡。
-                        </p><!-- p Ends -->
+
+                        <div><!-- Starts -->
+
+                            <label>E-mail转账（Interac e-Transfer ®）</label>
+
+
+                            <div>
+                                <p>如果您有加拿大境内银行账户，您可以方便地进行E-mail转账</p>
+                                <p>我们的收款邮箱是：pay@canadabeacon.ca </p>
+                                <p>收款人名称是：Canada Beacon Immigration Services</p>
+                                <p>您支付相应的款项后，请致电1 (506) 897-4321 或发邮件到 payment@canadabeacon.ca 告知我们安全问答（Security
+                                    Answer）。</p>
+                            </div>
+
+                            <hr>
+
+                        </div><!-- Ends -->
+
+                        <div><!-- Starts -->
+
+                            <label>当面支付</label>
+
+                            <div>
+                                <p>欢迎当面支付。我们接受现金和支票。</p>
+
+                            </div>
+
+                            <hr>
+
+                        </div><!-- Ends -->
+
+
+                        <!--                     <div>
+
+                                                 <label>信用卡支付</label>
+
+                                                 <div>
+                                                     <p>我们会在24小时内致电联系您，待电话确认后处理订单，服务开始前您可以无条件退款。</p>
+
+                                                 </div>
+
+                                                 <hr>
+
+                                             </div>-->
+
 
                     </div>
 
@@ -173,55 +200,77 @@
 
         </div><!-- box Ends -->
 
-
     </div><!-- col-sm-6 Ends -->
 
 </div><!-- row Ends -->
 
-<script src="js/jquery.min.js"> </script>
+
+<div class="modal fade" id="thankYou" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalCenterTitle">发送成功！</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                感谢关注加国灯塔。我们将在24小时内邮件或电话回复您。
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">感谢</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
 
 <script src="js/bootstrap.min.js"></script>
 
 
-<script>
+<?php
 
-    $(document).ready(function () {
-        $('.action').change(function () {
-            if ($(this).val() != '') {
-                var action = $(this).attr("id");
-                var query = $(this).val();
-                var result = '';
+if (isset($_POST['submit'])) {
 
+    // Admin receives email through this code
 
-                if (action == "country") {
-                    result = 'state';
-                }
-                else {
-                    result = 'city';
-                }
-                $.ajax({
-                    url: "fetch.php",
-                    method: "POST",
-                    data: {action: action, query: query},
-                    success: function (data) {
+    $sender_name = $_POST['name'];
 
-                        var tax = data * <?php echo $pro_price ?>;
-                        var subtotal = tax + <?php echo $pro_price ?>;
+    $sender_email = $_POST['email'];
 
+    $sender_subject = $pro_title;
 
-                        $('#' + result).html(tax);
+    $sender_message = $_POST['message'];
 
-                        $('#subtotal').html(subtotal);
-                        $('#pricetotal').html(subtotal);
+    $sender_phone = $_POST['phone'];
 
+    $new_message = "
 
+<h3> This Message Has Been Sent By $sender_name </h3>
 
+<p> <b> Sender Email :  </b> <br> $sender_email </p>
 
-                    }
-                })
-            }
-        });
-    });
+<p> <b> Sender Phone :  </b> <br> $sender_phone </p>
+
+<p> <b> Sender Subject :  </b> <br> $sender_subject </p>
+
+<p> <b> Sender Message :  </b> <br> $sender_message </p>
+
+";
+
+    $headers = "From: $sender_email \r\n";
+
+    $headers .= "Content-type: text/html\r\n";
 
 
-</script>
+    if (mail($contact_email, $sender_subject, $new_message, $headers)) {
+        echo "<script>$('#thankYou').modal('show');</script>";
+    }
+
+}
+
+
+?>
