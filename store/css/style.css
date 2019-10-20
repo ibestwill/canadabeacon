@@ -1,3 +1,10 @@
+/*
+Template: Computerfever HTML5 Responsive template
+Author: M.T.Ahmed <sad.ahmed22224@gmail.com>
+Theme URI:http://www.computerfever.com
+Version: 1.0
+
+*/
 
 
 /*  ----------------------------------------------
@@ -12,7 +19,7 @@
     4.2:    About section ("About us")
     4.3:    Services section ("What we do")
     4.4:    Products section ("Why choose us")
-    4.5:    Team section 
+    4.5:    Team section
     4.6:    Portfolio section
     4.7:    Clients section
     4.8:    Contact section
@@ -28,6 +35,7 @@
 /*
 ----------------------------------------------------- */
 
+
 /* 1: Default styles */
 html, body {
     width: 100%;
@@ -35,7 +43,7 @@ html, body {
 }
 
 body {
-    font-family:  "Microsoft Yahei", STXihei, Tahoma, Helvetica, Arial, sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
     color: #999;
     background: #fff;
@@ -50,7 +58,7 @@ h6 {
     margin: 0 0 20px 0;
     text-transform: none;
     color: rgba(254, 82, 76, 1);
-    font-family:  "Microsoft Yahei", STXihei, Tahoma, Helvetica, Arial, sans-serif;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 600;
     letter-spacing: 1px;
     line-height: 1.5;
@@ -62,14 +70,12 @@ p {
     line-height: 1.5;
 }
 
-
 a {
     color: #fff;
     transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
 }
-
 a:hover,
 a:focus {
     text-decoration: none;
@@ -87,64 +93,6 @@ a:focus {
 .gray {
     color: #a5a5a5;
 }
-
-.title{
-    font-size:60px;
-    color:yellow;
-    font-family: "Microsoft Yahei", STXihei, Tahoma, Helvetica, Arial, sans-serif;
-    text-shadow: 1px 1px black;
-    text-align: center;
-    padding: 10px;
-}
-
-
-@media only screen and (max-width: 992px) {
-    .title {
-        font-size:50px;
-
-    }
-}
-
-@media only screen and (max-width: 776px) {
-    .title {
-        font-size:40px;
-
-    }
-}
-
-@media only screen and (max-width: 617px) {
-    .title {
-        font-size:30px;
-
-    }
-}
-
-
-@media only screen and (max-width: 511px) {
-    .title {
-        font-size:25px;
-
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .title {
-        font-size:25px;
-
-    }
-}
-
-
-@media only screen and (max-width: 440px) {
-    .title {
-        font-size:25px;
-
-    }
-}
-
-
-
-
 
 .buffer-twenty {
     margin: 20px 0;
@@ -233,7 +181,7 @@ blockquote {
     font-size: 22px;
     position: relative;
     padding-left: 90px;
-    color: rgb(255, 253, 218);
+    color: rgb(254, 80, 75);
     border-color: rgba(254, 82, 76, 1);
 }
 
@@ -260,13 +208,14 @@ blockquote span {
     color: #999;
 }
 
+
 /*3: Navigation */
 .navbar-custom {
     padding: 10px 0;
     margin-bottom: 0;
-    font-size:25px;
-    font-family:"Microsoft Yahei", Tahoma, Helvetica, Arial, sans-serif;
-
+    text-transform: uppercase;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
 }
 
 .navbar-custom .navbar-brand:focus {
@@ -285,10 +234,9 @@ blockquote span {
 
 .navbar-custom .navbar-brand .navbar-toggle {
     padding: 4px 6px;
-    font-size: 25px;
+    font-size: 16px;
     color: #fff;
 }
-
 .navbar-custom .navbar-brand .navbar-toggle:focus,
 .navbar-custom .navbar-brand .navbar-toggle:active {
     outline: 0;
@@ -303,13 +251,11 @@ blockquote span {
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
 }
-
 .navbar-custom .nav li a:hover {
     outline: 0;
     color: rgba(255, 255, 255, .8);
     background-color: transparent;
 }
-
 .navbar-custom .nav li a:focus,
 .navbar-custom .nav li a:active {
     outline: 0;
@@ -342,16 +288,17 @@ blockquote span {
 .banner {
     padding: 0 0;
 }
-
 #slides .slide-caption {
-
     padding: 10px 20px;
-    height: 100%;
+    position: relative;
     text-align: left;
     max-width: 100%;
     z-index: 3;
-    margin:auto;
-    border:3px solid blue;
+    margin: 0 auto;
+    margin-top: 25%;
+    margin-bottom: 25%;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
 .banner a {
@@ -359,6 +306,7 @@ blockquote span {
 }
 
 .banner h2 {
+    text-align: center;
     min-width: 500px;
     width: 100%;
     border-style: none;
@@ -370,8 +318,8 @@ blockquote span {
     margin: 0;
     text-decoration: none;
     line-height: 30px;
-    font-family:  "Microsoft Yahei", STXihei, Tahoma, Helvetica, Arial, sans-serif;
-    text-align: center;
+    font-family: "Raleway", sans-serif;
+
 }
 
 .banner h2:hover {
@@ -435,6 +383,7 @@ blockquote span {
     }
 }
 
+
 @media only screen and (max-width: 992px) {
     .banner h2 {
         margin-top: 70px;
@@ -484,6 +433,12 @@ blockquote span {
 .about h2, .about h3 {
     margin: 0 0 10px 0;
     padding: 0;
+}
+
+.about img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* 5.3 Services Section ("what we do") */
@@ -597,119 +552,6 @@ blockquote span {
     cursor: pointer;
 }
 
-/* 5.3.2  Dark Services Section */
-.services-item-dark:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-width: 0 30px 30px 0;
-    border-style: solid;
-    border-color: #fff #fff rgba(254, 82, 76, 1) rgba(254, 82, 76, 1);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px rgba(0, 0, 0, 0.2);
-    transition: border-color .2s ease-in-out;
-    -moz-transition: border-color .2s ease-in-out;
-    -webkit-transition: border-color .2s ease-in-out;
-    display: block;
-    width: 0;
-}
-
-.services-item-dark {
-    background: rgba(21, 21, 21, 0.3) /* 40% opaque red */;
-
-    padding: 30px 20px 20px;
-    margin: 15px 0;
-    position: relative;
-    color: #fff;
-    overflow: hidden;
-    transition: background .5s ease-in-out;
-    -webkit-transition: background .5s ease-in-out;
-    -moz-transition: background .5s ease-in-out;
-}
-
-.services-item-dark h4 {
-    margin: 0 0 10px 0;
-    padding: 0;
-    font-size: 20px;
-    font-weight: 600;
-    transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-}
-
-.services-item-dark p {
-    padding: 0;
-    margin: 0;
-    color: #999;
-    font-size: 16px;
-    transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-}
-
-.services-item-dark i {
-    color: rgba(254, 82, 76, 1);
-    padding: 0;
-    margin: 0 0 10px 0;
-    transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-}
-
-.services-item-dark:hover {
-    background: rgba(254, 82, 76, 1);
-    transition: background .2s ease-in-out;
-    -webkit-transition: background .2s ease-in-out;
-    -moz-transition: background .2s ease-in-out;
-}
-
-.services-item-dark:hover h4 {
-    color: #fff;
-    transform: translate(0, -5px);
-    -moz-transform: translate(0, -5px);
-    -webkit-transform: translate(0, -5px);
-    -o-transform: translate(0, -5px);
-    transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
-    cursor: pointer;
-}
-
-.services-item-dark:hover p {
-    color: #fff;
-    transform: translate(0, -10px);
-    -moz-transform: translate(0, -10px);
-    -webkit-transform: translate(0, -10px);
-    -o-transform: translate(0, -10px);
-    transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    cursor: pointer;
-}
-
-.services-item-dark:hover i {
-    color: #fff;
-    transform: translate(0, -5px);
-    -moz-transform: translate(0, -5px);
-    -webkit-transform: translate(0, -5px);
-    -o-transform: translate(0, -5px);
-    transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    cursor: pointer;
-}
-
-.services-item-dark:hover:before {
-    border-color: #fff #fff #a5a5a5 #a5a5a5;
-    transition: border-color .2s ease-in-out;
-    -moz-transition: border-color .2s ease-in-out;
-    -webkit-transition: border-color .2s ease-in-out;
-    cursor: pointer;
-}
-
-
 /* Second Services Section Starts */
 .products {
     width: 100%;
@@ -736,7 +578,9 @@ blockquote span {
     border-radius: 50px;
     width: 80px;
     height: 80px;
+    font-size: 30px;
 }
+
 
 .product-item {
     padding: 10px 0;
@@ -848,25 +692,8 @@ blockquote span {
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
 }
-
 /* Portfolio Gallery Section */
-#liuxue {
-    background: #222;
-    background: url(../images/portfolio_bg.jpg) 50% 0 no-repeat scroll;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-}
-
-#liuxue img{
-    display: block;
-    margin: auto;
-
-}
-
-
-#haiwai {
+#portfolio {
     background: #222;
     background: url(../images/portfolio_bg.jpg) 50% 0 no-repeat scroll;
     background-size: cover;
@@ -955,7 +782,6 @@ ul.project-meta li a:hover {
     padding: 0 10px;
     line-height: 20px;
 }
-
 /* overlay and hover effect */
 .recent-project::before {
     content: "";
@@ -975,7 +801,6 @@ ul.project-meta li a:hover {
 .recent-project:hover::before {
     opacity: 1;
 }
-
 .project-info h3,
 ul.project-meta,
 .full-project {
@@ -986,7 +811,6 @@ ul.project-meta,
     -webkit-transform: translateY(100px);
     -o-transform: translateY(100px);
 }
-
 .project-info h3,
 ul.project-meta {
     transition: all 0.3s;
@@ -1001,7 +825,6 @@ ul.project-meta {
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
 }
-
 .recent-project:hover .project-info h3,
 .recent-project:hover ul.project-meta,
 .recent-project:hover .full-project {
@@ -1012,7 +835,6 @@ ul.project-meta {
     -moz-transform: translateY(0);
     -o-transform: translateY(0);
 }
-
 /* Carousel Navigation */
 .project-navigation .btn-next,
 .project-navigation .btn-prev {
@@ -1043,7 +865,6 @@ ul.project-meta {
     width: 60px;
     background: rgba(254, 82, 76, 1);
 }
-
 .project-container:hover .project-navigation .btn-prev,
 .project-container:hover .project-navigation .btn-next {
     opacity: 1;
@@ -1061,6 +882,7 @@ ul.project-meta {
     margin-bottom: 28px;
     margin-top: 15px;
 }
+
 
 #portfolio2 h5 {
     margin-bottom: 0;
@@ -1086,7 +908,7 @@ ul.project-meta {
     overflow: hidden;
     max-height: 350px;
     width: 100%;
-    background: #3085a3;
+    background: #2c2c2c;
     text-align: center;
     cursor: pointer;
 }
@@ -1151,7 +973,6 @@ ul.project-meta {
 
 /* Individual effects */
 
-
 /*---------------*/
 /***** Lily *****/
 /*---------------*/
@@ -1160,7 +981,7 @@ figure.effect-lily img {
     max-width: none;
     width: -webkit-calc(100% + 50px);
     width: calc(100% + 50px);
-    opacity: 0.7;
+    opacity: 0.5;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
     -webkit-transform: translate3d(-40px, 0, 0);
@@ -1173,7 +994,7 @@ figure.effect-lily figcaption {
 
 figure.effect-lily figcaption > div {
     position: absolute;
-    bottom: 30px;
+    top: 30px;
     left: 0;
     padding: 15px;
     width: 100%;
@@ -1196,13 +1017,15 @@ figure.effect-lily p {
 figure.effect-lily p {
     color: yellow;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 12px;
     opacity: 0;
     -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
     transition: opacity 0.2s, transform 0.35s;
 }
 
-figure.effect-lily:hover img,
+figure.effect-lily:hover img {
+    opacity: 0.2;
+}
 figure.effect-lily:hover p {
     opacity: 1;
 }
@@ -1220,6 +1043,7 @@ figure.effect-lily:hover p {
     -webkit-transition-duration: 0.35s;
     transition-duration: 0.35s;
 }
+
 
 /* portfolio2 offers section Ends */
 
@@ -1333,26 +1157,25 @@ figure.effect-lily:hover p {
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
 }
 
+
 /* Portfolio Client testimonial Section Ends */
 
 /* Portfolio Counter Section Starts */
 .counter-section {
     text-align: center;
+    background: url(../images/counter_bg.jpg) 50% 0 no-repeat scroll;
     background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
-
 }
 
 .counter-section strong {
     display: block;
     font-weight: 600;
     font-size: 60px;
-    line-height: 40px;
+    line-height: 48px;
     color: #fff;
-    text-shadow: 1px 1px black;
-
 }
 
 span.count-description {
@@ -1362,19 +1185,14 @@ span.count-description {
     line-height: 40px;
     text-transform: capitalize;
     padding-top: 10px;
-    text-shadow: 1px 1px #191919
-
 }
 
 .counter-wrap {
-
-    padding: 15px 0;
-
+    padding: 50px 0;
 }
 
 .counter-section .caption {
-
-    font-weight: bold;
+    color: whitesmoke;
 }
 
 .counter-section .alternate {
@@ -1435,7 +1253,6 @@ span.count-description {
     display: inline-block;
     min-height: 100%;
 }
-
 .contact-form .form-group input,
 .contact-form .form-group textarea {
     border-radius: 0;
@@ -1451,7 +1268,6 @@ span.count-description {
 .contact-form .form-group .btn-default {
     min-width: 100%;
 }
-
 .contact-form .form-group input[type="email"],
 .contact-form .form-group input[type="phone"],
 .contact-form .form-group input[type="text"] {
@@ -1493,7 +1309,6 @@ span.count-description {
     border-radius: 0;
     border: 0;
 }
-
 .form-alerts .alert.alert-success,
 .form-alerts .alert.alert-danger {
     color: #fff;
@@ -1504,18 +1319,20 @@ span.count-description {
     background: #fe8080;
 }
 
-/* Map */
-#map {
-    margin-top: 20px;
-    width: 100%;
-    height: 400px;
+/* WeChat */
+
+.cta-one-section img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 /* Footer */
 footer {
-
+    background: rgba(54, 53, 54, .96);
     color: #fff;
-    padding: 0 0 0 0;
+    padding: 80px 0 0 0;
 }
 
 footer h2 {
@@ -1557,7 +1374,6 @@ footer .social a {
     right: 1%;
     z-index: 100;
 }
-
 .scroll-top a:link,
 .scroll-top a:visited {
     display: inline-block;
@@ -1581,7 +1397,7 @@ footer .social a {
     border: 0;
     padding: 10px 30px;
     text-transform: none;
-    font-family:  "Microsoft Yahei", STXihei, Tahoma, Helvetica, Arial, sans-serif;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-weight: 100;
     transition: all .3s ease-in-out;
@@ -1598,7 +1414,6 @@ footer .social a {
     border: 1px solid rgba(254, 82, 76, 1);
     background: rgba(254, 82, 76, 1);
 }
-
 .btn-default:hover,
 .btn-default:focus,
 .btn-overcolor:hover,
@@ -1614,7 +1429,6 @@ footer .social a {
     color: #fff;
     background: rgba(9, 113, 178, 1);
 }
-
 .btn-outlined:hover,
 .btn-outlined:focus {
     border: 1px solid rgba(9, 113, 178, 1);
@@ -1662,7 +1476,6 @@ footer .social a {
         bottom: 4%;
         right: 3%;
     }
-
     .scroll-top a:link,
     .scroll-top a:visited {
         padding: 2px 6px;
@@ -1679,6 +1492,7 @@ footer .social a {
     .products {
         text-align: left;
     }
+
 
 }
 
