@@ -72,7 +72,7 @@
                 <p><!-- p Starts -->
                     <strong>Fredericton,NB</strong>
 
-                    <br>邮箱：info@canadabeacon.ca
+                    <br>邮箱：canadabeacon@gmail.com
                     <br>电话：+1 506-897-4321
                     <br>
                     <br>营业时间： 大西洋时区

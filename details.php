@@ -137,7 +137,7 @@ if ($check_product == 0) {
                         <div class="dropdown-content">
 
                             <li>
-                                <a href="index"> 动态 </a>
+                                <a href="news"> 动态 </a>
                             </li>
 
                             <li>

@@ -15,7 +15,6 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
     <link href="styles/bootstrap.min.css" rel="stylesheet">
-    <link href="store/css/style.css" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/cb-logo.png" />
@@ -38,15 +37,12 @@ include("includes/header.php");
 
         <div>
 
-
             <!--vision mission values start-->
 
             <div>
                 <img src="images\Vision-Mission-Values.png" style="margin: auto"
                      class="img-responsive">
             </div>
-
-
 
             <!-- About Section Starts -->
 
@@ -59,7 +55,6 @@ include("includes/header.php");
                     <p class="lead"> 我们的使命是用完美主义精神，将每一项业务做到极致，把客户对美好生活的向往变成现实；我们立志打破移民留学难的局面，让更多的人可以自由迁徙和选择人生！</p>
 
                     <p CLASS="lead"> 诚实守信，以客户和结果为导向，精益求精完成不论大小的每一件事，不辱使命，不负重托。 </p>
-
                 </blockquote>
 
             </div><!-- container Ends -->

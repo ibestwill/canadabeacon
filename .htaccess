@@ -3,6 +3,7 @@ RewriteEngine On
 RewriteCond %{HTTPS} !=off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteRule ^index?$ index.php [NC,L]
+RewriteRule ^news?$ news.php [NC,L]
 RewriteRule ^immigration?$ immigration.php [NC,L]
 RewriteRule ^study?$ study.php [NC,L]
 RewriteRule ^visa?$ visa.php [NC,L]

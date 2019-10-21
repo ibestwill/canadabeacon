@@ -55,7 +55,7 @@ include("functions/functions.php");
                     <div class="dropdown-content">
 
                         <li>
-                            <a href="index"> 动态 </a>
+                            <a href="news"> 动态 </a>
                         </li>
 
                         <li>
@@ -140,7 +140,7 @@ include("functions/functions.php");
                 <ul class="nav nav-pills card-header-pills nav-justified"><!-- nav navbar-nav navbar-left Starts -->
 
                     <li>
-                        <a href="index"> 动态 </a>
+                        <a href="news"> 动态 </a>
                     </li>
 
                     <li>

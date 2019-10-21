@@ -109,17 +109,14 @@ include("functions/functions.php");
     <div class="container"><!-- container Starts -->
         <div class="row"><!-- row Starts -->
             <div class="col-md-6"><!-- col-md-6 Starts -->
-                <h2><a href="about.php"> 关于我们</a>
+                <h2><a href="about"> 关于我们</a>
                 </h2>
                 <h3 class="caption gray"></h3>
                 <p>加国灯塔是由加拿大官方认证（ICCRC）并由持牌移民顾问（编号: R532305）创办的移民事务所。总部位于NB省会Fredericton，是一家具备移民部授发执照的移民咨询公司。</p>
 
                 <blockquote>
-
                     我们的使命是用完美主义精神，将每一项业务做到极致，把客户对美好生活的向往变成现实；我们立志打破移民留学难的局面，让更多的人可以自由迁徙和选择人生！
                     诚实守信，以客户和结果为导向，精益求精完成不论大小的每一件事，不辱使命，不负重托。
-
-
                 </blockquote>
 
             </div><!-- col-md-6 Ends -->
@@ -143,7 +140,7 @@ include("functions/functions.php");
 
             <div class="col-md-12"><!--  col-md-12 Starts -->
 
-                <h2><a href="immigration.php">产品服务</a></h2>
+                <h2><a href="immigration">产品服务</a></h2>
 
                 <h3 class="caption gray">
                     “加国灯塔”将为每位客户量身选择最适合您的移民申请方案，提供包含移民信息咨询，资料准备，移民申请的一站式服务。专业的移民顾问常年居住在加拿大，对于客户的问题我们会给予最地道的解答和专业的指导。</h3>
@@ -250,7 +247,7 @@ include("functions/functions.php");
         <div class="row text-center"><!-- row Starts -->
 
             <div class="col-md-12"><!-- col-md-12 Starts -->
-                <h2><a href="immigration.php">热门项目</a></h2>
+                <h2><a href="immigration">热门项目</a></h2>
                 <h3 class="caption white">
                     加拿大拥有完善的福利体系，先进的科学技术，优质的教育资源，众多的创业、工作的机遇，一直以来，加拿大备受移民追捧。在加拿大移民项目中，除了留学生移民、杰出人才移民，还有企业家移民和投资移民。</h3>
             </div><!-- col-md-12 Ends -->
@@ -341,7 +338,7 @@ include("functions/functions.php");
     <div class="container"><!-- container Starts -->
         <div class="row text-center"><!-- Row Starts -->
             <div class="col-md-12"><!-- col-md-12 Starts -->
-                <h2><a href="visa.php">签证服务</a></h2>
+                <h2><a href="visa">签证服务</a></h2>
                 <h3 class="caption gray">
                     加拿大的签证类型多种多样，分为临时居民签证，移民签证，永久居民返加旅行证件的签证。不同的签证类型分别适用于不同目的访客。除学习许可签证及工作许可签证两大类外的临时居民签证统称为访问签证，针对访问者赴加目的不同，分为以下几类：探亲签证；旅游签证；商务考察；超级签证；短期学习；留学生返加（持有学习许可）；返加工作（持有工作许可）过境签证。</h3>
             </div><!-- col-md-12 Ends -->
@@ -500,7 +497,7 @@ include("functions/functions.php");
         <div class="row center-content wow zoomIn" data-wow-delay="0.2s" data-wow-duration="0.5s">
             <!--  col-lg-12 col-md-12 col-sm-12 Starts -->
             <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-                <h2><a href="news.php">移民动态</a></h2>
+                <h2><a href="news">移民动态</a></h2>
                 <h3 class="caption gray">第一手的新闻, 第一时间传递到您身边</h3>
             </div>
             <!--  col-lg-12 col-md-12 col-sm-12 Ends -->
@@ -572,25 +569,25 @@ include("functions/functions.php");
         <div class="row client-slider"><!-- row client-slider Starts -->
 
             <div class="item col-xs-4 col-md-2 i"><!-- item col-xs-4 col-md-2 i Starts -->
-                <a href="#" title="chamber of commerce">
+                <a title="chamber of commerce">
                     <img class="img-responsive" src="store/images/clients/chamber.png">
                 </a>
             </div><!-- item col-xs-4 col-md-2 i Ends -->
 
             <div class="item col-xs-4 col-md-2 i"><!-- item col-xs-4 col-md-2 i Starts -->
-                <a href="#" title="unb">
+                <a title="unb">
                     <img class="img-responsive" src="store/images/clients/unb.png">
                 </a>
             </div><!-- item col-xs-4 col-md-2 i Ends -->
 
             <div class="item col-xs-4 col-md-2 i"><!-- item col-xs-4 col-md-2 i Starts -->
-                <a href="#" title="nbcc">
+                <a title="nbcc">
                     <img class="img-responsive" src="store/images/clients/nbcc.png">
                 </a>
             </div><!-- item col-xs-4 col-md-2 i Ends -->
 
             <div class="item col-xs-4 col-md-2 i"><!-- item col-xs-4 col-md-2 i Starts -->
-                <a href="#" title="stu">
+                <a title="stu">
                     <img class="img-responsive" src="store/images/clients/stu.png">
                 </a>
             </div><!-- item col-xs-4 col-md-2 i Ends -->
@@ -723,7 +720,7 @@ include("functions/functions.php");
     <div class="container"><!-- container Starts -->
         <div class="row text-center"><!-- row Starts -->
             <div class="col-md-12"><!-- col-md-12 Starts -->
-                <h2><a href="contact.php">联系我们</a></h2>
+                <h2><a href="contact">联系我们</a></h2>
                 <h3 class="caption gray">专业的事交给专业的人。选择以下最方便的联系方式，我们会尽快回应您的关切。
                 </h3>
             </div><!-- col-md-12 Ends -->
@@ -735,7 +732,7 @@ include("functions/functions.php");
             <div class="col-md-8 contact-form"><!-- col-md-8 contact-form Starts -->
                 <h3>留言咨询</h3>
 
-                <form action="index.php" method="post" id="ContactForm">
+                <form action="index" method="post" id="ContactForm">
 
                     <div class="form-group">
                         <input class="form-control" placeholder="您的姓名" required type="text" name="name">
@@ -931,7 +928,8 @@ if (isset($_POST['submit'])) {
 
     $new_message = "
 
-<h3> 客户姓名： $sender_name </h3>
+
+<p> <b> 客户姓名：</b> <br> $sender_name </p>
 
 <p> <b> 电子邮箱：</b> <br> $sender_email </p>
 
