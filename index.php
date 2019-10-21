@@ -3,6 +3,7 @@
 include("includes/db.php");
 include("functions/functions.php");
 
+
 ?>
 
 <!DOCTYPE html>
@@ -108,7 +109,8 @@ include("functions/functions.php");
     <div class="container"><!-- container Starts -->
         <div class="row"><!-- row Starts -->
             <div class="col-md-6"><!-- col-md-6 Starts -->
-                <h2>关于我们</h2>
+                <h2><a href="about.php"> 关于我们</a>
+                </h2>
                 <h3 class="caption gray"></h3>
                 <p>加国灯塔是由加拿大官方认证（ICCRC）并由持牌移民顾问（编号: R532305）创办的移民事务所。总部位于NB省会Fredericton，是一家具备移民部授发执照的移民咨询公司。</p>
 
@@ -141,7 +143,7 @@ include("functions/functions.php");
 
             <div class="col-md-12"><!--  col-md-12 Starts -->
 
-                <h2>产品服务</h2>
+                <h2><a href="immigration.php">产品服务</a></h2>
 
                 <h3 class="caption gray">
                     “加国灯塔”将为每位客户量身选择最适合您的移民申请方案，提供包含移民信息咨询，资料准备，移民申请的一站式服务。专业的移民顾问常年居住在加拿大，对于客户的问题我们会给予最地道的解答和专业的指导。</h3>
@@ -248,7 +250,7 @@ include("functions/functions.php");
         <div class="row text-center"><!-- row Starts -->
 
             <div class="col-md-12"><!-- col-md-12 Starts -->
-                <h2>热门项目</h2>
+                <h2><a href="immigration.php">热门项目</a></h2>
                 <h3 class="caption white">
                     加拿大拥有完善的福利体系，先进的科学技术，优质的教育资源，众多的创业、工作的机遇，一直以来，加拿大备受移民追捧。在加拿大移民项目中，除了留学生移民、杰出人才移民，还有企业家移民和投资移民。</h3>
             </div><!-- col-md-12 Ends -->
@@ -339,7 +341,7 @@ include("functions/functions.php");
     <div class="container"><!-- container Starts -->
         <div class="row text-center"><!-- Row Starts -->
             <div class="col-md-12"><!-- col-md-12 Starts -->
-                <h2>签证服务</h2>
+                <h2><a href="visa.php">签证服务</a></h2>
                 <h3 class="caption gray">
                     加拿大的签证类型多种多样，分为临时居民签证，移民签证，永久居民返加旅行证件的签证。不同的签证类型分别适用于不同目的访客。除学习许可签证及工作许可签证两大类外的临时居民签证统称为访问签证，针对访问者赴加目的不同，分为以下几类：探亲签证；旅游签证；商务考察；超级签证；短期学习；留学生返加（持有学习许可）；返加工作（持有工作许可）过境签证。</h3>
             </div><!-- col-md-12 Ends -->
@@ -498,7 +500,7 @@ include("functions/functions.php");
         <div class="row center-content wow zoomIn" data-wow-delay="0.2s" data-wow-duration="0.5s">
             <!--  col-lg-12 col-md-12 col-sm-12 Starts -->
             <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-                <h2>移民动态</h2>
+                <h2><a href="news.php">移民动态</a></h2>
                 <h3 class="caption gray">第一手的新闻, 第一时间传递到您身边</h3>
             </div>
             <!--  col-lg-12 col-md-12 col-sm-12 Ends -->
@@ -507,92 +509,51 @@ include("functions/functions.php");
     <!--  grid container Starts -->
     <div class="grid container wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1">
 
-        <!--  col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem Starts -->
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem">
-            <figure class="effect-lily">
-                <img alt="offers" src="store/images/offers/offer-1.jpg">
-                <figcaption>
-                    <div>
-                        <h4>NB省探索出的新的寻找省提民候选人的机制</h4>
-                        <p>20190726 : 联邦快速通道的候选人现在有可能收到来自新不伦瑞克（NB）省政府发出的省提名（Provincial
-                            Nominee）的邀请，无论他们是否已在此前已经向该省提交了省提名意向书（Express of Interest)...</p>
-                    </div>
-                    <a href="#">更多</a>
-                </figcaption>
-            </figure>
-        </div><!--  col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem Ends -->
+        <?php
+        $query = "SELECT * FROM products WHERE p_cat_id=5 ORDER BY post_id DESC LIMIT 6";
+        $data = mysqli_query($con, $query);
 
-        <!--  col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem Starts -->
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem">
-            <figure class="effect-lily">
-                <img alt="offers" src="store/images/offers/offer-2.jpg">
-                <figcaption>
-                    <div>
-                        <h4>NB省提名快速通道项目EOI要求变化</h4>
-                        <p>20190705 : 2019年7月26日NB省政府发出了对省提名项目－快速通道项目申请人提交的意向书（Express of Interest） 的新要求...</p>
-                    </div>
-                    <a href="#">更多</a>
-                </figcaption>
-            </figure>
-        </div><!--  col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem Ends -->
+        if (!$data) {
+            printf("Error: %s\n", mysqli_error($con));
+            exit();
+        }
 
-        <!--  col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem Starts -->
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem">
-            <figure class="effect-lily">
-                <img alt="offers" src="store/images/offers/offer-3.jpg">
-                <figcaption>
-                    <div>
-                        <h4>N.L. 预计将在2019年超额完成2022年的移民目标</h4>
-                        <p>20190601 : 加拿大最年轻，最东部的省份（纽芬兰和拉布拉多省）将比预期提前三年吸纳1,700多名移民。
-                            2017年，纽芬兰省和拉布拉多省政府表示，他们将在2022年之前每年增加50％的移民数量...</p>
-                    </div>
-                    <a href="#">更多</a>
-                </figcaption>
-            </figure>
-        </div><!--  col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem Ends -->
+        while ($row = mysqli_fetch_array($data)) {
 
-        <!--  col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem Starts -->
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem">
-            <figure class="effect-lily">
-                <img alt="offers" src="store/images/offers/offer-4.jpg">
-                <figcaption>
-                    <div>
-                        <h4>来自中国的访问签申请将会更加快速便捷</h4>
-                        <p>20190501 : 为了支持加拿大和中国民间的沟通往来，加拿大移民局在2018年11月底推出了一项新的政策...</p>
-                    </div>
-                    <a href="#">更多</a>
-                </figcaption>
-            </figure>
-        </div><!--  col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem Ends -->
+            $pro_title = $row['product_title'];
 
-        <!--  col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem Starts -->
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem">
-            <figure class="effect-lily">
-                <img alt="offers" src="store/images/offers/offer-5.jpg">
-                <figcaption>
-                    <div>
-                        <h4>大西洋移民试点项目动态更新</h4>
-                        <p>20190501 : 联邦政府宣布，加拿大已将其大西洋移民试点延长至2021年12月，以维持该计划的势头...</p>
-                    </div>
-                    <a href="#">更多</a>
-                </figcaption>
-            </figure>
-        </div><!--  col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem Ends -->
+            $pro_label = $row['product_label'];
 
+            $pro_url = $row['product_url'];
+
+            $pro_feature = shortenText($row['product_desc']);
+
+            $pro_img1 = $row['product_img1'];
+            $pro_date = $row['post_id'];
+
+
+            echo "
+            
         <!--  col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem Starts -->
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem">
-            <figure class="effect-lily">
-                <img alt="offers" src="store/images/offers/offer-6.jpg">
+        <div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem\">
+            <figure class=\"effect-lily\">
+                <img alt=\"offers\" src='admin_area\\product_images\\$pro_img1'>
                 <figcaption>
                     <div>
-                        <h4>护工类外籍人士将很快有新的途径申请加拿大永久居民</h4>
-                        <p>20190223 :
-                            根据移民局官方2019年2月23号的新闻，针对护工类（caregivers）的外籍人士，移民局推出了两个新的5年计划。新的计划将允许护工跟他们的家庭成员一同来到加拿大并且提供给他们申请永久居民的途径...</p>
+                        <h4>$pro_title </h4>
+                        <p>$pro_date  : $pro_feature</p>
                     </div>
-                    <a href="#">更多</a>
+                    <a href='$pro_url'>更多</a>
                 </figcaption>
             </figure>
-        </div><!--  col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem Ends -->
+        </div>
+        <!--  col-lg-4 col-md-4 col-sm-4 col-xs-6 gridItem Ends -->
+  
+        ";
+
+        }
+
+        ?>
 
     </div><!--  grid container Ends -->
 </section>
@@ -762,7 +723,7 @@ include("functions/functions.php");
     <div class="container"><!-- container Starts -->
         <div class="row text-center"><!-- row Starts -->
             <div class="col-md-12"><!-- col-md-12 Starts -->
-                <h2>联系我们</h2>
+                <h2><a href="contact.php">联系我们</a></h2>
                 <h3 class="caption gray">专业的事交给专业的人。选择以下最方便的联系方式，我们会尽快回应您的关切。
                 </h3>
             </div><!-- col-md-12 Ends -->
@@ -773,26 +734,27 @@ include("functions/functions.php");
         <div class="row text-center form-container"><!-- row form-container Starts -->
             <div class="col-md-8 contact-form"><!-- col-md-8 contact-form Starts -->
                 <h3>留言咨询</h3>
-                <form id="ContactForm">
+
+                <form action="index.php" method="post" id="ContactForm">
 
                     <div class="form-group">
-                        <input class="form-control" placeholder="您的姓名" required type="text">
+                        <input class="form-control" placeholder="您的姓名" required type="text" name="name">
                     </div>
 
                     <div class="form-group">
-                        <input class="form-control" placeholder="您的邮箱" required type="email">
+                        <input class="form-control" placeholder="您的邮箱" required type="text" name="email">
                     </div>
 
                     <div class="form-group">
-                        <input class="form-control" placeholder="您的电话" required type="phone">
+                        <input class="form-control" placeholder="您的电话" required type="text" name="phone">
                     </div>
 
                     <div class="form-group">
-                        <textarea class="form-control" placeholder="留言内容" required rows="4"></textarea>
+                        <textarea class="form-control" placeholder="留言内容" required rows="4" name="message"></textarea>
                     </div>
 
                     <div class="form-group">
-                        <button class="btn btn-default" type="submit"><i class="fa fa-paper-plane fa-fw">
+                        <button class="btn btn-default" type="submit" name="submit"><i class="fa fa-paper-plane fa-fw">
                             </i> 发送
                         </button>
                     </div>
@@ -909,6 +871,30 @@ include("functions/functions.php");
 </footer>
 <!-- Footer Ends  -->
 
+
+<!-- Modal Thank You Message after submitting the contact form starts -->
+<div class="modal fade" id="thankYou" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalCenterTitle">发送成功！</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                感谢联系加国灯塔。我们将尽快回复您的关切。
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">感谢</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Thank You Message after submitting the contact form ends -->
+
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -931,3 +917,38 @@ include("functions/functions.php");
 
 </body>
 </html>
+
+<?php
+
+if (isset($_POST['submit'])) {
+
+    // Admin receives email through this code
+
+    $sender_name = $_POST['name'];
+    $sender_email = $_POST['email'];
+    $sender_phone = $_POST['phone'];
+    $sender_message = $_POST['message'];
+
+    $new_message = "
+
+<h3> 客户姓名： $sender_name </h3>
+
+<p> <b> 电子邮箱：</b> <br> $sender_email </p>
+
+<p> <b> 联系电话： </b> <br> $sender_phone </p>
+
+<p> <b> 留言内容： </b> <br> $sender_message </p>
+
+";
+
+    $headers = "From: $sender_email \r\n";
+
+    $headers .= "Content-type: text/html\r\n";
+
+    if (mail("canadabeacon@gmail.com", "客户留言", $new_message, $headers)) {
+        echo "<script>$('#thankYou').modal('show');</script>";
+    }
+
+}
+
+?>

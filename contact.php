@@ -237,7 +237,7 @@ include("includes/footer.php");
                 </button>
             </div>
             <div class="modal-body">
-                感谢关注加国灯塔。我们将在24小时内邮件或电话回复您。
+                感谢联系加国灯塔。我们将尽快回复您的关切。
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">感谢</button>

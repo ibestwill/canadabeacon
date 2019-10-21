@@ -254,6 +254,10 @@ include("includes/footer.php");
 
 ?>
 
+
+<!--disabled the modal feature-->
+<!--
+
 <div id="myModal" class="modal fade">
 
     <div class="vertical-alignment-helper">
@@ -289,7 +293,9 @@ include("includes/footer.php");
 
     </div>
 
-</div>
+</div
+
+>-->
 
 
 <script src="js/jquery.min.js"></script>
@@ -434,6 +440,7 @@ include("includes/footer.php");
 
 </script>
 
+<!--
 <script>
     var myCookie = getCookie("language");
 
@@ -445,6 +452,8 @@ include("includes/footer.php");
         window.location.replace("en");
     }
 </script>
+
+-->
 
 
 </body>

@@ -71,7 +71,7 @@ p {
 }
 
 a {
-    color: #fff;
+    color: rgba(254, 82, 76, 1);
     transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
@@ -79,7 +79,7 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: rgba(254, 82, 76, 1);
+    color: rgb(254, 176, 0);
 }
 
 .light {
@@ -552,6 +552,119 @@ blockquote span {
     cursor: pointer;
 }
 
+/* 5.3.2  Dark Services Section */
+.services-item-dark:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-width: 0 30px 30px 0;
+    border-style: solid;
+    border-color: #fff #fff rgba(254, 82, 76, 1) rgba(254, 82, 76, 1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px rgba(0, 0, 0, 0.2);
+    transition: border-color .2s ease-in-out;
+    -moz-transition: border-color .2s ease-in-out;
+    -webkit-transition: border-color .2s ease-in-out;
+    display: block;
+    width: 0;
+}
+
+.services-item-dark {
+    background: rgba(21, 21, 21, 0.3) /* 40% opaque red */;
+
+    padding: 30px 20px 20px;
+    margin: 15px 0;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+    transition: background .5s ease-in-out;
+    -webkit-transition: background .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out;
+}
+
+.services-item-dark h4 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+}
+
+.services-item-dark p {
+    padding: 0;
+    margin: 0;
+    color: #999;
+    font-size: 16px;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+}
+
+.services-item-dark i {
+    color: rgba(254, 82, 76, 1);
+    padding: 0;
+    margin: 0 0 10px 0;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+}
+
+.services-item-dark:hover {
+    background: rgba(254, 82, 76, 1);
+    transition: background .2s ease-in-out;
+    -webkit-transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+}
+
+.services-item-dark:hover h4 {
+    color: #fff;
+    transform: translate(0, -5px);
+    -moz-transform: translate(0, -5px);
+    -webkit-transform: translate(0, -5px);
+    -o-transform: translate(0, -5px);
+    transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.services-item-dark:hover p {
+    color: #fff;
+    transform: translate(0, -10px);
+    -moz-transform: translate(0, -10px);
+    -webkit-transform: translate(0, -10px);
+    -o-transform: translate(0, -10px);
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.services-item-dark:hover i {
+    color: #fff;
+    transform: translate(0, -5px);
+    -moz-transform: translate(0, -5px);
+    -webkit-transform: translate(0, -5px);
+    -o-transform: translate(0, -5px);
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.services-item-dark:hover:before {
+    border-color: #fff #fff #a5a5a5 #a5a5a5;
+    transition: border-color .2s ease-in-out;
+    -moz-transition: border-color .2s ease-in-out;
+    -webkit-transition: border-color .2s ease-in-out;
+    cursor: pointer;
+}
+
+
 /* Second Services Section Starts */
 .products {
     width: 100%;
@@ -693,7 +806,7 @@ blockquote span {
     -moz-transition: all 0.4s ease-in-out;
 }
 /* Portfolio Gallery Section */
-#portfolio {
+.portfolio {
     background: #222;
     background: url(../images/portfolio_bg.jpg) 50% 0 no-repeat scroll;
     background-size: cover;
@@ -1497,3 +1610,20 @@ footer .social a {
 }
 
 /* Media queries Ends */
+
+
+/* Additional Features */
+#liuxue {
+    background: #222;
+    background: url(../images/portfolio_bg.jpg) 50% 0 no-repeat scroll;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#liuxue img {
+    display: block;
+    margin: auto;
+
+}

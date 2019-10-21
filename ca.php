@@ -429,13 +429,6 @@
         <br>
 
 
-
-
-    </div><!-- container Ends  -->
-
-    <!-- Footer Starts  -->
-    <footer>
-
         <div class="row"><!-- row Starts  -->
             <div class="col-md-12 text-center">
                 <p>
@@ -446,7 +439,7 @@
             </div>
 
             <div class="col-md-12 text-center">
-               <p>&copy; 2019 Canada Beacon Immigration Services.</p>
+                <p>&copy; 2019 Canada Beacon Immigration Services.</p>
 
 
             </div>
@@ -490,8 +483,7 @@
         </div><!-- nav pull-right scroll-top Ends  -->
 
 
-    </footer>
-    <!-- Footer Ends  -->
+    </div><!-- container Ends  -->
 
 
 </section>
